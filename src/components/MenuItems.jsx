@@ -1,7 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import Dropdown from './Dropdown';
 
 const MenuItems = ({ items }) => {
+  const [depthLevel, setDepthLevel] = useState(0);
   const [dropdown, setDropdown] = useState(false);
 
   const ref = useRef();
@@ -23,10 +25,16 @@ const MenuItems = ({ items }) => {
 
   const onMouseEnter = () => {
     window.innerWidth > 960 && setDropdown(true);
+    setDepthLevel(1);
   };
 
   const onMouseLeave = () => {
     window.innerWidth > 960 && setDropdown(false);
+    setDepthLevel(0);
+  };
+
+  const closeDropdown = () => {
+    dropdown && setDropdown(false);
   }
 
   return (
@@ -35,8 +43,9 @@ const MenuItems = ({ items }) => {
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={closeDropdown}
     >
-      {items.submenu ? (
+      {items.submenu && items.url ? (
         <>
           <button
             type='button'
@@ -44,15 +53,53 @@ const MenuItems = ({ items }) => {
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {items.title}{' '}
+            {window.innerWidth < 960 ? (
+              items.title
+            ) : (
+              <>
+                <Link to={items.url}>{items.title}</Link>
+                {window.innerWidth < 960 ?
+                  null :
+                  depthLevel > 0 && window.innerWidth > 960 ? (
+                    <span>&raquo;</span>
+                  ) : (
+                    <span className="arrow" />
+                  )
+                }
+              </>
+            )}
           </button>
           <Dropdown
             submenus={items.submenu}
             dropdown={dropdown}
           />
         </>
-      ): (
-        <a href={items.url}>{items.title}</a>
+      )
+      : !items.url && items.submenu ? (
+        <>
+          <button
+            type='button'
+            aria-haspopup='menu'
+            aria-expanded={dropdown ? 'true' : 'false'}
+            onClick={() => setDropdown((prev) => !prev)}
+            >
+            {items.title}
+            {window.innerWidth < 960 ?
+              null :
+              depthLevel > 0 && window.innerWidth > 960 ? (
+                <span>&raquo;</span>
+              ) : (
+                <span className="arrow" />
+              )
+            }
+          </button>
+          <Dropdown
+            submenus={items.submenu}
+            dropdown={dropdown}
+          />
+        </>
+      ) : (
+        <Link to={items.url}>{items.title}</Link>
       )}
     </li>
   );

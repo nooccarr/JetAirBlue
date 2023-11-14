@@ -8,18 +8,17 @@ export const menuItems = [
     url: '/plane-tours',
     submenu: [
       {
-        title: 'Manhattan',
+        title: 'Manhattan Plane Tour',
         url: '/manhattan-plane-tour',
       },
       {
-        title: 'Montauk',
+        title: 'Montauk Plane Tour',
         url: '/montauk-plane-tour',
       }
     ]
   },
   {
     title: 'More',
-    url: '/more',
     submenu: [
       {
         title: 'About Us',

@@ -2,6 +2,7 @@ import { menuItems } from './MenuItems';
 import MenuItems from './MenuItems.jsx';
 
 const NavBar = () => {
+
   return (
     <nav>
       <ul className='menus'>
