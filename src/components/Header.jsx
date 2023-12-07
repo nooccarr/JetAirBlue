@@ -4,13 +4,13 @@ import NavBar from './NavBar';
 const Header = () => {
   return (
     <header>
-      <div className='nav-area'>
-        <Link to='/' className='logo'>
-          Logo
+      <div className='header-container'>
+        <Link to='/' className='header-logo'>
+          jet air blue
           {/* <img src='/images/logo.png' alt='logo' /> */}
         </Link>
         <NavBar />
-        <button className='btn'>Book a Plane Tour</button>
+        <button className='header-button'>Book a Plane Tour</button>
       </div>
     </header>
   );

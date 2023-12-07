@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from './Dropdown';
+
 
 const MenuItems = ({ items }) => {
   const [depthLevel, setDepthLevel] = useState(0);
@@ -39,7 +42,7 @@ const MenuItems = ({ items }) => {
 
   return (
     <li
-      className='menu-items'
+      className='navbar-menu-item'
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -61,9 +64,13 @@ const MenuItems = ({ items }) => {
                 {window.innerWidth < 960 ?
                   null :
                   depthLevel > 0 && window.innerWidth > 960 ? (
-                    <span>&raquo;</span>
+                    <span className='caret-icon'>
+                      <FontAwesomeIcon icon={faCaretUp} />
+                    </span>
                   ) : (
-                    <span className="arrow" />
+                    <span className='caret-icon'>
+                      <FontAwesomeIcon icon={faCaretDown} />
+                    </span>
                   )
                 }
               </>
@@ -87,9 +94,13 @@ const MenuItems = ({ items }) => {
             {window.innerWidth < 960 ?
               null :
               depthLevel > 0 && window.innerWidth > 960 ? (
-                <span>&raquo;</span>
+                <span className='caret-icon'>
+                  <FontAwesomeIcon icon={faCaretUp} />
+                </span>
               ) : (
-                <span className="arrow" />
+                <span className='caret-icon'>
+                  <FontAwesomeIcon icon={faCaretDown} />
+                </span>
               )
             }
           </button>
