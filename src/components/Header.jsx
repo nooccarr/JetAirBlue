@@ -4,8 +4,8 @@ import NavBar from './NavBar';
 const Header = () => {
   return (
     <header>
-      <div className='nav-area'>
-        <Link to='/' className='logo'>
+      <div className='header-container'>
+        <Link to='/' className='header-logo'>
           Logo
           {/* <img src='/images/logo.png' alt='logo' /> */}
         </Link>
