@@ -14,6 +14,7 @@ header {
   background-color: #060d17;
   color: #fff;
 }
+
 .header-container {
   margin: 0 auto;
   max-width: 1280px;
@@ -25,29 +26,128 @@ header {
 }
 
 .header-logo {
-  /* flex: 1;
-  text-align: center; */
+  color: #fff;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.header-logo:hover {
+  opacity: 0.7;
+}
+
+.header-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.header-button:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 
 /* NAVIGATION BAR */
+.navbar-menu-container {
+  display: flex;
+  padding-left: 0px;
+  min-width: 300px;
+  justify-content: space-around;
+  list-style-type: none;
+}
 
+.navbar-menu-item {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
+.navbar-menu-item > a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.navbar-menu-item > a:hover {
+  text-decoration: underline;
+}
+
+.navbar-menu-item > button > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar-menu-item > button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 0px;
+}
+
+.navbar-menu-item > ul > li > a {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.navbar-menu-item > ul > li > a:hover {
+  text-decoration: underline;
+}
 
 /* NAVIGATION BAR: DROP DOWN MENU */
 .dropdown {
   display: none;
+  position: absolute;
+  list-style-type: none;
+  border: 1px solid #060d17;
+  margin: 0px;
+  padding: 0px;
+  border-radius: 5px;
+}
+
+.dropdown-menu-item {
+  background-color: #060d17;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+
 }
 
 .show {
   display: block;
 }
 
-.arrow {
+.caret-icon {
+  padding-left: 5px;
+}
+
+/* .arrow {
   border: solid #060d17;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
-}
+} */
