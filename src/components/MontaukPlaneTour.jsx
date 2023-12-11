@@ -1,6 +1,9 @@
 const MontaukPlaneTour = () => {
   return (
-    <h2>Montauk Plane Tour page content</h2>
+    <div className='page-wrapper'>
+      <h2>Montauk Plane Tour page content</h2>
+    </div>
+
   );
 };
 

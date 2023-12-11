@@ -1,6 +1,8 @@
 const ContactUs = () => {
   return (
-    <h2>Contact Us page content</h2>
+    <div className='page-wrapper'>
+      <h2>Contact Us page content</h2>
+    </div>
   );
 };
 

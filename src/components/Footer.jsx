@@ -29,7 +29,7 @@ const Footer = () => {
 
         <ul className='footer-section-info-container'>
           <li className='footer-contact-info'>
-            <a href='tel:+0-123-456-7890'>123-456-7890</a>
+            <a href='tel:+1-718-359-1070'>718-359-1070</a>
           </li>
           <li className='footer-contact-info'>
             <a href='mailto: abcd@abcd.com'>abcd@abcd.com</a>

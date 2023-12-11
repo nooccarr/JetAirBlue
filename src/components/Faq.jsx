@@ -1,6 +1,8 @@
 const Faq = () => {
   return (
-    <h2>Frequently Asked Questions page content</h2>
+    <div className='page-wrapper'>
+      <h2>Frequently Asked Questions page content</h2>
+    </div>
   );
 };
 
