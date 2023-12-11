@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -52,19 +53,19 @@ const Footer = () => {
       <h3 className='footer-section-title'>quick links</h3>
       <ul className='footer-section-quick-links-container'>
         <li className='footer-quick-links'>
-          <a href='/'>home</a>
+          <Link to='/'>home</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/manhattan-plane-tour'>manhattan plane tour</a>
+          <Link to='/manhattan-plane-tour'>manhattan plane tour</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/montauk-plane-tour'>montauk plane tour</a>
+          <Link to='/montauk-plane-tour'>montauk plane tour</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/faq'>frequently asked questions</a>
+          <Link to='/faq'>frequently asked questions</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/contact-us'>contact us</a>
+          <Link to='/contact-us'>contact us</Link>
         </li>
       </ul>
     </div>
