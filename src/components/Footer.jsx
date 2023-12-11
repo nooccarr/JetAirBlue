@@ -34,11 +34,13 @@ const Footer = () => {
             <a href='mailto: abcd@abcd.com'>abcd@abcd.com</a>
           </li>
           <li className='footer-contact-info'>
-            <address>
-              Republic Airport<br/>
-              7150 Republic Airport<br/>
-              Farmingdale, NY 11735
-            </address>
+            <a href='https://maps.app.goo.gl/fc9EKkDM2yR1QnMQ7' target='_blank' rel=''>
+              <address>
+                Republic Airport<br/>
+                7150 Republic Airport<br/>
+                Farmingdale, NY 11735
+              </address>
+            </a>
           </li>
         </ul>
       </div>

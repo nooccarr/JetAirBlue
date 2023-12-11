@@ -204,13 +204,13 @@ footer {
   cursor: pointer;
 }
 
-.footer-contact-info > address {
+.footer-contact-info > a > address {
   display: inline-block;
   font-style: normal;
 }
 
-.footer-contact-info > address:hover,
-.footer-contact-info > address:focus {
+.footer-contact-info > a > address:hover,
+.footer-contact-info > a > address:focus {
   text-decoration: underline;
   cursor: pointer;
 }
