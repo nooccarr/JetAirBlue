@@ -32,7 +32,7 @@ const Footer = () => {
             <a href='tel:+1-718-359-1070'>718-359-1070</a>
           </li>
           <li className='footer-contact-info'>
-            <a href='mailto: abcd@abcd.com'>abcd@abcd.com</a>
+            <a href='mailto: test@test.com'>jouncpark@gmail.com</a>
           </li>
           <li className='footer-contact-info'>
             <a href='https://maps.app.goo.gl/fc9EKkDM2yR1QnMQ7' target='_blank' rel=''>
