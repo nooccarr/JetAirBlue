@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
@@ -28,17 +29,19 @@ const Footer = () => {
 
         <ul className='footer-section-info-container'>
           <li className='footer-contact-info'>
-            <a href='tel:+0-123-456-7890'>123-456-7890</a>
+            <a href='tel:+1-718-359-1070'>718-359-1070</a>
           </li>
           <li className='footer-contact-info'>
             <a href='mailto: abcd@abcd.com'>abcd@abcd.com</a>
           </li>
           <li className='footer-contact-info'>
-            <address>
-              Republic Airport<br/>
-              7150 Republic Airport<br/>
-              Farmingdale, NY 11735
-            </address>
+            <a href='https://maps.app.goo.gl/fc9EKkDM2yR1QnMQ7' target='_blank' rel=''>
+              <address>
+                Republic Airport<br/>
+                7150 Republic Airport<br/>
+                Farmingdale, NY 11735
+              </address>
+            </a>
           </li>
         </ul>
       </div>
@@ -50,19 +53,19 @@ const Footer = () => {
       <h3 className='footer-section-title'>quick links</h3>
       <ul className='footer-section-quick-links-container'>
         <li className='footer-quick-links'>
-          <a href='/'>home</a>
+          <Link to='/'>home</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/manhattan-plane-tour'>manhattan plane tour</a>
+          <Link to='/manhattan-plane-tour'>manhattan plane tour</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/montauk-plane-tour'>montauk plane tour</a>
+          <Link to='/montauk-plane-tour'>montauk plane tour</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/faq'>frequently asked questions</a>
+          <Link to='/faq'>frequently asked questions</Link>
         </li>
         <li className='footer-quick-links'>
-          <a href='/contact-us'>contact us</a>
+          <Link to='/contact-us'>contact us</Link>
         </li>
       </ul>
     </div>

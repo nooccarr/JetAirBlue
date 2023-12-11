@@ -1,6 +1,8 @@
 const Gallery = () => {
   return (
-    <h2>Gallery page content</h2>
+    <div className='page-wrapper'>
+      <h2>Gallery page content</h2>
+    </div>
   );
 };
 
