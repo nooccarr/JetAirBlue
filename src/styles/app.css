@@ -121,6 +121,7 @@ header {
   margin: 0px;
   padding: 0px;
   border-radius: 5px;
+  z-index: 100
 }
 
 .dropdown-menu-item {
@@ -147,11 +148,127 @@ header {
 .page-wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  /* padding-bottom: 500px; */
+  padding-bottom: 500px;
+}
+
+.page-container {
+  background-color: #f2f2f2;
 }
 
 /* HOME */
+.home-main-image {
+  max-height: 525px;
+  /* min-height: 400px; */
+}
 
+.home-choose-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-top: 80px;
+  padding-bottom: 98px;
+}
+
+.home-choose-tour-text {
+  text-align: center;
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+/* TOUR CARDS */
+.tour-card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /* height: 100%; */
+}
+
+.tour-card-container {
+  max-width: 360px;
+  margin: 24px 24px 24px;
+  border-radius: 10px;
+  /* height: 100%; */
+  background-color: #fff;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+.tour-card-image-container {
+  margin-bottom: -7px;
+}
+
+.tour-card-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.tour-card-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  /* height: 100%; */
+  padding: 20px;
+}
+
+.tour-card-title {
+  line-height: 1;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.tour-card-description {
+  margin-bottom: 0px;
+}
+
+.tour-card-button-container {
+  display: flex;
+  justify-content: space-between;
+  height: 68px;
+}
+
+/* BUTTON */
+.book-now-button {
+  padding: 12px;
+  margin-top: auto;
+  width: 48%;
+  text-transform: uppercase;
+  border: 1px solid #505152;;
+  border-radius: 5px;
+  background-color: #505152;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.book-now-button:hover,
+.book-now-button:focus {
+  cursor: pointer;
+  background-color: #060d17;
+  border: 1px solid #060d17;
+  opacity: 1;
+}
+
+.learn-more-button {
+  padding: 12px;
+  margin-top: auto;
+  width: 48%;
+  text-transform: uppercase;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #505152;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.learn-more-button:hover,
+.learn-more-button:focus {
+  color: white;
+  cursor: pointer;
+  background-color: #060d17;
+  border: 1px solid #060d17;
+  opacity: 1;
+}
 
 /* FOOTER */
 footer {
