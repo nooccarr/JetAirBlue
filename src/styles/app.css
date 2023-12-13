@@ -165,21 +165,12 @@ header {
   margin: 0 auto;
   max-width: 1280px;
   padding-top: 80px;
-  padding-bottom: 120px;
+  padding-bottom: 98px;
 }
-
-    /*
-    TODO:
-    max-width: 1280px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between; */
 
 .home-choose-tour-text {
   text-align: center;
   margin: 0;
-  padding-bottom: 24px;
   font-size: 32px;
   letter-spacing: -1px;
   line-height: 1.25;
@@ -189,12 +180,13 @@ header {
 .tour-card-list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   /* height: 100%; */
 }
 
 .tour-card-container {
   max-width: 360px;
-  margin: 0 22px;
+  margin: 24px 24px 24px;
   border-radius: 10px;
   /* height: 100%; */
   background-color: #fff;
