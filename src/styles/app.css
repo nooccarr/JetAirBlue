@@ -156,9 +156,12 @@ header {
 }
 
 /* HOME */
-.home-main-image {
+.home-main-image-top {
+  max-height: 1080px;
+}
+
+.home-main-image-bottom {
   max-height: 525px;
-  /* min-height: 400px; */
 }
 
 .home-choose-tour-container {
@@ -270,10 +273,81 @@ header {
   opacity: 1;
 }
 
+/* WHY CHOOSE US */
+.home-why-choose-us-container {
+  /* margin: 0 auto;
+  max-width: 1280px; */
+  padding-top: 80px;
+  /* margin-bottom: 43px; */
+  background-color: #242325;
+}
+
+.home-why-choose-us-text {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 43px;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.home-value-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-bottom: 43px;
+}
+
+.home-value-container {
+  min-width: 244px;
+  max-width: 460px;
+  margin: 0 30px;
+}
+
+.home-value-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px solid rgb(92 128 160);
+  padding-bottom: 5px;
+}
+
+.home-value-description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  padding-bottom: 55px;
+}
+
+/* HOME REQUEST INFO */
+/* TODO: implement grid layout */
+.home-request-info-container {
+
+  margin-bottom: -7px;
+}
+
+/* TODO: implement grid layout */
+.home-request-info-form-container {
+  min-width: 600px;
+  width: auto;
+  padding: 0 30px;
+  background-color: #fff;
+
+}
+
 /* FOOTER */
 footer {
   background-color: rgb(150 151 153);
   color: #fff;
+  border-top: 3px solid rgb(92 128 160);
 }
 
 .footer-container {
