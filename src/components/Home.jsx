@@ -1,4 +1,9 @@
 import { Carousel } from 'react-responsive-carousel';
+import HomeTopCarousel from '../assets/images/airvan-3.jpg';
+// import HomeTopCarousel from '../assets/images/home-manhattan-top-carousel.webp';
+import HomeBottomCarouselFirst from '../assets/images/caravan-1.jpg';
+import HomeBottomCarouselSecond from '../assets/images/pilatus-1.jpg';
+import HomeBottomCarouselThird from '../assets/images/pilatus-2.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const tours = [
@@ -39,28 +44,27 @@ const values = [
 ];
 
 const Home = () => {
-
-  const imagesCarouselBottom = () => (
-    <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
-      <div className='home-main-image-bottom'>
-        <img src="https://placehold.co/1920x525" />
-        {/* <p className="legend">Legend 1</p> */}
-      </div>
-      <div className='home-main-image-bottom'>
-        <img src="https://placehold.co/1920x525" />
-        {/* <p className="legend">Legend 2</p> */}
-      </div>
-      <div className='home-main-image-bottom'>
-        <img src="https://placehold.co/1920x525" />
-        {/* <p className="legend">Legend 3</p> */}
+  const imagesCarouselTop = () => (
+    <Carousel showThumbs={false} showIndicators={false}>
+      <div className='home-main-image-top'>
+        <img src={HomeTopCarousel} />
       </div>
     </Carousel>
   );
 
-  const imagesCarouselTop = () => (
-    <Carousel showThumbs={false} showIndicators={false}>
-      <div className='home-main-image-top'>
-        <img src="https://placehold.co/1920x1080" />
+  const imagesCarouselBottom = () => (
+    <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
+      <div className='home-main-image-bottom'>
+        <img src={HomeBottomCarouselFirst} />
+        {/* <p className="legend">Legend 1</p> */}
+      </div>
+      <div className='home-main-image-bottom'>
+        <img src={HomeBottomCarouselSecond} />
+        {/* <p className="legend">Legend 2</p> */}
+      </div>
+      <div className='home-main-image-bottom'>
+        <img src={HomeBottomCarouselThird} />
+        {/* <p className="legend">Legend 3</p> */}
       </div>
     </Carousel>
   );
