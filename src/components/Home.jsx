@@ -1,9 +1,8 @@
 import { Carousel } from 'react-responsive-carousel';
-import HomeTopCarousel from '../assets/images/airvan-3.jpg';
-// import HomeTopCarousel from '../assets/images/home-manhattan-top-carousel.webp';
-import HomeBottomCarouselFirst from '../assets/images/caravan-1.jpg';
-import HomeBottomCarouselSecond from '../assets/images/pilatus-1.jpg';
-import HomeBottomCarouselThird from '../assets/images/pilatus-2.jpg';
+// import HomeTopCarousel from '../assets/images/home-carousel-top.webp';
+// import HomeBottomCarouselFirst from '../assets/images/caravan-1.jpg';
+// import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.webp';
+// import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.webp';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const tours = [
@@ -47,7 +46,8 @@ const Home = () => {
   const imagesCarouselTop = () => (
     <Carousel showThumbs={false} showIndicators={false}>
       <div className='home-main-image-top'>
-        <img src={HomeTopCarousel} />
+        <img src='https://placehold.co/1920x1080' />
+        {/* <img src={HomeTopCarousel} /> */}
       </div>
     </Carousel>
   );
@@ -55,15 +55,18 @@ const Home = () => {
   const imagesCarouselBottom = () => (
     <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
       <div className='home-main-image-bottom'>
-        <img src={HomeBottomCarouselFirst} />
+        {/* <img src={HomeBottomCarouselFirst} /> */}
+        <img src='https://placehold.co/1920x1080' />
         {/* <p className="legend">Legend 1</p> */}
       </div>
       <div className='home-main-image-bottom'>
-        <img src={HomeBottomCarouselSecond} />
+        {/* <img src={HomeBottomCarouselSecond} /> */}
+        <img src='https://placehold.co/1920x1080' />
         {/* <p className="legend">Legend 2</p> */}
       </div>
       <div className='home-main-image-bottom'>
-        <img src={HomeBottomCarouselThird} />
+        {/* <img src={HomeBottomCarouselThird} /> */}
+        <img src='https://placehold.co/1920x1080' />
         {/* <p className="legend">Legend 3</p> */}
       </div>
     </Carousel>

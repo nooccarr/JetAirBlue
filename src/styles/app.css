@@ -161,7 +161,8 @@ header {
 }
 
 .home-main-image-bottom {
-  max-height: 525px;
+  /* max-height: 525px; */
+  max-height: 1080px;
 }
 
 .home-choose-tour-container {
@@ -329,7 +330,6 @@ header {
 
 /* HOME REQUEST INFO */
 .home-request-info-container {
-  /* margin-bottom: -7px; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   /* grid-template-columns: 1fr 2fr; */
@@ -394,6 +394,8 @@ header {
 
 .home-request-info-image {
   /* background-color: pink; */
+    margin-bottom: -7px;
+
 }
 
 /* FOOTER */
