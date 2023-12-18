@@ -158,6 +158,33 @@ header {
 /* HOME */
 .home-main-image-top {
   max-height: 1080px;
+  /* min-height: 355px; */
+  position: relative;
+}
+
+.caption-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.caption-title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.caption-description {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: capitalize;
+  padding-bottom: 40px;
 }
 
 .home-main-image-bottom {
@@ -203,6 +230,9 @@ header {
 
 .tour-card-image {
   border-radius: 10px 10px 0 0;
+  object-fit: contain;
+  /* height: 100%;
+  width: 100%; */
 }
 
 .tour-card-text-container {
