@@ -158,10 +158,38 @@ header {
 /* HOME */
 .home-main-image-top {
   max-height: 1080px;
+  /* min-height: 355px; */
+  position: relative;
+}
+
+.caption-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.caption-title {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.caption-description {
+  margin: 0;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: capitalize;
+  padding-bottom: 40px;
 }
 
 .home-main-image-bottom {
-  max-height: 525px;
+  /* max-height: 525px; */
+  max-height: 1080px;
 }
 
 .home-choose-tour-container {
@@ -202,6 +230,9 @@ header {
 
 .tour-card-image {
   border-radius: 10px 10px 0 0;
+  object-fit: contain;
+  /* height: 100%;
+  width: 100%; */
 }
 
 .tour-card-text-container {
@@ -328,18 +359,72 @@ header {
 }
 
 /* HOME REQUEST INFO */
-/* TODO: implement grid layout */
 .home-request-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 2fr; */
+  /* gap: 10px; */
+  /* grid-auto-rows: minmax(100px, auto); */
 
-  margin-bottom: -7px;
 }
 
-/* TODO: implement grid layout */
-.home-request-info-form-container {
-  min-width: 600px;
-  width: auto;
+.home-request-info-form {
+  /* grid-row: 1;
+  grid-column: 1; */
   padding: 0 30px;
+  padding: 32px 24px;
   background-color: #fff;
+}
+
+.home-request-info-form-container {
+  margin: 0 49px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+
+.home-request-info-title {
+  font-family: 'Spectral', serif;
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  color: #191B1C;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.home-request-info-span {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.home-request-input-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+}
+
+.home-request-button-container {
+  padding: 54px 0px 24px 0px;
+}
+
+.home-request-input-label {
+  color: #70777d;
+  padding-top: 30px;
+  font-size: 0.928rem;
+}
+
+.home-request-input {
+  border: none;
+  outline: none;
+  font-size: 0.928rem;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+.home-request-info-image {
+  /* background-color: pink; */
+    margin-bottom: -7px;
 
 }
 
