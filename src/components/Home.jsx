@@ -80,8 +80,8 @@ const Home = () => {
           <p className='tour-card-description'>{description}</p>
         </div>
         <div className='tour-card-button-container'>
-          {bookNowButton()}
-          {learnMoreButton()}
+          {coloredButton('book now')}
+          {clearButton('learn more')}
         </div>
       </div>
     </div>
@@ -93,12 +93,12 @@ const Home = () => {
     </div>
   );
 
-  const bookNowButton = () => (
-    <button className='book-now-button'>book now</button>
+  const coloredButton = (text) => (
+    <button className='book-now-button'>{text}</button>
   );
 
-  const learnMoreButton = () => (
-    <button className='learn-more-button'>learn more</button>
+  const clearButton = (text) => (
+    <button className='learn-more-button'>{text}</button>
   );
 
   const valueList = () => (
@@ -113,33 +113,32 @@ const Home = () => {
   );
 
   const requestInfo = () => (
-    <div className='home-request-info-form-container'>
-      <form>
-        <div>
-          <h4>Request Information</h4>
+    <div className='home-request-info-form'>
+      <form className='home-request-info-form-container'>
+        <h2 className='home-request-info-title'>Request Information</h2>
+        <span className='home-request-info-span'>We’d love to hear from you. Please fill out the contact form and our team will be in touch to discuss your travel needs.</span>
+        <div className='home-request-input-container'>
+          <label htmlFor='fname' className='home-request-input-label'>First Name</label>
+          <input type='text' id='fname' name='fname' className='home-request-input' />
         </div>
-        <div>
-          <label htmlFor='fname'>First Name</label>
-          <input type='text' id='fname' name='fname' />
+        <div className='home-request-input-container'>
+          <label htmlFor='lname' className='home-request-input-label'>Last Name</label>
+          <input type='text' id='lname' name='lname' className='home-request-input' />
         </div>
-        <div>
-          <label htmlFor='lname'>Last Name</label>
-          <input type='text' id='lname' name='lname' />
+        <div className='home-request-input-container'>
+          <label htmlFor='email' className='home-request-input-label'>Email</label>
+          <input type='email' id='email' name='email' className='home-request-input' />
         </div>
-        <div>
-          <label htmlFor='email'>Email</label>
-          <input type='email' id='email' name='email' />
+        <div className='home-request-input-container'>
+          <label htmlFor='phone' className='home-request-input-label'>Phone</label>
+          <input type='tel' id='phone' name='phone' className='home-request-input' />
         </div>
-        <div>
-          <label htmlFor='phone'>Phone</label>
-          <input type='tel' id='phone' name='phone' />
+        <div className='home-request-input-container'>
+          <label htmlFor='message' className='home-request-input-label'>What Can We Assist You With?</label>
+          <input id='text' name='message' className='home-request-input' />
         </div>
-        <div>
-          <label htmlFor='message'>What Can We Assist You With?</label>
-          <textarea id='message' name='message' />
-        </div>
-        <div>
-          <button>Submit</button>
+        <div className='home-request-button-container'>
+          {clearButton('book now')}
         </div>
       </form>
     </div>
@@ -159,7 +158,7 @@ const Home = () => {
       </section>
       <section className='home-request-info-container'>
         {requestInfo()}
-        <div>
+        <div className='home-request-info-image'>
           <img src="https://placehold.co/1080x1080" />
         </div>
       </section>
