@@ -1,28 +1,32 @@
 import { Carousel } from 'react-responsive-carousel';
 import HomeTopCarousel from '../assets/images/home-carousel-top.webp';
-import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.webp';
-import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.webp';
-import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.webp';
+import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
+import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.jpeg';
+import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.jpeg';
 import ManhattanClassicCard from '../assets/images/manhattan-card-1.jpg';
 import ManhattanDeluxeCard from '../assets/images/manhattan-card-2.jpg';
 import MontaukCard from '../assets/images/montauk-card-1.jpg';
+import HomeRequestInfo from '../assets/images/home-request-info.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const tours = [
   {
     title: 'Manhattan Classic Plane Tour',
     description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
-    image: ManhattanClassicCard
+    image: ManhattanClassicCard,
+    carouselImage: HomeBottomCarouselFirst
   },
   {
     title: 'Manhattan Deluxe Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
-    image: ManhattanDeluxeCard
+    image: ManhattanDeluxeCard,
+    carouselImage: HomeBottomCarouselSecond
   },
     {
     title: 'Montauk Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
-    image: MontaukCard
+    image: MontaukCard,
+    carouselImage: HomeBottomCarouselThird
   },
 ];
 
@@ -48,35 +52,38 @@ const values = [
 const Home = () => {
   const imagesCarouselTop = () => (
     <Carousel showThumbs={false} showIndicators={false}>
-      <div className='home-main-image-top'>
+      <>
         {/* <img src='https://placehold.co/1920x1080' /> */}
-        <img src={HomeTopCarousel} />
+        <img className='home-main-image-top' src={HomeTopCarousel} />
         <div className='caption-container'>
           <h1 className='caption-title'>jet air blue planes</h1>
           <p className='caption-description'>breathtaking plane tours over new york city</p>
-          {coloredButton('book a plane tour')}
+          {coloredButton('book a plane tour', 'home-book-now-button')}
         </div>
-      </div>
+      </>
     </Carousel>
   );
 
-  const imagesCarouselBottom = () => (
+  const imagesCarouselBottom = (tours) => (
     <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
-      <div className='home-main-image-bottom'>
-        <img src={HomeBottomCarouselFirst} />
-        {/* <img src='https://placehold.co/1920x1080' /> */}
-        {/* <p className="legend">Legend 1</p> */}
-      </div>
-      <div className='home-main-image-bottom'>
-        <img src={HomeBottomCarouselSecond} />
-        {/* <img src='https://placehold.co/1920x1080' /> */}
-        {/* <p className="legend">Legend 2</p> */}
-      </div>
-      <div className='home-main-image-bottom'>
-        <img src={HomeBottomCarouselThird} />
-        {/* <img src='https://placehold.co/1920x1080' /> */}
-        {/* <p className="legend">Legend 3</p> */}
-      </div>
+      {tours.map(tour => (
+        <>
+          <img className='home-main-image-bottom' src={tour.carouselImage} />
+          <div className='bottom-carousel-caption-container'>
+            <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
+            <p className='bottom-carousel-caption-description'>{tour.description}</p>
+            <div className='bottom-carousel-caption-button-container'>{coloredButton('learn more', 'home-learn-more-button')}</div>
+          </div>
+        </>
+      ))}
+
+
+      {/* // <div className='home-main-image-bottom'>
+      //   <img src={HomeBottomCarouselSecond} />
+      // </div>
+      // <div className='home-main-image-bottom'>
+      //   <img src={HomeBottomCarouselThird} />
+      // </div> */}
     </Carousel>
   );
 
@@ -104,12 +111,12 @@ const Home = () => {
     </div>
   );
 
-  const coloredButton = (text) => (
-    <button className='book-now-button'>{text}</button>
+  const coloredButton = (text, classname) => (
+    <button className={`colored-button ${classname}`}>{text}</button>
   );
 
-  const clearButton = (text) => (
-    <button className='learn-more-button'>{text}</button>
+  const clearButton = (text, classname) => (
+    <button className={`clear-button ${classname}`}>{text}</button>
   );
 
   const valueList = () => (
@@ -149,7 +156,7 @@ const Home = () => {
           <input id='text' name='message' className='home-request-input' />
         </div>
         <div className='home-request-button-container'>
-          {clearButton('book now')}
+          {clearButton('book now', 'home-request-button')}
         </div>
       </form>
     </div>
@@ -158,7 +165,7 @@ const Home = () => {
   return (
     <div className='page-container'>
       {imagesCarouselTop()}
-      {imagesCarouselBottom()}
+      {imagesCarouselBottom(tours)}
       <section className='home-choose-tour-container'>
         <h3 className='home-choose-tour-text'>Choose a Plane Tour</h3>
         {tourCardList()}
@@ -169,8 +176,8 @@ const Home = () => {
       </section>
       <section className='home-request-info-container'>
         {requestInfo()}
-        <div className='home-request-info-image'>
-          <img src="https://placehold.co/1080x1080" />
+        <div>
+          <img className='home-request-info-image' src={HomeRequestInfo} />
         </div>
       </section>
     </div>
