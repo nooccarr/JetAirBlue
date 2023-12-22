@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+
 /* BODY */
 body {
   margin: 0px;
@@ -156,12 +158,18 @@ header {
 }
 
 /* HOME */
-.home-main-image-top {
+.home-main-image-top-container {
+  /* height: 1080px; */
   position: relative;
-  max-height: 1080px;
-  min-height: 500px;
-  object-fit: cover;
+  background-image: url('../assets/images/home-carousel-top.webp');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(34, 34, 34, 0.5);
+  background-blend-mode: multiply;
+  height: 550px;
 }
+
 
 .caption-container {
   position: absolute;
@@ -185,14 +193,21 @@ header {
   line-height: 1.25;
   color: #fff;
   text-transform: capitalize;
+  text-align: center;
   padding-bottom: 40px;
+}
+
+.caption-button-container {
+  display: flex;
+  justify-content: center;
 }
 
 .home-main-image-bottom {
   position: relative;
-  max-height: 1080px;
+  /* max-height: 1080px;
   min-height: 500px;
-  height: 100%;
+  height: 100%; */
+  height: 550px;
   width: auto;
   object-fit: cover;
 }
@@ -250,7 +265,6 @@ header {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  /* height: 100%; */
 }
 
 .tour-card-container {
@@ -260,6 +274,11 @@ header {
   /* height: 100%; */
   background-color: #fff;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+.related-tour-card-container {
+  min-width: 360px;
+  max-width: 590px;
 }
 
 .tour-card-image-container {
@@ -324,6 +343,7 @@ header {
   padding: 20px;
   border-radius: 40px;
   background-color: #060d17;
+  min-width: 200px;
   opacity: 1;
   transition: 0.3s;
 }
@@ -449,8 +469,6 @@ header {
   margin: 0 49px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
-
 .home-request-info-title {
   font-family: 'Spectral', serif;
   font-size: calc(1.425rem + 2.1vw);
@@ -495,6 +513,44 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* PLANE TOUR */
+.plane-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+/* PLANE PLANE MAIN IMAGE SECTION */
+.tour-main-image-container {
+  height: 357px;
+}
+
+.tour-main-image {
+  background-image: url('../assets/images/tour-main-image.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.5);
+  background-blend-mode: multiply;
+}
+
+.tour-main-image-caption-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.tour-main-image-caption-title {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1.125;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform: capitalize;
 }
 
 /* FOOTER */
