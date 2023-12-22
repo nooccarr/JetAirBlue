@@ -1,5 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
-import HomeTopCarousel from '../assets/images/home-carousel-top.webp';
+import { coloredButton, clearButton } from '../utils/Button';
+import TourCards from '../utils/TourCards';
 import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
 import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.jpeg';
 import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.jpeg';
@@ -11,13 +12,13 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const tours = [
   {
-    title: 'Manhattan Classic Plane Tour',
+    title: 'Classic Manhattan Plane Tour',
     description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
     image: ManhattanClassicCard,
     carouselImage: HomeBottomCarouselFirst
   },
   {
-    title: 'Manhattan Deluxe Plane Tour',
+    title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: ManhattanDeluxeCard,
     carouselImage: HomeBottomCarouselSecond
@@ -50,79 +51,44 @@ const values = [
 ];
 
 const Home = () => {
-  const imagesCarouselTop = () => (
-    <Carousel showThumbs={false} showIndicators={false}>
-      <>
-        {/* <img src='https://placehold.co/1920x1080' /> */}
-        <img className='home-main-image-top' src={HomeTopCarousel} />
+  const imageTop = () => (
+      <div className='home-main-image-top-container'>
+      {/* <img src='https://placehold.co/1920x1080' /> */}
+        {/* <div className='home-main-image-top'> */}
         <div className='caption-container'>
           <h1 className='caption-title'>jet air blue planes</h1>
           <p className='caption-description'>breathtaking plane tours over new york city</p>
-          {coloredButton('book a plane tour', 'home-book-now-button')}
+          <div className='caption-button-container'>
+            {coloredButton('book a plane tour', 'home-book-now-button')}
+          </div>
         </div>
-      </>
-    </Carousel>
+        {/* </div> */}
+      </div>
+    // </Carousel>
   );
 
-  const imagesCarouselBottom = (tours) => (
+  const imagesCarousel = (tours) => (
     <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
       {tours.map(tour => (
-        <>
-          <img className='home-main-image-bottom' src={tour.carouselImage} />
+        <div key={tour.title}>
+          <img className='home-main-image-bottom' style={{ filter: 'brightness(75%)'}} src={tour.carouselImage} />
           <div className='bottom-carousel-caption-container'>
             <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
             <p className='bottom-carousel-caption-description'>{tour.description}</p>
             <div className='bottom-carousel-caption-button-container'>{coloredButton('learn more', 'home-learn-more-button')}</div>
           </div>
-        </>
+        </div>
       ))}
-
-
-      {/* // <div className='home-main-image-bottom'>
-      //   <img src={HomeBottomCarouselSecond} />
-      // </div>
-      // <div className='home-main-image-bottom'>
-      //   <img src={HomeBottomCarouselThird} />
-      // </div> */}
     </Carousel>
   );
 
-  const tourCard = ({ title, description, image }) => (
-    <div className='tour-card-container'>
-      <div className='tour-card-image-container'>
-        <img src={image} className='tour-card-image' />
-      </div>
-      <div className='tour-card-text-container'>
-        <div>
-          <h4 className='tour-card-title'>{title}</h4>
-          <p className='tour-card-description'>{description}</p>
-        </div>
-        <div className='tour-card-button-container'>
-          {coloredButton('book now')}
-          {clearButton('learn more')}
-        </div>
-      </div>
-    </div>
-  );
 
-  const tourCardList = () => (
-    <div className='tour-card-list'>
-      {tours.map(tour => tourCard(tour))}
-    </div>
-  );
 
-  const coloredButton = (text, classname) => (
-    <button className={`colored-button ${classname}`}>{text}</button>
-  );
-
-  const clearButton = (text, classname) => (
-    <button className={`clear-button ${classname}`}>{text}</button>
-  );
 
   const valueList = () => (
     <div className='home-value-list'>
       {values.map(value => (
-        <div className='home-value-container'>
+        <div className='home-value-container' key={value.title}>
           <h4 className='home-value-title'>{value.title}</h4>
           <p className='home-value-description'>{value.description}</p>
         </div>
@@ -164,12 +130,9 @@ const Home = () => {
 
   return (
     <div className='page-container'>
-      {imagesCarouselTop()}
-      {imagesCarouselBottom(tours)}
-      <section className='home-choose-tour-container'>
-        <h3 className='home-choose-tour-text'>Choose a Plane Tour</h3>
-        {tourCardList()}
-      </section>
+      {imageTop()}
+      {imagesCarousel(tours)}
+      <TourCards title={'Choose a Plane Tour'} tours={tours} />
       <section className='home-why-choose-us-container'>
         <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
         {valueList()}
