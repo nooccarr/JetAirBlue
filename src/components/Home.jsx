@@ -51,7 +51,7 @@ const values = [
 ];
 
 const Home = () => {
-  const imageTop = () => (
+  const imageTop = (
       <div className='home-main-image-top-container'>
       {/* <img src='https://placehold.co/1920x1080' /> */}
         {/* <div className='home-main-image-top'> */}
@@ -85,7 +85,7 @@ const Home = () => {
 
 
 
-  const valueList = () => (
+  const valueList = (
     <div className='home-value-list'>
       {values.map(value => (
         <div className='home-value-container' key={value.title}>
@@ -96,7 +96,7 @@ const Home = () => {
     </div>
   );
 
-  const requestInfo = () => (
+  const requestInfo = (
     <div className='home-request-info-form'>
       <form className='home-request-info-form-container'>
         <h2 className='home-request-info-title'>Request Information</h2>
@@ -130,15 +130,15 @@ const Home = () => {
 
   return (
     <div className='page-container'>
-      {imageTop()}
+      {imageTop}
       {imagesCarousel(tours)}
       <TourCards title={'Choose a Plane Tour'} tours={tours} />
       <section className='home-why-choose-us-container'>
         <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
-        {valueList()}
+        {valueList}
       </section>
       <section className='home-request-info-container'>
-        {requestInfo()}
+        {requestInfo}
         <div>
           <img className='home-request-info-image' src={HomeRequestInfo} />
         </div>

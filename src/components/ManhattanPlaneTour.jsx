@@ -84,7 +84,7 @@ const ManhattanPlaneTour = () => {
     />
   );
 
-  const tourInfoAccordion = () => (
+  const tourInfoAccordion = (
     <div className={styles.info}>
       <Accordion transition transitionTimeout={250}>
         <AccordionItem header='Airplane Route'>
@@ -108,7 +108,7 @@ const ManhattanPlaneTour = () => {
       {topImageSection(tour.title)}
       <div className='plane-tour-container'>
         {tourInfoSection(tour)}
-        {tourInfoAccordion()}
+        {tourInfoAccordion}
         <TourCards title={'Related Airplane Tours'} tours={relatedTours} classname={'related-tour-card-container'} />
       </div>
     </main>
