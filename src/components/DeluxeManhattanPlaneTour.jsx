@@ -9,11 +9,11 @@ import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';
 
 const tour = {
-  title: 'montauk plane tour',
-  duration: '12-15 Minutes',
+  title: 'deluxe manhattan plane tour',
+  duration: '18-20 Minutes',
   availability: 'Monday-Saturday 9:30am-6:30pm',
-  description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
-  sights: ['Statue of Liberty', 'Ellis Island', 'Financial District', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Empire State Building', 'Chrysler Building', 'Central Park', 'U.S.S. Intrepid Sea', 'Air & Space Museum', 'George Washington Bridge', 'Brooklyn Bridge', 'Times Square', 'Yankee Stadium']
+  description: ['An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.', 'In addition to several must-see attractions, passengers will enjoy a flight over historic Uptown Manhattan (Columbia University & Harlem) and The Bronx (Yankee Stadium). Consider upgrading from the Classic Tour and you’ll know New York better than a native!'],
+  sights: ['Statue of Liberty', 'Ellis Island', 'One World Trade Center', '9/11 Memorial', 'Battery Park', 'Financial District', 'Empire State Building', 'Chrysler Building', 'Times Square', 'Central Park', 'U.S.S. Intrepid Sea, Air & Space Museum', 'Grant’s Tomb', 'Columbia University', 'George Washington Bridge', 'Harlem', 'Spuyten Duyvil Bridge', 'Palisades Cliff']
 };
 
 const relatedTours = [
@@ -29,7 +29,7 @@ const relatedTours = [
   }
 ];
 
-const MontaukPlaneTour = () => {
+const DeluxeManhattanPlaneTour = () => {
   const topImageSection = (title) => (
     <div className='tour-main-image-container'>
       <section className='tour-main-image'>
@@ -57,9 +57,11 @@ const MontaukPlaneTour = () => {
           </li>
         </ul>
       </div>
-      <h3 className='tour-info-section-sighting-title'>The Ride of a Lifetime</h3>
+      <h3 className='tour-info-section-sighting-title'>An Extended Trip Over the Skyline</h3>
       <div className='tour-info-section-sighting-description-container'>
-        <p className='tour-info-section-sighting-description'>{description}</p>
+        {description.map((paragraph, index) => (
+          <p className='tour-info-section-sighting-description' key={index}>{`${paragraph}`}</p>
+        ))}
       </div>
       <h4 className='tour-info-section-sighting-list-title'>sights include:</h4>
       <ul className='tour-info-section-sighting-list-ul'>
@@ -151,4 +153,4 @@ const tourCardSection = (title, tours) => (
   );
 };
 
-export default MontaukPlaneTour;
+export default DeluxeManhattanPlaneTour;
