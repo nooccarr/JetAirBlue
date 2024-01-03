@@ -56,7 +56,7 @@ const Footer = () => {
           <Link to='/'>home</Link>
         </li>
         <li className='footer-quick-links'>
-          <Link to='/manhattan-plane-tour'>manhattan plane tour</Link>
+          <Link to='/classic-manhattan-plane-tour'>classic manhattan plane tour</Link>
         </li>
         <li className='footer-quick-links'>
           <Link to='/montauk-plane-tour'>montauk plane tour</Link>

@@ -24,7 +24,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0px;
+  padding: 15px 20px;
 }
 
 .header-logo {
@@ -150,7 +150,8 @@ header {
 .page-wrapper {
   margin: 0 auto;
   max-width: 1280px;
-  padding-bottom: 500px;
+  padding: 0px 20px 500px 20px;
+  /* padding-bottom: 500px; */
 }
 
 .page-container {
@@ -250,6 +251,7 @@ header {
   max-width: 1280px;
   padding-top: 80px;
   padding-bottom: 98px;
+  /* padding: 80px 20px 98px 20px; */
 }
 
 .home-choose-tour-text {
@@ -258,6 +260,12 @@ header {
   font-size: 32px;
   letter-spacing: -1px;
   line-height: 1.25;
+}
+
+.related-tour-text {
+  text-align: start;
+  font-size: 1.5rem;
+  padding: 0 20px;
 }
 
 /* TOUR CARDS */
@@ -283,13 +291,17 @@ header {
 
 .tour-card-image-container {
   margin-bottom: -7px;
+  opacity: 1;
+  transition: 0.3s;
+  height: 280px;
 }
 
 .tour-card-image {
   border-radius: 10px 10px 0 0;
-  object-fit: contain;
-  /* height: 100%;
-  width: 100%; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
 }
 
 .tour-card-text-container {
@@ -305,10 +317,25 @@ header {
   margin-top: 6px;
   margin-bottom: 20px;
   font-size: 24px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.related-tour-card-title:hover,
+.related-tour-card-title:focus,
+.related-tour-card-image-container:hover,
+.related-tour-card-image-container:focus {
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .tour-card-description {
   margin-bottom: 0px;
+}
+
+.related-tour-card-description {
+  background-color: #f2f2f3;
+  padding: 20px;
 }
 
 .tour-card-button-container {
@@ -539,6 +566,7 @@ header {
 .tour-main-image-caption-container {
   margin: 0 auto;
   max-width: 1280px;
+  padding: 0 20px;
   display: flex;
   height: 100%;
   align-items: center;
@@ -551,6 +579,84 @@ header {
   letter-spacing: -1px;
   color: #fff;
   text-transform: capitalize;
+}
+
+/* PLANE TOUR INFO SECTION */
+.tour-info-section-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 80px 20px 0 20px;
+
+}
+
+.tour-info-section-quick-details-container,
+.tour-info-section-sighting-description-container {
+  padding: 20px;
+  margin-bottom: 24px;
+  background-color: rgb(230 230 231);
+}
+
+.tour-info-section-title {
+  color: #455b6f;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  line-height: 16px;
+  margin: 0 0 16px 0;
+}
+
+.tour-info-section-ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.tour-info-section-li {
+  list-style-type: none;
+  margin: 0 8px 16px 0;
+}
+
+.tour-info-section-li:last-child {
+  margin-bottom: 0px;
+}
+
+.tour-info-section-li-prop {
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 0 5px 0 10px;
+}
+
+.tour-info-section-sighting-title {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #08090E;
+}
+
+.tour-info-section-sighting-description {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.tour-info-section-sighting-description:last-child {
+  margin-bottom: 0px;
+}
+
+.tour-info-section-sighting-list-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  line-height: 1.25;
+  color: #08090E;
+}
+
+.tour-info-section-sighting-list-ul {
+  padding-left: 20px;
+  margin-bottom: 0;
 }
 
 /* FOOTER */
@@ -567,7 +673,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 0px;
+  padding: 80px 20px;
 }
 
 .footer-section-title {

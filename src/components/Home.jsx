@@ -4,9 +4,9 @@ import TourCards from '../utils/TourCards';
 import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
 import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.jpeg';
 import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.jpeg';
-import ManhattanClassicCard from '../assets/images/manhattan-card-1.jpg';
-import ManhattanDeluxeCard from '../assets/images/manhattan-card-2.jpg';
-import MontaukCard from '../assets/images/montauk-card-1.jpg';
+import ClassicManhattanCard from '../assets/images/home-classic-manhattan-card.jpg';
+import DeluxeManhattanCard from '../assets/images/home-deluxe-manhattan-card.jpg';
+import MontaukCard from '../assets/images/home-montauk-card.jpg';
 import HomeRequestInfo from '../assets/images/home-request-info.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
@@ -14,13 +14,13 @@ const tours = [
   {
     title: 'Classic Manhattan Plane Tour',
     description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
-    image: ManhattanClassicCard,
+    image: ClassicManhattanCard,
     carouselImage: HomeBottomCarouselFirst
   },
   {
     title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
-    image: ManhattanDeluxeCard,
+    image: DeluxeManhattanCard,
     carouselImage: HomeBottomCarouselSecond
   },
     {

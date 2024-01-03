@@ -1,8 +1,10 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
-import TourCards from '../utils/TourCards';
-import ManhattanDeluxeCard from '../assets/images/manhattan-card-2.jpg';
-import MontaukCard from '../assets/images/montauk-card-1.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
+import VipManhattanCard from '../assets/images/related-vip-manhattan-card.jpg';
 import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
+import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';
 
@@ -10,24 +12,24 @@ const tour = {
   title: 'classic manhattan plane tour',
   duration: '12-15 Minutes',
   availability: 'Monday-Saturday 9:30am-6:30pm',
-  description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
-  sights: ['Statue of Liberty', 'Ellis Island', 'Financial District', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Empire State Building', 'Chrysler Building', 'Central Park', 'U.S.S. Intrepid Sea', 'Air & Space Museum', 'George Washington Bridge', 'Brooklyn Bridge', 'Times Square', 'Yankee Stadium']
+  description: ['Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.'],
+  sights: ['Statue of Liberty', 'Ellis Island', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Financial District', 'Empire State Building', 'Chrysler Building', 'Times Square', 'Central Park', 'U.S.S. Intrepid Sea, Air & Space Museum']
 };
 
 const relatedTours = [
   {
     title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
-    image: ManhattanDeluxeCard
+    image: DeluxeManhattanCard
   },
     {
-    title: 'Montauk Plane Tour',
-    description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
-    image: MontaukCard
+    title: 'VIP Manhattan Plane Tour',
+    description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! With the extended route and approximately 30-minute duration, you’ll be sure to feel like a VIP on the VIP Tour!',
+    image: VipManhattanCard
   }
 ]
 
-const ManhattanPlaneTour = () => {
+const ClassicManhattanPlaneTour = () => {
 
 
   const topImageSection = (title) => (
@@ -41,24 +43,30 @@ const ManhattanPlaneTour = () => {
   );
 
   const tourInfoSection = ({ duration, availability, description, sights }) => (
-    <div>
-      <div>
-        <p>quick details</p>
-        <li>
-          <span>duration:</span>
-          <span>{duration}</span>
-        </li>
-        <li>
-          <span>availability:</span>
-          <span>{availability}</span>
-        </li>
+    <div className='tour-info-section-container'>
+      <div className='tour-info-section-quick-details-container'>
+        <p className='tour-info-section-title'>quick details</p>
+        <ul className='tour-info-section-ul'>
+          <li className='tour-info-section-li'>
+            <FontAwesomeIcon icon={faClock} />
+            <span className='tour-info-section-li-prop'>duration:</span>
+            <span>{duration}</span>
+          </li>
+          <li className='tour-info-section-li'>
+            <FontAwesomeIcon icon={faCalendarAlt} />
+            <span className='tour-info-section-li-prop'>availability:</span>
+            <span>{availability}</span>
+          </li>
+        </ul>
       </div>
-      <h3>The Ride of a Lifetime</h3>
-      <div>
-        <p>{description}</p>
+      <h3 className='tour-info-section-sighting-title'>The Ride of a Lifetime</h3>
+      <div className='tour-info-section-sighting-description-container'>
+        {description.map((paragraph, index) => (
+          <p className='tour-info-section-sighting-description' key={index}>{`${paragraph}`}</p>
+        ))}
       </div>
-      <h4>sights include:</h4>
-      <ul>
+      <h4 className='tour-info-section-sighting-list-title'>sights include:</h4>
+      <ul className='tour-info-section-sighting-list-ul'>
         {sights.map(sight => <li key={sight}>{sight}</li>)}
       </ul>
     </div>
@@ -103,16 +111,48 @@ const ManhattanPlaneTour = () => {
     </div>
   );
 
+const tourCard = ({ title, description, image }) => (
+  <div className='tour-card-container related-tour-card-container' key={title}>
+    <div className='tour-card-image-container related-tour-card-image-container'>
+      <img src={image} className='tour-card-image' />
+    </div>
+    <div className='tour-card-text-container'>
+      <div>
+        <h4 className='tour-card-title related-tour-card-title'>{title}</h4>
+        <p className='tour-card-description related-tour-card-description'>{description}</p>
+      </div>
+      <div className='tour-card-button-container'>
+        {coloredButton('book now')}
+        {clearButton('learn more')}
+      </div>
+    </div>
+  </div>
+);
+
+const tourCardList = (tours) => (
+  <div className='tour-card-list'>
+    {tours.map(tour => tourCard(tour))}
+  </div>
+);
+
+const tourCardSection = (title, tours) => (
+  <section className='home-choose-tour-container'>
+    <h3 className='home-choose-tour-text related-tour-text'>{title}</h3>
+    {tourCardList(tours)}
+  </section>
+);
+
+
   return (
     <main className='page-container'>
       {topImageSection(tour.title)}
       <div className='plane-tour-container'>
         {tourInfoSection(tour)}
         {tourInfoAccordion}
-        <TourCards title={'Related Airplane Tours'} tours={relatedTours} classname={'related-tour-card-container'} />
+        {tourCardSection('Related Airplane Tours', relatedTours, 'related-tour-card-container')}
       </div>
     </main>
   );
 };
 
-export default ManhattanPlaneTour;
+export default ClassicManhattanPlaneTour;
