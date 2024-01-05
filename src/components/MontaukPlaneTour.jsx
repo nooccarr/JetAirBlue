@@ -10,21 +10,21 @@ import chevronDown from '../assets/svgs/chevron-down.svg';
 
 const tour = {
   title: 'montauk plane tour',
-  duration: '12-15 Minutes',
-  availability: 'Monday-Saturday 9:30am-6:30pm',
-  description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
-  sights: ['Statue of Liberty', 'Ellis Island', 'Financial District', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Empire State Building', 'Chrysler Building', 'Central Park', 'U.S.S. Intrepid Sea', 'Air & Space Museum', 'George Washington Bridge', 'Brooklyn Bridge', 'Times Square', 'Yankee Stadium']
+  duration: '60 Minutes',
+  availability: 'Monday-Sunday 10:00am-5:00pm',
+  description: 'Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Montauk Tour will treat you to the best views of Long Island including the Jones Beach, East Hampton, and Montauk.',
+  sights: ['Long Island South Shoreline', 'Jones Beach', 'Fire Island', 'East Hampton', 'Montauk', 'Gardiners Island', 'Smithtown Bay', 'Long Island North Shoreline']
 };
 
 const relatedTours = [
   {
     title: 'Classic Manhattan Plane Tour',
-    description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
+    description: 'Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
     image: ClassicManhattanCard
   },
     {
     title: 'VIP Manhattan Plane Tour',
-    description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! With the extended route and approximately 30-minute duration, you’ll be sure to feel like a VIP on the VIP Tour!',
+    description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! With the extended route and approximately 60-minute duration, you’ll be sure to feel like a VIP on the VIP Tour!',
     image: VipManhattanCard
   }
 ];
