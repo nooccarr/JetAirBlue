@@ -3,7 +3,7 @@ import { coloredButton, clearButton } from '../utils/Button';
 import TourCards from '../utils/TourCards';
 import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
 import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.jpeg';
-import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.jpeg';
+import HomeBottomCarouselThird from '../assets/images/home-carousel-bottom-3.jpg';
 import ClassicManhattanCard from '../assets/images/home-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/home-deluxe-manhattan-card.jpg';
 import MontaukCard from '../assets/images/home-montauk-card.jpg';
@@ -131,17 +131,17 @@ const Home = () => {
   return (
     <div className='page-container'>
       {imageTop}
-      {imagesCarousel(tours)}
       <TourCards title={'Choose a Plane Tour'} tours={tours} />
-      <section className='home-why-choose-us-container'>
-        <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
-        {valueList}
-      </section>
+      {imagesCarousel(tours)}
       <section className='home-request-info-container'>
         {requestInfo}
         <div>
           <img className='home-request-info-image' src={HomeRequestInfo} />
         </div>
+      </section>
+      <section className='home-why-choose-us-container'>
+        <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
+        {valueList}
       </section>
     </div>
 
