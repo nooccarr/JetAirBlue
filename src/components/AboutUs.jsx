@@ -1,3 +1,4 @@
+import TopImageSection from "./TopImageSection";
 const reasons = ['10+ Years of Tour Experience', 'Affordable Prices', 'Great Customer Service', 'Modern Helicopters', 'Our friendly staff and personable pilots will go out of their way to make sure you feel comfortable and have fun throughout the entire flight.', 'There is No Language Barrier', 'Having given New York City helicopter tours for years we understand that the city is a true melting pot of cultures. This is why we are proud to offer tours in multiple languages'];
 const languages = ['English', 'Korean', 'Chinese', 'Japanese', 'Portugese', 'Spanish'];
 const captains = ['Raffaele Molfetta', 'Adam Chunn', 'Dillon Schroder', 'Matthew Layden', 'Benjamin Bodnar', 'Michael Conte', 'Laura Douvier', 'Jonah Garber', 'Dewayne Goar', 'Wojciech Grodnicki', 'Edward Huerta Jr', 'Jena Kendall', 'Aldan McNeil', 'Alexander Ralston', 'Robert Rodgame', 'David Sundlof', 'Moises Torres'];
@@ -19,25 +20,17 @@ const staffs = [
 
 const AboutUs = () => {
 
-    const topImageSection = (title) => (
-    <div className='tour-other-image-container'>
-      <section className='tour-other-image'>
-        <div className='tour-other-image-caption-container item-start'>
-          <h1 className='tour-other-image-caption-title'>{title}</h1>
-        </div>
-      </section>
-    </div>
-  );
+
 
   const aboutUsIntro = () => (
-    <div>
-      <div>
+    <div className='about-us-intro-section'>
+      <div className='about-us-intro-text-container'>
         <h3 className='about-us-title'>who are we?</h3>
         <p className='about-us-description'>Our team of professionals at Manhattan Helicopters cares about the experience our clients have. We are committed to having you walk away happy, satisfied and in awe of your one-of-a-kind helicopter tour of New York City. While there are a handful of different Manhattan helicopter tours from which you can choose from, not all of the companies should be entrusted with your experience and safety. Take the guesswork out of choosing a tour company, by allowing Manhattan Helicopters to provide you with an affordable, safe, unforgettable New York City experience.</p>
       </div>
-      {/* <div> TODO: add image
-        <img />
-      </div> */}
+      <div className='about-us-intro-image-container'>
+        <img src='https://placehold.co/200x200' />
+      </div>
     </div>
   );
 
@@ -72,15 +65,16 @@ const AboutUs = () => {
   );
 
   const crewStaffList = () => (
-    <div className='grid-container'>
+    <div className='crew-staff-container'>
       <div className='grid-item-1'>
-        <h3>Crew</h3>
+        <h3 className='about-us-title'>Crew</h3>
         {captains.map((captain, index) => (
-          <h5 key={index}>Captain: {captain}</h5>
+          <h5 key={index} className='crew-li'>Captain: {captain}</h5>
         ))}
       </div>
       <div className='grid-item-2'>
-        <ul>
+        <h3 className='about-us-title'>Jet Air Blue Staff</h3>
+        <ul className='staff-ul'>
           {staffs.map((staff, index) => (
             <li key={index}>
               <strong>{staff.position}: </strong>
@@ -93,7 +87,7 @@ const AboutUs = () => {
   );
   return (
     <main className='page-container'>
-      {topImageSection('About Jet Air Blue Planes')}
+      <TopImageSection title='About Jet Air Blue Planes' />
       <div className='about-us-container'>
         {aboutUsIntro()}
         {aboutUsInfoSectionOne()}

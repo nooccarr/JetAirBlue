@@ -2,7 +2,7 @@ import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
-import VipManhattanCard from '../assets/images/related-vip-manhattan-card.jpg';
+import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
 import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
 import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
@@ -12,7 +12,7 @@ const tour = {
   title: 'montauk plane tour',
   duration: '60 Minutes',
   availability: 'Monday-Sunday 10:00am-5:00pm',
-  description: 'Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Montauk Tour will treat you to the best views of Long Island including the Jones Beach, East Hampton, and Montauk.',
+  description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! Departing from the Republic Airport (Farmingdale, LI), the Montauk Tour will treat you to the best views of Long Island including the Jones Beach, East Hampton, and Montauk.',
   sights: ['Long Island South Shoreline', 'Jones Beach', 'Fire Island', 'East Hampton', 'Montauk', 'Gardiners Island', 'Smithtown Bay', 'Long Island North Shoreline']
 };
 
@@ -22,10 +22,10 @@ const relatedTours = [
     description: 'Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
     image: ClassicManhattanCard
   },
-    {
-    title: 'VIP Manhattan Plane Tour',
-    description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! With the extended route and approximately 60-minute duration, you’ll be sure to feel like a VIP on the VIP Tour!',
-    image: VipManhattanCard
+  {
+    title: 'Deluxe Manhattan Plane Tour',
+    description: 'An exciting and comprehensive airplane tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
+    image: DeluxeManhattanCard
   }
 ];
 

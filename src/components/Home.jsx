@@ -71,7 +71,7 @@ const Home = () => {
     <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
       {tours.map(tour => (
         <div key={tour.title}>
-          <img className='home-main-image-bottom' style={{ filter: 'brightness(75%)'}} src={tour.carouselImage} />
+          <img className='home-main-image-bottom' style={{ filter: 'brightness(80%)'}} src={tour.carouselImage} />
           <div className='bottom-carousel-caption-container'>
             <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
             <p className='bottom-carousel-caption-description'>{tour.description}</p>

@@ -162,11 +162,11 @@ header {
 .home-main-image-top-container {
   height: 95vh;
   position: relative;
-  background-image: url('../assets/images/home-carousel-top.webp');
+  background-image: url('../assets/images/home-carousel-top.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: rgba(34, 34, 34, 0.5);
+  background-color: rgba(34, 34, 34, 0.3);
   background-blend-mode: multiply;
   /* height: 550px; */
 }
@@ -561,7 +561,7 @@ header {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
-  background-color: rgba(34, 34, 34, 0.5);
+  background-color: rgba(34, 34, 34, 0.3);
   background-blend-mode: multiply;
 }
 
@@ -592,14 +592,33 @@ header {
   justify-content: center;
 }
 
-.tour-main-image-caption-title,
-.tour-other-image-caption-title {
+.tour-main-image-caption-title {
   margin: 0;
   font-size: 4rem;
   line-height: 1.125;
   letter-spacing: -1px;
   color: #fff;
   text-transform: capitalize;
+}
+
+.tour-other-image-caption-title {
+  text-align: center;
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1.125;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.tour-other-image-caption-description {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  color: #fff;
+
+
 }
 
 /* PLANE TOUR INFO SECTION */
@@ -681,13 +700,23 @@ header {
 }
 
 /* ABOUT US */
-.about-us-container {
+.about-us-container,
+.contact-us-container {
   margin: 0 auto;
   padding: 80px 20px;
   max-width: 1280px;
   background-color: #f2f2f2;
 }
 
+.about-us-intro-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-us-intro-text-container {
+  padding-right: 20px;
+
+}
 .about-us-title {
   text-transform: capitalize;
   margin: 0;
@@ -706,6 +735,12 @@ header {
   color: #08090e;
 }
 
+.about-us-intro-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+}
 .about-us-bold {
   display: block;
   margin-top: 24px;
@@ -716,13 +751,108 @@ header {
 
 .about-us-ul {
   padding-left: 20px;
-
 }
+
 .about-us-info-section-container {
   background-color: #fff;
   padding: 40px;
   margin-left: -20px;
   margin-top: 40px;
+}
+
+.crew-staff-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 40px;
+}
+
+.crew-li {
+  margin: 24px 0 0 0;
+  font-size: 18px;
+}
+
+.staff-ul {
+  padding-left: 20px;
+}
+
+/* CONTACT US */
+.contact-us-form {
+  background-color: #fff;
+  padding: 40px 60px 40px 40px;
+  margin-left: -20px;
+}
+
+.contact-us-form-info-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.contact-us-input-container {
+  margin-top: 16px;
+  padding-right: 16px;
+}
+
+.contact-us-input-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-us-input {
+  background-color: #FAFBFC;
+  border: 1px solid #9badb8;
+  border-radius: 4px;
+  padding: 5px 4px;
+  color: #152833;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 14px;
+}
+
+.contact-us-textarea {
+  background-color: #FAFBFC;
+  border: 1px solid #9badb8;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: #152833;
+  width: 100%;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.contact-us-info-hours {
+  font-size: 24px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.contact-us-info-desc {
+  margin: 16px 0 0 0;
+}
+
+.contact-us-info-holiday {
+  font-size: 18px;
+  letter-spacing: -1px;
+  margin: 16px 0 0 0;
+}
+
+.contact-us-info-container {
+  background-color: #cce0ee;
+  padding: 40px;
+}
+
+.contact-us-info-title,
+.contact-us-form-title {
+  font-size: 32px;
+  color: #08090E;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.contact-us-icon-info-container {
+  display: flex;
+  margin-top: 1.5rem;
 }
 
 /* FOOTER */
@@ -755,7 +885,8 @@ footer {
   padding-left: 0px;
 }
 
-.footer-section-icon-container {
+.footer-section-icon-container,
+.contact-us-icon-container {
   margin-top: 0;
   padding: 0 10px 0 0;
   display: flex;
@@ -763,7 +894,8 @@ footer {
   align-items: start;
 }
 
-.footer-section-info-container {
+.footer-section-info-container,
+.contact-us-ctc-info-container {
   margin-top: 0;
   padding-left: 0px;
   display: flex;
@@ -771,7 +903,8 @@ footer {
   align-items: start;
 }
 
-.footer-contact-info {
+.footer-contact-info,
+.contact-info {
   list-style-type: none;
   padding-bottom: 16px;
 }
@@ -781,13 +914,19 @@ footer {
   text-decoration: none;
 }
 
+.contact-info > a {
+  color: #08090E;
+  text-decoration: none;
+}
+
 .footer-contact-info > a:hover,
 .footer-contact-info > a:focus {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.footer-contact-info > a > address {
+.footer-contact-info > a > address,
+.contact-info > a > address {
   display: inline-block;
   font-style: normal;
 }

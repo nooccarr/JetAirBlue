@@ -23,7 +23,7 @@ const App = () => {
           <Route path='plane-tours' element={<PlaneTours />} />
           <Route path='classic-manhattan-plane-tour' element={<ClassicManhattanPlaneTour />} />
           <Route path='deluxe-manhattan-plane-tour' element={<DeluxeManhattanPlaneTour />} />
-          <Route path='vip-manhattan-plane-tour' element={<VipManhattanPlaneTour />} />
+          {/* <Route path='vip-manhattan-plane-tour' element={<VipManhattanPlaneTour />} /> */}
           <Route path='montauk-plane-tour' element={<MontaukPlaneTour />} />
           <Route path='about-us' element={<AboutUs />} />
           <Route path='contact-us' element={<ContactUs />} />
