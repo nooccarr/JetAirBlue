@@ -688,6 +688,15 @@ header {
   background-color: #f2f2f2;
 }
 
+.about-us-intro-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.about-us-intro-text-container {
+  padding-right: 20px;
+
+}
 .about-us-title {
   text-transform: capitalize;
   margin: 0;
@@ -706,6 +715,12 @@ header {
   color: #08090e;
 }
 
+.about-us-intro-image-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 20px;
+
+}
 .about-us-bold {
   display: block;
   margin-top: 24px;
@@ -716,14 +731,31 @@ header {
 
 .about-us-ul {
   padding-left: 20px;
-
 }
+
 .about-us-info-section-container {
   background-color: #fff;
   padding: 40px;
   margin-left: -20px;
   margin-top: 40px;
 }
+
+.crew-staff-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 40px;
+}
+
+.crew-li {
+  margin: 24px 0 0 0;
+  font-size: 18px;
+}
+
+.staff-ul {
+  padding-left: 20px;
+}
+
+
 
 /* FOOTER */
 footer {

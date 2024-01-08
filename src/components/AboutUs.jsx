@@ -30,14 +30,14 @@ const AboutUs = () => {
   );
 
   const aboutUsIntro = () => (
-    <div>
-      <div>
+    <div className='about-us-intro-section'>
+      <div className='about-us-intro-text-container'>
         <h3 className='about-us-title'>who are we?</h3>
         <p className='about-us-description'>Our team of professionals at Manhattan Helicopters cares about the experience our clients have. We are committed to having you walk away happy, satisfied and in awe of your one-of-a-kind helicopter tour of New York City. While there are a handful of different Manhattan helicopter tours from which you can choose from, not all of the companies should be entrusted with your experience and safety. Take the guesswork out of choosing a tour company, by allowing Manhattan Helicopters to provide you with an affordable, safe, unforgettable New York City experience.</p>
       </div>
-      {/* <div> TODO: add image
-        <img />
-      </div> */}
+      <div className='about-us-intro-image-container'>
+        <img src='https://placehold.co/200x200' />
+      </div>
     </div>
   );
 
@@ -72,15 +72,16 @@ const AboutUs = () => {
   );
 
   const crewStaffList = () => (
-    <div className='grid-container'>
+    <div className='crew-staff-container'>
       <div className='grid-item-1'>
-        <h3>Crew</h3>
+        <h3 className='about-us-title'>Crew</h3>
         {captains.map((captain, index) => (
-          <h5 key={index}>Captain: {captain}</h5>
+          <h5 key={index} className='crew-li'>Captain: {captain}</h5>
         ))}
       </div>
       <div className='grid-item-2'>
-        <ul>
+        <h3 className='about-us-title'>Jet Air Blue Staff</h3>
+        <ul className='staff-ul'>
           {staffs.map((staff, index) => (
             <li key={index}>
               <strong>{staff.position}: </strong>
