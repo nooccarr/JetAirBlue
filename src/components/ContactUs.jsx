@@ -1,8 +1,9 @@
+import TopImageSection from "./TopImageSection";
 const ContactUs = () => {
   return (
-    <div className='page-wrapper'>
-      <h2>Contact Us page content</h2>
-    </div>
+    <main className='page-container'>
+      <TopImageSection title='Contact Us' description='Customer Service Lines are Open from 10am-5pm' />
+    </main>
   );
 };
 

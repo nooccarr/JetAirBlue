@@ -2,7 +2,7 @@ import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
-import VipManhattanCard from '../assets/images/related-vip-manhattan-card.jpg';
+import MontaukCard from '../assets/images/related-montauk.jpg';
 import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
 import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
@@ -22,10 +22,10 @@ const relatedTours = [
     description: 'An exciting and comprehensive airplane tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: DeluxeManhattanCard
   },
-    {
-    title: 'VIP Manhattan Plane Tour',
-    description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! With the extended route and approximately 60-minute duration, you’ll be sure to feel like a VIP on the VIP Tour!',
-    image: VipManhattanCard
+  {
+    title: 'Montauk Plane Tour',
+    description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! Departing from the Republic Airport (Farmingdale, LI), the Montauk Tour will treat you to the best views of Long Island including the Jones Beach, East Hampton, and Montauk.',
+    image: MontaukCard
   }
 ]
 
