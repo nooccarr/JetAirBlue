@@ -700,7 +700,8 @@ header {
 }
 
 /* ABOUT US */
-.about-us-container {
+.about-us-container,
+.contact-us-container {
   margin: 0 auto;
   padding: 80px 20px;
   max-width: 1280px;
@@ -737,7 +738,7 @@ header {
 .about-us-intro-image-container {
   display: flex;
   justify-content: center;
-  padding-left: 20px;
+  margin-top: 24px;
 
 }
 .about-us-bold {
@@ -774,7 +775,85 @@ header {
   padding-left: 20px;
 }
 
+/* CONTACT US */
+.contact-us-form {
+  background-color: #fff;
+  padding: 40px 60px 40px 40px;
+  margin-left: -20px;
+}
 
+.contact-us-form-info-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.contact-us-input-container {
+  margin-top: 16px;
+  padding-right: 16px;
+}
+
+.contact-us-input-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-us-input {
+  background-color: #FAFBFC;
+  border: 1px solid #9badb8;
+  border-radius: 4px;
+  padding: 5px 4px;
+  color: #152833;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 14px;
+}
+
+.contact-us-textarea {
+  background-color: #FAFBFC;
+  border: 1px solid #9badb8;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: #152833;
+  width: 100%;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.contact-us-info-hours {
+  font-size: 24px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.contact-us-info-desc {
+  margin: 16px 0 0 0;
+}
+
+.contact-us-info-holiday {
+  font-size: 18px;
+  letter-spacing: -1px;
+  margin: 16px 0 0 0;
+}
+
+.contact-us-info-container {
+  background-color: #cce0ee;
+  padding: 40px;
+}
+
+.contact-us-info-title,
+.contact-us-form-title {
+  font-size: 32px;
+  color: #08090E;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.contact-us-icon-info-container {
+  display: flex;
+  margin-top: 1.5rem;
+}
 
 /* FOOTER */
 footer {
@@ -806,7 +885,8 @@ footer {
   padding-left: 0px;
 }
 
-.footer-section-icon-container {
+.footer-section-icon-container,
+.contact-us-icon-container {
   margin-top: 0;
   padding: 0 10px 0 0;
   display: flex;
@@ -814,7 +894,8 @@ footer {
   align-items: start;
 }
 
-.footer-section-info-container {
+.footer-section-info-container,
+.contact-us-ctc-info-container {
   margin-top: 0;
   padding-left: 0px;
   display: flex;
@@ -822,7 +903,8 @@ footer {
   align-items: start;
 }
 
-.footer-contact-info {
+.footer-contact-info,
+.contact-info {
   list-style-type: none;
   padding-bottom: 16px;
 }
@@ -832,13 +914,19 @@ footer {
   text-decoration: none;
 }
 
+.contact-info > a {
+  color: #08090E;
+  text-decoration: none;
+}
+
 .footer-contact-info > a:hover,
 .footer-contact-info > a:focus {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.footer-contact-info > a > address {
+.footer-contact-info > a > address,
+.contact-info > a > address {
   display: inline-block;
   font-style: normal;
 }
