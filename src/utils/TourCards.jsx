@@ -18,7 +18,7 @@ const tourCard = ({ title, description, image }, classname) => (
   </div>
 );
 
-const tourCardList = (tours, classname) => (
+export const tourCardList = (tours, classname) => (
   <div className='tour-card-list'>
     {tours.map(tour => tourCard(tour, classname))}
   </div>
