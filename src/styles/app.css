@@ -160,7 +160,6 @@ header {
 
 /* HOME */
 .home-main-image-top-container {
-  height: 95vh;
   position: relative;
   background-image: url('../assets/images/home-carousel-top.jpg');
   background-size: cover;
@@ -168,6 +167,8 @@ header {
   background-position: center center;
   background-color: rgba(34, 34, 34, 0.3);
   background-blend-mode: multiply;
+  height: 1080px;
+  /* height: 95vh; */
   /* height: 550px; */
 }
 
@@ -701,7 +702,8 @@ header {
 
 /* ABOUT US */
 .about-us-container,
-.contact-us-container {
+.contact-us-container,
+.faq-container {
   margin: 0 auto;
   padding: 80px 20px;
   max-width: 1280px;
@@ -854,6 +856,27 @@ header {
   display: flex;
   margin-top: 1.5rem;
 }
+
+/* FAQ */
+.faq-info-ctc-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.faq-info-title {
+  font-size: 32px;
+  color: #08090E;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.faq-contact-us-form {
+  background-color: #cce0ee;
+  padding: 40px 40px 40px 40px;
+}
+
 
 /* FOOTER */
 footer {
