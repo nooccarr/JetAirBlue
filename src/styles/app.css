@@ -160,7 +160,6 @@ header {
 
 /* HOME */
 .home-main-image-top-container {
-  height: 95vh;
   position: relative;
   background-image: url('../assets/images/home-carousel-top.jpg');
   background-size: cover;
@@ -168,6 +167,8 @@ header {
   background-position: center center;
   background-color: rgba(34, 34, 34, 0.3);
   background-blend-mode: multiply;
+  height: 1080px;
+  /* height: 95vh; */
   /* height: 550px; */
 }
 
@@ -273,11 +274,33 @@ header {
   flex-wrap: wrap;
 }
 
+.plane-tour-card-list {
+  /* display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
 .tour-card-container {
   max-width: 360px;
   margin: 24px 24px 24px;
   border-radius: 10px;
   /* height: 100%; */
+  background-color: #fff;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+.plane-tours-paragraph {
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.plane-tour-card-container {
+  /* max-width: 360px;
+  margin: 24px 24px 24px; */
+  border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
 }
@@ -540,6 +563,24 @@ header {
   object-fit: cover;
 }
 
+/* PLANE TOURS */
+.plane-tours-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 80px 20px;
+}
+
+.plane-tours-divider-container {
+  margin: 0;
+  padding: 50px 0 65px 0;
+}
+
+.plane-tours-divider {
+  background-color: #dfdfdf;
+  border: none;
+  height: 1px;
+}
+
 /* PLANE TOUR */
 .plane-tour-container {
   margin: 0 auto;
@@ -701,17 +742,20 @@ header {
 
 /* ABOUT US */
 .about-us-container,
-.contact-us-container {
+.contact-us-container,
+.faq-container {
   margin: 0 auto;
   padding: 80px 20px;
   max-width: 1280px;
   background-color: #f2f2f2;
 }
 
-.about-us-intro-section {
+.about-us-intro-section,
+.plane-tour-outro-section {
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
+
 
 .about-us-intro-text-container {
   padding-right: 20px;
@@ -854,6 +898,27 @@ header {
   display: flex;
   margin-top: 1.5rem;
 }
+
+/* FAQ */
+.faq-info-ctc-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.faq-info-title {
+  font-size: 32px;
+  color: #08090E;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.faq-contact-us-form {
+  background-color: #cce0ee;
+  padding: 40px 40px 40px 40px;
+}
+
 
 /* FOOTER */
 footer {

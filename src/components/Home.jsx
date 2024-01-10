@@ -131,18 +131,19 @@ const Home = () => {
   return (
     <div className='page-container'>
       {imageTop}
-      <TourCards title={'Choose a Plane Tour'} tours={tours} />
+      <section className='home-why-choose-us-container'>
+        <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
+        {valueList}
+      </section>
       {imagesCarousel(tours)}
+      <TourCards title={'Choose a Plane Tour'} tours={tours} />
       <section className='home-request-info-container'>
         {requestInfo}
         <div>
           <img className='home-request-info-image' src={HomeRequestInfo} />
         </div>
       </section>
-      <section className='home-why-choose-us-container'>
-        <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
-        {valueList}
-      </section>
+
     </div>
 
   );

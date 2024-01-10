@@ -1,8 +1,83 @@
+import TopImageSection from "./TopImageSection";
+import ClassicManhattanCard from '../assets/images/home-classic-manhattan-card.jpg';
+import DeluxeManhattanCard from '../assets/images/home-deluxe-manhattan-card.jpg';
+import MontaukCard from '../assets/images/home-montauk-card.jpg';
+import { coloredButton, clearButton } from '../utils/Button';
+
+const tours = [
+  {
+    title: 'Classic Manhattan Plane Tour',
+    description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
+    image: ClassicManhattanCard
+  },
+  {
+    title: 'Deluxe Manhattan Plane Tour',
+    description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
+    image: DeluxeManhattanCard
+  },
+    {
+    title: 'Montauk Plane Tour',
+    description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
+    image: MontaukCard
+  },
+];
+
 const PlaneTours = () => {
-  return (
-    <div className='page-wrapper'>
-      <h2>Plane Tours page content</h2>
+  const tourCard = ({ title, description, image }) => (
+    <div className='plane-tour-card-container' key={title}>
+      <div className='tour-card-image-container'>
+        <img src={image} className='tour-card-image' />
+      </div>
+      <div className='tour-card-text-container'>
+        <div>
+          <h4 className='tour-card-title'>{title}</h4>
+          <p className='tour-card-description'>{description}</p>
+        </div>
+        <div className='tour-card-button-container'>
+          {coloredButton('book now')}
+          {clearButton('learn more')}
+        </div>
+      </div>
     </div>
+  );
+
+  const tourCardList = (tours) => (
+    <div className='plane-tour-card-list'>
+      {tours.map(tour => tourCard(tour))}
+    </div>
+  );
+
+  const tourCardSection = (tours) => (
+    <section>
+      <p className='plane-tours-paragraph'>Take to the skies and see Manhattan from breathtaking new heights! Our unique helicopter tours show you the best of the many world-famous landmarks New York City has to offer.</p>
+      {tourCardList(tours)}
+    </section>
+  );
+
+  const planeToursOutro = (
+    <div className='plane-tour-outro-section'>
+      <div className='about-us-intro-text-container'>
+        <h3 className='about-us-title'>who are we?</h3>
+        <p className='about-us-description'>Our team of professionals at Manhattan Helicopters cares about the experience our clients have. We are committed to having you walk away happy, satisfied and in awe of your one-of-a-kind helicopter tour of New York City. While there are a handful of different Manhattan helicopter tours from which you can choose from, not all of the companies should be entrusted with your experience and safety. Take the guesswork out of choosing a tour company, by allowing Manhattan Helicopters to provide you with an affordable, safe, unforgettable New York City experience.</p>
+      </div>
+      <div className='about-us-intro-image-container'>
+        <img src='https://placehold.co/200x200' />
+      </div>
+    </div>
+  );
+
+
+  return (
+    <main className='page-container'>
+      <TopImageSection title='Jet Air Blue Plane Tours' />
+      <div className='plane-tours-container'>
+        {tourCardSection(tours)}
+        <div className='plane-tours-divider-container'>
+          <hr className='plane-tours-divider'></hr>
+        </div>
+        {planeToursOutro}
+      </div>
+    </main>
   );
 };
 
