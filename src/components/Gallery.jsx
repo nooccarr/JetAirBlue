@@ -1,24 +1,16 @@
 import TopImageSection from './TopImageSection';
 import { useState } from 'react';
 import { Gallery as GridGallery } from 'react-grid-gallery';
-import Lightbox from 'react-18-image-lightbox';
-import "react-18-image-lightbox/style.css";
+import { Lightbox } from "react-modal-image";
 import { IMAGES } from './Images';
-
 
 const Gallery = () => {
   const [index, setIndex] = useState(-1);
 
   const currentImage = IMAGES[index];
-  const nextIndex = (index + 1) % IMAGES.length;
-  const nextImage = IMAGES[nextIndex] || currentImage;
-  const prevIndex = (index + IMAGES.length - 1) % IMAGES.length;
-  const prevImage = IMAGES[prevIndex] || currentImage;
 
-  const handleClick = (index, item) => setIndex(index);
+  const handleClick = (index, _) => setIndex(index);
   const handleClose = () => setIndex(-1);
-  const handleMovePrev = () => setIndex(prevIndex);
-  const handleMoveNext = () => setIndex(nextIndex);
 
   return (
     <main className='page-container'>
@@ -33,16 +25,8 @@ const Gallery = () => {
         />
         {!!currentImage && (
           <Lightbox
-            mainSrc={currentImage.original}
-            imageTitle={currentImage.caption}
-            mainSrcThumbnail={currentImage.src}
-            nextSrc={nextImage.original}
-            nextSrcThumbnail={nextImage.src}
-            prevSrc={prevImage.original}
-            prevSrcThumbnail={prevImage.src}
-            onCloseRequest={handleClose}
-            onMovePrevRequest={handleMovePrev}
-            onMoveNextRequest={handleMoveNext}
+            large={IMAGES[index].original}
+            onClose={handleClose}
           />
         )}
       </div>
