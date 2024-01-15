@@ -13,7 +13,7 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 const tours = [
   {
     title: 'Classic Manhattan Plane Tour',
-    description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
+    description: 'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
     image: ClassicManhattanCard,
     carouselImage: HomeBottomCarouselFirst
   },

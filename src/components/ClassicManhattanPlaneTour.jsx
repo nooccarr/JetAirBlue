@@ -12,8 +12,36 @@ const tour = {
   title: 'classic manhattan plane tour',
   duration: '60 Minutes',
   availability: 'Monday-Sunday 10:00am-5:00pm',
-  description: ['Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.'],
-  sights: ['Statue of Liberty', 'Ellis Island', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Financial District', 'Empire State Building', 'Chrysler Building', 'Times Square', 'Central Park', 'U.S.S. Intrepid Sea, Air & Space Museum']
+  // description: ['Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.'],
+  // sights: ['Statue of Liberty', 'Ellis Island', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Financial District', 'Empire State Building', 'Chrysler Building', 'Times Square', 'Central Park', 'U.S.S. Intrepid Sea, Air & Space Museum']
+  description: [
+
+'Get ready for an exciting adventure with our Fantastic Manhattan Scenic Flight departing from Long Island Republic Airport in Farmingdale, New York.',
+
+'As the plane takes off, you\'ll cruise westward over the George Washington Bridge, catching a glimpse of Long Island\'s north coastline. Keep an eye out for the New Jersey Twin Towers on your right, standing tall in the distance. On the left, you\'ll pass the St. Patrick\'s Cathedral, cruise over Central Park, and get a peek at iconic landmarks like the Chrysler Building and the World Trade Center.',
+
+'Head south over the Hudson River, where you\'ll see JFK Airport, the Verrazano Bridge, and the laid-back vibes of Jones Beach. Finally, we\'ll loop back to Long Island Republic Airport, completing an exhilarating tour that covers all the must-see spots.',
+
+'This Fantastic Manhattan Scenic Flight is the perfect blend of fun and adventure – so buckle up and get ready for an unforgettable ride over the city that never sleeps!'
+  ],
+  sights: [
+    'George Washington Bridge',
+    'New Jersey Twin Towers',
+    'St. Patrick\'s Cathedral',
+    'Central Park',
+    'U.S.S. Intrepid Sea, Air & Space Museum',
+    'Times Square',
+    'Chrysler Building',
+    'Empire State Building',
+    'One World Trade Center',
+    'Financial District',
+    '9/11 Memorial * Battery Park',
+    'Statue of Liberty',
+    'Ellis Island',
+    'Verazzano Bridge',
+    'JFK Airport',
+    'Jones Beach',
+  ]
 };
 
 const relatedTours = [
@@ -59,7 +87,7 @@ const ClassicManhattanPlaneTour = () => {
           </li>
         </ul>
       </div>
-      <h3 className='tour-info-section-sighting-title'>The Ride of a Lifetime</h3>
+      <h3 className='tour-info-section-sighting-title'>Fantastic Manhattan Scenic Flight</h3>
       <div className='tour-info-section-sighting-description-container'>
         {description.map((paragraph, index) => (
           <p className='tour-info-section-sighting-description' key={index}>{`${paragraph}`}</p>
