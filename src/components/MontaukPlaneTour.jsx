@@ -1,6 +1,7 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
 import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
@@ -18,11 +19,13 @@ const tour = {
 
 const relatedTours = [
   {
+    slug: 'classic-manhattan-plane-tour',
     title: 'Classic Manhattan Plane Tour',
     description: 'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
     image: ClassicManhattanCard
   },
   {
+    slug: 'deluxe-manhattan-plane-tour',
     title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive airplane tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: DeluxeManhattanCard
@@ -107,7 +110,7 @@ const MontaukPlaneTour = () => {
     </div>
   );
 
-const tourCard = ({ title, description, image }) => (
+const tourCard = ({ slug, title, description, image }) => (
   <div className='tour-card-container related-tour-card-container' key={title}>
     <div className='tour-card-image-container related-tour-card-image-container'>
       <img src={image} className='tour-card-image' />
@@ -119,7 +122,9 @@ const tourCard = ({ title, description, image }) => (
       </div>
       <div className='tour-card-button-container'>
         {coloredButton('book now')}
-        {clearButton('learn more')}
+        <Link to={`../${slug}`} className='tour-card-button-link'>
+          {clearButton('learn more')}
+        </Link>
       </div>
     </div>
   </div>

@@ -1,5 +1,6 @@
 import { Carousel } from 'react-responsive-carousel';
 import { coloredButton, clearButton } from '../utils/Button';
+import { Link } from 'react-router-dom';
 import TourCards from '../utils/TourCards';
 import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
 import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.jpeg';
@@ -12,18 +13,21 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const tours = [
   {
+    slug: 'classic-manhattan-plane-tour',
     title: 'Classic Manhattan Plane Tour',
     description: 'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
     image: ClassicManhattanCard,
     carouselImage: HomeBottomCarouselFirst
   },
   {
+    slug: 'deluxe-manhattan-plane-tour',
     title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: DeluxeManhattanCard,
     carouselImage: HomeBottomCarouselSecond
   },
-    {
+  {
+    slug: 'montauk-plane-tour',
     title: 'Montauk Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: MontaukCard,
@@ -52,19 +56,18 @@ const values = [
 
 const Home = () => {
   const imageTop = (
-      <div className='home-main-image-top-container'>
-      {/* <img src='https://placehold.co/1920x1080' /> */}
-        {/* <div className='home-main-image-top'> */}
-        <div className='caption-container'>
-          <h1 className='caption-title'>jet air blue planes</h1>
-          <p className='caption-description'>breathtaking plane tours over new york city</p>
-          <div className='caption-button-container'>
-            {coloredButton('book a plane tour', 'home-book-now-button')}
-          </div>
+    <div className='home-main-image-top-container'>
+    {/* <img src='https://placehold.co/1920x1080' /> */}
+      {/* <div className='home-main-image-top'> */}
+      <div className='caption-container'>
+        <h1 className='caption-title'>jet air blue planes</h1>
+        <p className='caption-description'>breathtaking plane tours over new york city</p>
+        <div className='caption-button-container'>
+          {coloredButton('book a plane tour', 'home-book-now-button')}
         </div>
-        {/* </div> */}
       </div>
-    // </Carousel>
+      {/* </div> */}
+    </div>
   );
 
   const imagesCarousel = (tours) => (
@@ -75,7 +78,11 @@ const Home = () => {
           <div className='bottom-carousel-caption-container'>
             <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
             <p className='bottom-carousel-caption-description'>{tour.description}</p>
-            <div className='bottom-carousel-caption-button-container'>{coloredButton('learn more', 'home-learn-more-button')}</div>
+            <div className='bottom-carousel-caption-button-container'>
+              <Link to={tour.slug}>
+                {coloredButton('learn more', 'home-learn-more-button')}
+              </Link>
+            </div>
           </div>
         </div>
       ))}

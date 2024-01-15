@@ -1,6 +1,7 @@
 import { coloredButton, clearButton } from './Button';
+import { Link } from 'react-router-dom';
 
-const tourCard = ({ title, description, image }, classname) => (
+const tourCard = ({ slug, title, description, image }, classname) => (
   <div className={`tour-card-container ${classname}`} key={title}>
     <div className='tour-card-image-container'>
       <img src={image} className='tour-card-image' />
@@ -12,7 +13,9 @@ const tourCard = ({ title, description, image }, classname) => (
       </div>
       <div className='tour-card-button-container'>
         {coloredButton('book now')}
-        {clearButton('learn more')}
+        <Link to={slug} className='tour-card-button-link'>
+          {clearButton('learn more')}
+        </Link>
       </div>
     </div>
   </div>

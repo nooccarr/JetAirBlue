@@ -1,6 +1,7 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import MontaukCard from '../assets/images/related-montauk.jpg';
 import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
@@ -18,12 +19,14 @@ const tour = {
 
 const relatedTours = [
   {
+    slug: 'classic-manhattan-plane-tour',
     title: 'Classic Manhattan Plane Tour',
     // description: 'Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
     description: 'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
     image: ClassicManhattanCard
   },
   {
+    slug: 'montauk-plane-tour',
     title: 'Montauk Plane Tour',
     description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! Departing from the Republic Airport (Farmingdale, LI), the Montauk Tour will treat you to the best views of Long Island including the Jones Beach, East Hampton, and Montauk.',
     image: MontaukCard
@@ -110,7 +113,7 @@ const DeluxeManhattanPlaneTour = () => {
     </div>
   );
 
-const tourCard = ({ title, description, image }) => (
+const tourCard = ({ slug, title, description, image }) => (
   <div className='tour-card-container related-tour-card-container' key={title}>
     <div className='tour-card-image-container related-tour-card-image-container'>
       <img src={image} className='tour-card-image' />
@@ -122,7 +125,9 @@ const tourCard = ({ title, description, image }) => (
       </div>
       <div className='tour-card-button-container'>
         {coloredButton('book now')}
-        {clearButton('learn more')}
+        <Link to={`../${slug}`} className='tour-card-button-link'>
+          {clearButton('learn more')}
+        </Link>
       </div>
     </div>
   </div>
