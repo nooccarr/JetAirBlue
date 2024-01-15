@@ -228,6 +228,17 @@ header {
   color: #fff;
   text-transform: capitalize;
   padding-bottom: 20px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.bottom-carousel-caption-title:hover,
+.bottom-carousel-caption-title:focus {
+  opacity: 0.7;
+}
+
+.bottom-carousel-caption-title-link {
+  text-decoration: none;
 }
 
 .bottom-carousel-caption-description {
@@ -333,7 +344,12 @@ header {
   padding: 20px;
 }
 
+.tour-card-title-link {
+  text-decoration: none;
+}
+
 .tour-card-title {
+  color: #333;
   line-height: 1;
   margin-top: 6px;
   margin-bottom: 20px;
@@ -342,6 +358,14 @@ header {
   transition: 0.3s;
 }
 
+.tour-card-title:hover,
+.tour-card-title:focus {
+  color: gray;
+  cursor: pointer;
+}
+
+.tour-card-image-container:hover,
+.tour-card-image-container:focus,
 .related-tour-card-title:hover,
 .related-tour-card-title:focus,
 .related-tour-card-image-container:hover,
@@ -402,6 +426,8 @@ header {
   background-color: #060d17;
   opacity: 1;
   transition: 0.3s;
+  /* text-decoration: none; */
+
 }
 
 .home-book-now-button:hover,
@@ -416,8 +442,7 @@ header {
 
 .clear-button {
   padding: 12px;
-  margin-top: auto;
-  width: 48%;
+  width: 100%;
   text-transform: uppercase;
   border: 1px solid #cfcfcf;
   border-radius: 5px;
@@ -425,6 +450,11 @@ header {
   color: #505152;
   opacity: 0.7;
   transition: 0.3s;
+}
+
+.tour-card-button-link {
+  margin-top: auto;
+  width: 48%;
 }
 
 .clear-button:hover,
@@ -439,6 +469,39 @@ header {
 .home-request-button {
   padding: 20px;
   border-radius: 40px;
+}
+
+/* ABOUT TOUR*/
+.about-tour-section {
+  border-top: 3px solid rgb(92 128 160);
+  border-bottom: 3px solid rgb(92 128 160);
+  background-color: #242325;
+  padding: 80px 20px;
+}
+
+.about-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  color: #fff;
+}
+
+.about-tour-title {
+  margin: 0;
+  padding-bottom: 1.2rem;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.about-tour-description {
+  text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.75px;
+    line-height: 1.5;
+    color: #fff;
+    padding-bottom: 1.2rem;
 }
 
 /* WHY CHOOSE US */

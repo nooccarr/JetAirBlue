@@ -1,6 +1,8 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
+import useScrollTop from './hooks/useScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
 import MontaukCard from '../assets/images/related-montauk.jpg';
 import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
@@ -12,17 +14,43 @@ const tour = {
   title: 'classic manhattan plane tour',
   duration: '60 Minutes',
   availability: 'Monday-Sunday 10:00am-5:00pm',
-  description: ['Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.'],
-  sights: ['Statue of Liberty', 'Ellis Island', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Financial District', 'Empire State Building', 'Chrysler Building', 'Times Square', 'Central Park', 'U.S.S. Intrepid Sea, Air & Space Museum']
+  // description: ['Take a flight that you will remember for a lifetime! Departing from the Republic Airport (Farmingdale, LI), the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.'],
+  // sights: ['Statue of Liberty', 'Ellis Island', 'One World Trade Center', '9/11 Memorial * Battery Park', 'Financial District', 'Empire State Building', 'Chrysler Building', 'Times Square', 'Central Park', 'U.S.S. Intrepid Sea, Air & Space Museum']
+  description: [
+    'Get ready for an exciting adventure with our Fantastic Manhattan Scenic Flight departing from Long Island Republic Airport in Farmingdale, New York.',
+    'As the plane takes off, you\'ll cruise westward over the George Washington Bridge, catching a glimpse of Long Island\'s north coastline. Keep an eye out for the New Jersey Twin Towers on your right, standing tall in the distance. On the left, you\'ll pass the St. Patrick\'s Cathedral, cruise over Central Park, and get a peek at iconic landmarks like the Chrysler Building and the World Trade Center.',
+    'Head south over the Hudson River, where you\'ll see JFK Airport, the Verrazano Bridge, and the laid-back vibes of Jones Beach. Finally, we\'ll loop back to Long Island Republic Airport, completing an exhilarating tour that covers all the must-see spots.',
+    'This Fantastic Manhattan Scenic Flight is the perfect blend of fun and adventure – so buckle up and get ready for an unforgettable ride over the city that never sleeps!'
+  ],
+  sights: [
+    'George Washington Bridge',
+    'New Jersey Twin Towers',
+    'St. Patrick\'s Cathedral',
+    'Central Park',
+    'U.S.S. Intrepid Sea, Air & Space Museum',
+    'Times Square',
+    'Chrysler Building',
+    'Empire State Building',
+    'One World Trade Center',
+    'Financial District',
+    '9/11 Memorial * Battery Park',
+    'Statue of Liberty',
+    'Ellis Island',
+    'Verazzano Bridge',
+    'JFK Airport',
+    'Jones Beach',
+  ]
 };
 
 const relatedTours = [
   {
+    slug: 'deluxe-manhattan-plane-tour',
     title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive airplane tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: DeluxeManhattanCard
   },
   {
+    slug: 'montauk-plane-tour',
     title: 'Montauk Plane Tour',
     description: 'All aboard for the most spectacular and unforgettable experience of your New York visit! Departing from the Republic Airport (Farmingdale, LI), the Montauk Tour will treat you to the best views of Long Island including the Jones Beach, East Hampton, and Montauk.',
     image: MontaukCard
@@ -30,7 +58,7 @@ const relatedTours = [
 ]
 
 const ClassicManhattanPlaneTour = () => {
-
+  useScrollTop();
 
   const topImageSection = (title) => (
     <div className='tour-main-image-container'>
@@ -59,7 +87,7 @@ const ClassicManhattanPlaneTour = () => {
           </li>
         </ul>
       </div>
-      <h3 className='tour-info-section-sighting-title'>The Ride of a Lifetime</h3>
+      <h3 className='tour-info-section-sighting-title'>Fantastic Manhattan Scenic Flight</h3>
       <div className='tour-info-section-sighting-description-container'>
         {description.map((paragraph, index) => (
           <p className='tour-info-section-sighting-description' key={index}>{`${paragraph}`}</p>
@@ -111,19 +139,25 @@ const ClassicManhattanPlaneTour = () => {
     </div>
   );
 
-const tourCard = ({ title, description, image }) => (
+const tourCard = ({ slug, title, description, image }) => (
   <div className='tour-card-container related-tour-card-container' key={title}>
     <div className='tour-card-image-container related-tour-card-image-container'>
-      <img src={image} className='tour-card-image' />
+      <Link to={`../${slug}`}>
+        <img src={image} className='tour-card-image' />
+      </Link>
     </div>
     <div className='tour-card-text-container'>
       <div>
-        <h4 className='tour-card-title related-tour-card-title'>{title}</h4>
+        <Link to={`../${slug}`} className='tour-card-title-link'>
+          <h4 className='tour-card-title related-tour-card-title'>{title}</h4>
+        </Link>
         <p className='tour-card-description related-tour-card-description'>{description}</p>
       </div>
       <div className='tour-card-button-container'>
         {coloredButton('book now')}
-        {clearButton('learn more')}
+        <Link to={`../${slug}`} className='tour-card-button-link'>
+          {clearButton('learn more')}
+        </Link>
       </div>
     </div>
   </div>

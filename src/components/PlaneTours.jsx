@@ -1,21 +1,26 @@
 import TopImageSection from "./TopImageSection";
+import useScrollTop from "./hooks/useScrollTop";
 import ClassicManhattanCard from '../assets/images/home-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/home-deluxe-manhattan-card.jpg';
 import MontaukCard from '../assets/images/home-montauk-card.jpg';
+import { Link } from 'react-router-dom';
 import { coloredButton, clearButton } from '../utils/Button';
 
 const tours = [
   {
+    slug: 'classic-manhattan-plane-tour',
     title: 'Classic Manhattan Plane Tour',
-    description: 'Take a flight that you will remember for a lifetime! Departing from the Downtown Manhattan Heliport, the Classic Manhattan Tour begins at the majestic the Statue of Liberty, followed by the world-famous Manhattan Skyline.',
+    description: 'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
     image: ClassicManhattanCard
   },
   {
+    slug: 'deluxe-manhattan-plane-tour',
     title: 'Deluxe Manhattan Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: DeluxeManhattanCard
   },
-    {
+  {
+    slug: 'montauk-plane-tour',
     title: 'Montauk Plane Tour',
     description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
     image: MontaukCard
@@ -23,19 +28,27 @@ const tours = [
 ];
 
 const PlaneTours = () => {
-  const tourCard = ({ title, description, image }) => (
+  useScrollTop();
+
+  const tourCard = ({ slug, title, description, image }) => (
     <div className='plane-tour-card-container' key={title}>
       <div className='tour-card-image-container'>
-        <img src={image} className='tour-card-image' />
+        <Link to={`../${slug}`}>
+          <img src={image} className='tour-card-image' />
+        </Link>
       </div>
       <div className='tour-card-text-container'>
         <div>
-          <h4 className='tour-card-title'>{title}</h4>
+          <Link to={`../${slug}`} className='tour-card-title-link'>
+            <h4 className='tour-card-title'>{title}</h4>
+          </Link>
           <p className='tour-card-description'>{description}</p>
         </div>
         <div className='tour-card-button-container'>
           {coloredButton('book now')}
-          {clearButton('learn more')}
+          <Link to={`../${slug}`} className='tour-card-button-link'>
+            {clearButton('learn more')}
+          </Link>
         </div>
       </div>
     </div>

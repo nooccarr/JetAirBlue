@@ -1,4 +1,5 @@
 import TopImageSection from "./TopImageSection";
+import useScrollTop from "./hooks/useScrollTop";
 const reasons = ['10+ Years of Tour Experience', 'Affordable Prices', 'Great Customer Service', 'Modern Helicopters', 'Our friendly staff and personable pilots will go out of their way to make sure you feel comfortable and have fun throughout the entire flight.', 'There is No Language Barrier', 'Having given New York City helicopter tours for years we understand that the city is a true melting pot of cultures. This is why we are proud to offer tours in multiple languages'];
 const languages = ['English', 'Korean', 'Chinese', 'Japanese', 'Portugese', 'Spanish'];
 const captains = ['Raffaele Molfetta', 'Adam Chunn', 'Dillon Schroder', 'Matthew Layden', 'Benjamin Bodnar', 'Michael Conte', 'Laura Douvier', 'Jonah Garber', 'Dewayne Goar', 'Wojciech Grodnicki', 'Edward Huerta Jr', 'Jena Kendall', 'Aldan McNeil', 'Alexander Ralston', 'Robert Rodgame', 'David Sundlof', 'Moises Torres'];
@@ -19,7 +20,7 @@ const staffs = [
 ]
 
 const AboutUs = () => {
-
+  useScrollTop();
 
 
   const aboutUsIntro = () => (
