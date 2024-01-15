@@ -1,4 +1,5 @@
 import TopImageSection from "./TopImageSection";
+import useScrollTop from "./hooks/useScrollTop";
 import ClassicManhattanCard from '../assets/images/home-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/home-deluxe-manhattan-card.jpg';
 import MontaukCard from '../assets/images/home-montauk-card.jpg';
@@ -27,6 +28,8 @@ const tours = [
 ];
 
 const PlaneTours = () => {
+  useScrollTop();
+
   const tourCard = ({ slug, title, description, image }) => (
     <div className='plane-tour-card-container' key={title}>
       <div className='tour-card-image-container'>

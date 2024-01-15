@@ -1,4 +1,5 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
+import useScrollTop from './hooks/useScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
@@ -34,6 +35,8 @@ const relatedTours = [
 ];
 
 const DeluxeManhattanPlaneTour = () => {
+  useScrollTop();
+
   const topImageSection = (title) => (
     <div className='tour-main-image-container'>
       <section className='tour-main-image'>

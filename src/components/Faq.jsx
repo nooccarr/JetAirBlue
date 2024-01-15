@@ -1,4 +1,5 @@
 import TopImageSection from "./TopImageSection";
+import useScrollTop from "./hooks/useScrollTop";
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';
@@ -100,8 +101,11 @@ const faqList = [
     question: 'Other Important Information',
     answer: ['*Pricing is per seat. Each helicopter is filled with 6 passengers. There is a $40 per person heliport fee as mandated by heliport. Cancellations made within 24 hours of the scheduled departure time as well as no-shows will incur 100% of tour charges. Please contact Manhattan Helicopters at least 24 hours in advance and we will re-schedule your tour at no cost. Late arrivals will be addressed on a case-by-case basis depending on seating and aircraft availability. Reservations made at the heliport forfeit their right to cancel after payment has been made. A deposit may be required to guarantee seats. 300 lbs max weight per passenger. Passengers over 250lbs will incur an additional fee. The scheduled duration of our tours may vary based on flight routing and weather conditions. Manhattan Helicopters reserves the right to amend the flight paths without notice. All passengers must pass a metal detector and present a government-issued ID for security purposes. Prices are subject to change without notice. Management reserves the right to refuse boarding to a passenger or to upgrade passengers at any time. Manhattan Helicopters reserves the right to alter or terminate any flights due to security maintenance, aircraft availability, emergencies, weather, or acts of God.']
   },
-]
+];
+
 const Faq = () => {
+  useScrollTop();
+
   const AccordionItem = ({ header, ...rest }) => (
     <Item
       {...rest}

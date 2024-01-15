@@ -1,6 +1,8 @@
+
 import { Carousel } from 'react-responsive-carousel';
 import { coloredButton, clearButton } from '../utils/Button';
 import { Link } from 'react-router-dom';
+import useScrollTop from './hooks/useScrollTop';
 import TourCards from '../utils/TourCards';
 import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
 import HomeBottomCarouselSecond from '../assets/images/home-carousel-bottom-2.jpeg';
@@ -55,6 +57,8 @@ const values = [
 ];
 
 const Home = () => {
+  useScrollTop();
+
   const imageTop = (
     <div className='home-main-image-top-container'>
     {/* <img src='https://placehold.co/1920x1080' /> */}

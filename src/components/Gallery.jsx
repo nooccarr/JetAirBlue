@@ -1,10 +1,12 @@
 import TopImageSection from './TopImageSection';
 import { useState } from 'react';
+import useScrollTop from './hooks/useScrollTop';
 import { Gallery as GridGallery } from 'react-grid-gallery';
 import { Lightbox } from "react-modal-image";
 import { IMAGES } from './Images';
 
 const Gallery = () => {
+  useScrollTop();
   const [index, setIndex] = useState(-1);
 
   const currentImage = IMAGES[index];

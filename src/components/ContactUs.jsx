@@ -1,9 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useScrollTop from "./hooks/useScrollTop";
 import { faPhone, faEnvelope, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import TopImageSection from "./TopImageSection";
 import { coloredButton } from "../utils/Button";
 
 const ContactUs = () => {
+  useScrollTop();
 
   const contactUsForm = (
     <form className='contact-us-form'>
