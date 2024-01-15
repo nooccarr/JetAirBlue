@@ -76,7 +76,9 @@ const Home = () => {
         <div key={tour.title}>
           <img className='home-main-image-bottom' style={{ filter: 'brightness(80%)'}} src={tour.carouselImage} />
           <div className='bottom-carousel-caption-container'>
-            <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
+            <Link to={tour.slug} className='bottom-carousel-caption-title-link'>
+              <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
+            </Link>
             <p className='bottom-carousel-caption-description'>{tour.description}</p>
             <div className='bottom-carousel-caption-button-container'>
               <Link to={tour.slug}>

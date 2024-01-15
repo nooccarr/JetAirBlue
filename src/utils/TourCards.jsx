@@ -4,11 +4,15 @@ import { Link } from 'react-router-dom';
 const tourCard = ({ slug, title, description, image }, classname) => (
   <div className={`tour-card-container ${classname}`} key={title}>
     <div className='tour-card-image-container'>
-      <img src={image} className='tour-card-image' />
+      <Link to={slug}>
+        <img src={image} className='tour-card-image' />
+      </Link>
     </div>
     <div className='tour-card-text-container'>
       <div>
-        <h4 className='tour-card-title'>{title}</h4>
+        <Link to={slug} className='tour-card-title-link'>
+          <h4 className='tour-card-title'>{title}</h4>
+        </Link>
         <p className='tour-card-description'>{description}</p>
       </div>
       <div className='tour-card-button-container'>
