@@ -471,6 +471,39 @@ header {
   border-radius: 40px;
 }
 
+/* ABOUT TOUR*/
+.about-tour-section {
+  border-top: 3px solid rgb(92 128 160);
+  border-bottom: 3px solid rgb(92 128 160);
+  background-color: #242325;
+  padding: 80px 20px;
+}
+
+.about-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  color: #fff;
+}
+
+.about-tour-title {
+  margin: 0;
+  padding-bottom: 1.2rem;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.about-tour-description {
+  text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.75px;
+    line-height: 1.5;
+    color: #fff;
+    padding-bottom: 1.2rem;
+}
+
 /* WHY CHOOSE US */
 .home-why-choose-us-container {
   /* margin: 0 auto;
