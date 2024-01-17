@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:wght@300&display=swap');
+
 /* BODY */
 body {
   margin: 0px;
@@ -22,7 +24,7 @@ header {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 0px;
+  padding: 15px 20px;
 }
 
 .header-logo {
@@ -121,6 +123,7 @@ header {
   margin: 0px;
   padding: 0px;
   border-radius: 5px;
+  z-index: 100
 }
 
 .dropdown-menu-item {
@@ -147,16 +150,845 @@ header {
 .page-wrapper {
   margin: 0 auto;
   max-width: 1280px;
+  padding: 0px 20px 500px 20px;
   /* padding-bottom: 500px; */
 }
 
+.page-container {
+  background-color: #f2f2f2;
+}
+
 /* HOME */
+.home-main-image-top-container {
+  position: relative;
+  background-image: url('../assets/images/home-carousel-top.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: rgba(34, 34, 34, 0.3);
+  background-blend-mode: multiply;
+  height: 1080px;
+  /* height: 95vh; */
+  /* height: 550px; */
+}
+
+
+.caption-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.caption-title {
+  margin: 0px;
+  font-size: 48px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+.caption-description {
+  margin: 0px;
+  font-size: 24px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.caption-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.home-main-image-bottom {
+  position: relative;
+  /* height: 550px; */
+  height: 700px;
+  width: auto;
+  object-fit: cover;
+}
+
+.bottom-carousel-caption-container {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.bottom-carousel-caption-title {
+  text-align: start;
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: capitalize;
+  padding-bottom: 20px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.bottom-carousel-caption-title:hover,
+.bottom-carousel-caption-title:focus {
+  opacity: 0.7;
+}
+
+.bottom-carousel-caption-title-link {
+  text-decoration: none;
+}
+
+.bottom-carousel-caption-description {
+  text-align: start;
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.75px;
+  line-height: 1.5;
+  color: #fff;
+  padding-bottom: 40px;
+}
+
+.bottom-carousel-caption-button-container {
+  display: flex;
+  width: 30%;
+}
+
+.home-choose-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-top: 80px;
+  padding-bottom: 98px;
+  /* padding: 80px 20px 98px 20px; */
+}
+
+.home-choose-tour-text {
+  text-align: center;
+  margin: 0;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+
+.related-tour-text {
+  text-align: start;
+  font-size: 1.5rem;
+  padding: 0 20px;
+}
+
+/* TOUR CARDS */
+.tour-card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.plane-tour-card-list {
+  /* display: flex;
+  justify-content: center;
+  flex-wrap: wrap; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.tour-card-container {
+  max-width: 360px;
+  margin: 24px 24px 24px;
+  border-radius: 10px;
+  /* height: 100%; */
+  background-color: #fff;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+.plane-tours-paragraph {
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.plane-tour-card-container {
+  /* max-width: 360px;
+  margin: 24px 24px 24px; */
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
+}
+
+.related-tour-card-container {
+  min-width: 360px;
+  max-width: 590px;
+}
+
+.tour-card-image-container {
+  margin-bottom: -7px;
+  opacity: 1;
+  transition: 0.3s;
+  height: 280px;
+}
+
+.tour-card-image {
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+
+.tour-card-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-end;
+  /* height: 100%; */
+  padding: 20px;
+}
+
+.tour-card-title-link {
+  text-decoration: none;
+}
+
+.tour-card-title {
+  color: #333;
+  line-height: 1;
+  margin-top: 6px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.tour-card-title:hover,
+.tour-card-title:focus {
+  color: gray;
+  cursor: pointer;
+}
+
+.tour-card-image-container:hover,
+.tour-card-image-container:focus,
+.related-tour-card-title:hover,
+.related-tour-card-title:focus,
+.related-tour-card-image-container:hover,
+.related-tour-card-image-container:focus {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.tour-card-description {
+  margin-bottom: 0px;
+}
+
+.related-tour-card-description {
+  background-color: #f2f2f3;
+  padding: 20px;
+}
+
+.tour-card-button-container {
+  display: flex;
+  justify-content: space-between;
+  height: 68px;
+}
+
+/* BUTTON */
+.colored-button {
+  padding: 12px;
+  margin-top: auto;
+  width: 48%;
+  text-transform: uppercase;
+  border: 1px solid #505152;;
+  border-radius: 5px;
+  background-color: #505152;
+  color: #fff;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.colored-button:hover,
+.colored-button:focus {
+  cursor: pointer;
+  background-color: #060d17;
+  border: 1px solid #060d17;
+  opacity: 1;
+}
+
+.home-book-now-button {
+  padding: 20px;
+  border-radius: 40px;
+  background-color: #060d17;
+  min-width: 200px;
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.home-learn-more-button {
+  padding: 18px;
+  min-width: 170px;
+  background-color: #060d17;
+  opacity: 1;
+  transition: 0.3s;
+  /* text-decoration: none; */
+
+}
+
+.home-book-now-button:hover,
+.home-book-now-button:focus,
+.home-learn-more-button:hover,
+.home-learn-more-button:focus {
+  cursor: pointer;
+  background-color: #505152;
+  border: 1px solid #505152;
+}
+
+
+.clear-button {
+  padding: 12px;
+  width: 100%;
+  text-transform: uppercase;
+  border: 1px solid #cfcfcf;
+  border-radius: 5px;
+  background-color: transparent;
+  color: #505152;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.tour-card-button-link {
+  margin-top: auto;
+  width: 48%;
+}
+
+.clear-button:hover,
+.clear-button:focus {
+  color: white;
+  cursor: pointer;
+  background-color: #060d17;
+  border: 1px solid #060d17;
+  opacity: 1;
+}
+
+.home-request-button {
+  padding: 20px;
+  border-radius: 40px;
+}
+
+/* ABOUT TOUR*/
+.about-tour-section {
+  border-top: 3px solid rgb(92 128 160);
+  border-bottom: 3px solid rgb(92 128 160);
+  background-color: #242325;
+  padding: 80px 20px;
+}
+
+.about-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  color: #fff;
+}
+
+.about-tour-title {
+  margin: 0;
+  padding-bottom: 1.2rem;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.about-tour-description {
+  text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+    letter-spacing: -0.75px;
+    line-height: 1.5;
+    color: #fff;
+    padding-bottom: 1.2rem;
+}
+
+/* WHY CHOOSE US */
+.home-why-choose-us-container {
+  /* margin: 0 auto;
+  max-width: 1280px; */
+  padding-top: 80px;
+  /* margin-bottom: 43px; */
+  background-color: #242325;
+}
+
+.home-why-choose-us-text {
+  text-align: center;
+  margin: 0;
+  padding-bottom: 43px;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #fff;
+}
+
+.home-value-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1280px;
+  padding-bottom: 43px;
+}
+
+.home-value-container {
+  min-width: 244px;
+  max-width: 460px;
+  margin: 0 30px;
+}
+
+.home-value-title {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 24px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #fff;
+  text-transform: uppercase;
+  border-bottom: 3px solid rgb(92 128 160);
+  padding-bottom: 5px;
+}
+
+.home-value-description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #fff;
+  padding-bottom: 55px;
+}
+
+/* HOME REQUEST INFO */
+.home-request-info-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-columns: 1fr 2fr; */
+  /* gap: 10px; */
+  /* grid-auto-rows: minmax(100px, auto); */
+
+}
+
+.home-request-info-form {
+  /* grid-row: 1;
+  grid-column: 1; */
+  padding: 0 30px;
+  padding: 32px 24px;
+  background-color: #fff;
+}
+
+.home-request-info-form-container {
+  margin: 0 49px;
+}
+
+.home-request-info-title {
+  font-family: 'Spectral', serif;
+  font-size: calc(1.425rem + 2.1vw);
+  font-weight: 300;
+  color: #191B1C;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.home-request-info-span {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.home-request-input-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 360px;
+}
+
+.home-request-button-container {
+  padding: 54px 0px 24px 0px;
+}
+
+.home-request-input-label {
+  color: #70777d;
+  padding-top: 30px;
+  font-size: 0.928rem;
+}
+
+.home-request-input {
+  border: none;
+  outline: none;
+  font-size: 0.928rem;
+  padding: 10px 0px;
+  border-bottom: 1px solid #ccc;
+}
+
+.home-request-info-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* PLANE TOURS */
+.plane-tours-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 80px 20px;
+}
+
+.plane-tours-divider-container {
+  margin: 0;
+  padding: 50px 0 65px 0;
+}
+
+.plane-tours-divider {
+  background-color: #dfdfdf;
+  border: none;
+  height: 1px;
+}
+
+/* PLANE TOUR */
+.plane-tour-container {
+  margin: 0 auto;
+  max-width: 1280px;
+}
+/* PLANE PLANE MAIN IMAGE SECTION */
+.tour-main-image-container {
+  height: 357px;
+}
+
+.tour-other-image-container {
+  height: 232px;
+}
+
+.tour-main-image {
+  background-image: url('../assets/images/tour-main-image.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(34, 34, 34, 0.3);
+  background-blend-mode: multiply;
+}
+
+.tour-other-image {
+  background-image: url('../assets/images/tour-other-image.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgb(34, 34, 34, 0.5); */
+  background-color: rgb(0, 140, 255);
+  background-blend-mode: multiply;
+  opacity: 0.7;
+}
+
+.tour-main-image-caption-container,
+.tour-other-image-caption-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 20px;
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.item-start {
+  justify-content: center;
+}
+
+.tour-main-image-caption-title {
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1.125;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.tour-other-image-caption-title {
+  text-align: center;
+  margin: 0;
+  font-size: 4rem;
+  line-height: 1.125;
+  letter-spacing: -1px;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.tour-other-image-caption-description {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.5;
+  letter-spacing: -1px;
+  color: #fff;
+
+
+}
+
+/* PLANE TOUR INFO SECTION */
+.tour-info-section-container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 80px 20px 0 20px;
+
+}
+
+.tour-info-section-quick-details-container,
+.tour-info-section-sighting-description-container {
+  padding: 20px;
+  margin-bottom: 24px;
+  background-color: rgb(230 230 231);
+}
+
+.tour-info-section-title {
+  color: #455b6f;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  line-height: 16px;
+  margin: 0 0 16px 0;
+}
+
+.tour-info-section-ul {
+  margin: 0;
+  padding-left: 20px;
+}
+.tour-info-section-li {
+  list-style-type: none;
+  margin: 0 8px 16px 0;
+}
+
+.tour-info-section-li:last-child {
+  margin-bottom: 0px;
+}
+
+.tour-info-section-li-prop {
+  text-transform: capitalize;
+  font-weight: 700;
+  padding: 0 5px 0 10px;
+}
+
+.tour-info-section-sighting-title {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #08090E;
+}
+
+.tour-info-section-sighting-description {
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+.tour-info-section-sighting-description:last-child {
+  margin-bottom: 0px;
+}
+
+.tour-info-section-sighting-list-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  text-transform: capitalize;
+  line-height: 1.25;
+  color: #08090E;
+}
+
+.tour-info-section-sighting-list-ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+/* ABOUT US */
+.about-us-container,
+.contact-us-container,
+.faq-container,
+.gallery-container {
+  margin: 0 auto;
+  padding: 80px 20px;
+  max-width: 1280px;
+  background-color: #f2f2f2;
+}
+
+.about-us-intro-section,
+.plane-tour-outro-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+
+.about-us-intro-text-container {
+  padding-right: 20px;
+
+}
+.about-us-title {
+  text-transform: capitalize;
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+  color: #08090e;
+}
+
+.about-us-description {
+  margin: 0;
+  margin-top: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #08090e;
+}
+
+.about-us-intro-image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+
+}
+.about-us-bold {
+  display: block;
+  margin-top: 24px;
+  font-size: 18px;
+  font-weight: 700;
+
+}
+
+.about-us-ul {
+  padding-left: 20px;
+}
+
+.about-us-info-section-container {
+  background-color: #fff;
+  padding: 40px;
+  margin-left: -20px;
+  margin-top: 40px;
+}
+
+.crew-staff-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 40px;
+}
+
+.crew-li {
+  margin: 24px 0 0 0;
+  font-size: 18px;
+}
+
+.staff-ul {
+  padding-left: 20px;
+}
+
+/* CONTACT US */
+.contact-us-form {
+  background-color: #fff;
+  padding: 40px 60px 40px 40px;
+  margin-left: -20px;
+}
+
+.contact-us-form-info-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+.contact-us-input-container {
+  margin-top: 16px;
+  padding-right: 16px;
+}
+
+.contact-us-input-label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-us-input {
+  background-color: #FAFBFC;
+  border: 1px solid #9badb8;
+  border-radius: 4px;
+  padding: 5px 4px;
+  color: #152833;
+  height: 2.5rem;
+  width: 100%;
+  font-size: 14px;
+}
+
+.contact-us-textarea {
+  background-color: #FAFBFC;
+  border: 1px solid #9badb8;
+  border-radius: 4px;
+  padding: 6px 8px;
+  color: #152833;
+  width: 100%;
+  line-height: 1.5;
+  margin-bottom: 32px;
+}
+
+.contact-us-info-hours {
+  font-size: 24px;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.contact-us-info-desc {
+  margin: 16px 0 0 0;
+}
+
+.contact-us-info-holiday {
+  font-size: 18px;
+  letter-spacing: -1px;
+  margin: 16px 0 0 0;
+}
+
+.contact-us-info-container {
+  background-color: #cce0ee;
+  padding: 40px;
+}
+
+.contact-us-info-title,
+.contact-us-form-title {
+  font-size: 32px;
+  color: #08090E;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+.contact-us-icon-info-container {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+/* FAQ */
+.faq-info-ctc-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.faq-info-title {
+  font-size: 32px;
+  color: #08090E;
+  margin: 0;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.faq-contact-us-form {
+  background-color: #cce0ee;
+  padding: 40px 40px 40px 40px;
+}
 
 
 /* FOOTER */
 footer {
   background-color: rgb(150 151 153);
   color: #fff;
+  border-top: 3px solid rgb(92 128 160);
 }
 
 .footer-container {
@@ -166,7 +998,7 @@ footer {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 80px 0px;
+  padding: 80px 20px;
 }
 
 .footer-section-title {
@@ -182,7 +1014,8 @@ footer {
   padding-left: 0px;
 }
 
-.footer-section-icon-container {
+.footer-section-icon-container,
+.contact-us-icon-container {
   margin-top: 0;
   padding: 0 10px 0 0;
   display: flex;
@@ -190,7 +1023,8 @@ footer {
   align-items: start;
 }
 
-.footer-section-info-container {
+.footer-section-info-container,
+.contact-us-ctc-info-container {
   margin-top: 0;
   padding-left: 0px;
   display: flex;
@@ -198,7 +1032,8 @@ footer {
   align-items: start;
 }
 
-.footer-contact-info {
+.footer-contact-info,
+.contact-info {
   list-style-type: none;
   padding-bottom: 16px;
 }
@@ -208,13 +1043,19 @@ footer {
   text-decoration: none;
 }
 
+.contact-info > a {
+  color: #08090E;
+  text-decoration: none;
+}
+
 .footer-contact-info > a:hover,
 .footer-contact-info > a:focus {
   text-decoration: underline;
   cursor: pointer;
 }
 
-.footer-contact-info > a > address {
+.footer-contact-info > a > address,
+.contact-info > a > address {
   display: inline-block;
   font-style: normal;
 }
@@ -225,7 +1066,7 @@ footer {
   cursor: pointer;
 }
 
-.footer-contact-info-icon {}
+/* .footer-contact-info-icon {} */
 
 .footer-quick-links {
   list-style-type: none;
