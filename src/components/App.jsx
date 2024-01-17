@@ -1,10 +1,11 @@
 import { Routes, Route } from 'react-router-dom';
+import Wrapper from './contextWrapper';
 import Layout from './Layout';
 import Home from './Home';
 import PlaneTours from './PlaneTours';
 import ClassicManhattanPlaneTour from './ClassicManhattanPlaneTour';
 import DeluxeManhattanPlaneTour from './DeluxeManhattanPlaneTour';
-import VipManhattanPlaneTour from './VipManhattanPlaneTour';
+// import VipManhattanPlaneTour from './VipManhattanPlaneTour';
 import MontaukPlaneTour from './MontaukPlaneTour';
 import AboutUs from './AboutUs';
 import Footer from './Footer';
@@ -16,9 +17,9 @@ import '../styles/app.css';
 
 const App = () => {
   return (
-    <>
+    <Wrapper>
       <Routes>
-        <Route path='/' element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path='plane-tours' element={<PlaneTours />} />
           <Route path='classic-manhattan-plane-tour' element={<ClassicManhattanPlaneTour />} />
@@ -33,7 +34,7 @@ const App = () => {
         </Route>
       </Routes>
       <Footer />
-    </>
+    </Wrapper>
   );
 };
 
