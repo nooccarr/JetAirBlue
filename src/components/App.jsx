@@ -21,22 +21,16 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="plane-tours" element={<PlaneTours />} />
-          <Route
-            path="classic-manhattan-plane-tour"
-            element={<ClassicManhattanPlaneTour />}
-          />
-          <Route
-            path="deluxe-manhattan-plane-tour"
-            element={<DeluxeManhattanPlaneTour />}
-          />
+          <Route path='plane-tours' element={<PlaneTours />} />
+          <Route path='classic-manhattan-plane-tour' element={<ClassicManhattanPlaneTour />} />
+          <Route path='deluxe-manhattan-plane-tour' element={<DeluxeManhattanPlaneTour />} />
           {/* <Route path='vip-manhattan-plane-tour' element={<VipManhattanPlaneTour />} /> */}
-          <Route path="montauk-plane-tour" element={<MontaukPlaneTour />} />
-          <Route path="about-us" element={<AboutUs />} />
-          <Route path="contact-us" element={<ContactUs />} />
-          <Route path="gallery" element={<Gallery />} />
-          <Route path="faq" element={<Faq />} />
-          <Route path="*" element={<NoMatch />} />
+          <Route path='montauk-plane-tour' element={<MontaukPlaneTour />} />
+          <Route path='about-us' element={<AboutUs />} />
+          <Route path='contact-us' element={<ContactUs />} />
+          <Route path='gallery' element={<Gallery />} />
+          <Route path='faq' element={<Faq />} />
+          <Route path='*' element={<NoMatch />} />
         </Route>
       </Routes>
       <Footer />
