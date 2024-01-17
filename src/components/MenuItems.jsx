@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretUp } from '@fortawesome/free-solid-svg-icons';
 import Dropdown from './Dropdown';
-
+import { FormattedMessage } from 'react-intl';
 
 const MenuItems = ({ items }) => {
   const [depthLevel, setDepthLevel] = useState(0);
@@ -23,7 +23,7 @@ const MenuItems = ({ items }) => {
       // Cleanup the event listener
       document.removeEventListener('mousedown', handler);
       document.removeEventListener('touchstart', handler);
-    }
+    };
   }, [dropdown]);
 
   const onMouseEnter = () => {
@@ -38,11 +38,11 @@ const MenuItems = ({ items }) => {
 
   const closeDropdown = () => {
     dropdown && setDropdown(false);
-  }
+  };
 
   return (
     <li
-      className='navbar-menu-item'
+      className="navbar-menu-item"
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -51,66 +51,71 @@ const MenuItems = ({ items }) => {
       {items.submenu && items.url ? (
         <>
           <button
-            type='button'
-            aria-haspopup='menu'
+            type="button"
+            aria-haspopup="menu"
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
             {window.innerWidth < 960 ? (
-              items.title
+              <FormattedMessage
+                id={`header.navbar.menu.${items.title}`}
+                defaultMessage={items.title}
+              />
             ) : (
               <>
-                <Link to={items.url}>{items.title}</Link>
-                {window.innerWidth < 960 ?
-                  null :
-                  depthLevel > 0 && window.innerWidth > 960 ? (
-                    <span className='caret-icon'>
-                      <FontAwesomeIcon icon={faCaretUp} />
-                    </span>
-                  ) : (
-                    <span className='caret-icon'>
-                      <FontAwesomeIcon icon={faCaretDown} />
-                    </span>
-                  )
-                }
+                <Link to={items.url}>
+                  <FormattedMessage
+                    id={`header.navbar.menu.${items.title}`}
+                    defaultMessage={items.title}
+                  />
+                </Link>
+                {window.innerWidth < 960 ? null : depthLevel > 0 &&
+                  window.innerWidth > 960 ? (
+                  <span className="caret-icon">
+                    <FontAwesomeIcon icon={faCaretUp} />
+                  </span>
+                ) : (
+                  <span className="caret-icon">
+                    <FontAwesomeIcon icon={faCaretDown} />
+                  </span>
+                )}
               </>
             )}
           </button>
-          <Dropdown
-            submenus={items.submenu}
-            dropdown={dropdown}
-          />
+          <Dropdown submenus={items.submenu} dropdown={dropdown} />
         </>
-      )
-      : !items.url && items.submenu ? (
+      ) : !items.url && items.submenu ? (
         <>
           <button
-            type='button'
-            aria-haspopup='menu'
+            type="button"
+            aria-haspopup="menu"
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
-            >
-            {items.title}
-            {window.innerWidth < 960 ?
-              null :
-              depthLevel > 0 && window.innerWidth > 960 ? (
-                <span className='caret-icon'>
-                  <FontAwesomeIcon icon={faCaretUp} />
-                </span>
-              ) : (
-                <span className='caret-icon'>
-                  <FontAwesomeIcon icon={faCaretDown} />
-                </span>
-              )
-            }
+          >
+            <FormattedMessage
+              id={`header.navbar.menu.${items.title}`}
+              defaultMessage={items.title}
+            />
+            {window.innerWidth < 960 ? null : depthLevel > 0 &&
+              window.innerWidth > 960 ? (
+              <span className="caret-icon">
+                <FontAwesomeIcon icon={faCaretUp} />
+              </span>
+            ) : (
+              <span className="caret-icon">
+                <FontAwesomeIcon icon={faCaretDown} />
+              </span>
+            )}
           </button>
-          <Dropdown
-            submenus={items.submenu}
-            dropdown={dropdown}
-          />
+          <Dropdown submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : (
-        <Link to={items.url}>{items.title}</Link>
+        <Link to={items.url}>
+          <FormattedMessage
+            id={`header.navbar.menu.${items.title}`}
+            defaultMessage={items.title}
+          />
+        </Link>
       )}
     </li>
   );
