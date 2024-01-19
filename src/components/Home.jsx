@@ -1,7 +1,7 @@
-
 import { Carousel } from 'react-responsive-carousel';
 import { coloredButton, clearButton } from '../utils/Button';
 import { Link } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 import useScrollTop from './hooks/useScrollTop';
 import TourCards from '../utils/TourCards';
 import HomeBottomCarouselFirst from '../assets/images/home-carousel-bottom-1.jpeg';
@@ -17,23 +17,26 @@ const tours = [
   {
     slug: 'classic-manhattan-plane-tour',
     title: 'Classic Manhattan Plane Tour',
-    description: 'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
+    description:
+      'Embark on a breathtaking journey from Long Island Republic Airport. Marvel at iconic landmarks, cityscapes, and the magnificence of renowned locations over Manhattan. Prepare for an extraordinary adventure that guarantees an exhilarating experience, uncovering the most captivating spots in the heart of New York City!',
     image: ClassicManhattanCard,
-    carouselImage: HomeBottomCarouselFirst
+    carouselImage: HomeBottomCarouselFirst,
   },
   {
     slug: 'deluxe-manhattan-plane-tour',
     title: 'Deluxe Manhattan Plane Tour',
-    description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
+    description:
+      'Experience the captivating Manhattan and Montauk Scenic Tour, a seamless blend of the Classic Manhattan Plane Tour and the enchanting Montauk Plane Tour. This fusion tour promises an unforgettable experience, seamlessly blending the magic of Manhattan with the coastal charm of Montauk. Discover the best of both worlds on the Manhattan and Montauk Scenic Tour.',
     image: DeluxeManhattanCard,
-    carouselImage: HomeBottomCarouselSecond
+    carouselImage: HomeBottomCarouselSecond,
   },
   {
     slug: 'montauk-plane-tour',
     title: 'Montauk Plane Tour',
-    description: 'An exciting and comprehensive helicopter tour of New York City with breathtaking views and excellent photo opportunities! This extended version of the Classic Tour will treat you to the best views of New York City including the Statue of Liberty, Empire State Building and Central park.',
+    description:
+      'Explore the Montauk Scenic Flight, a coastal journey of unparalleled beauty. Gracefully circling the iconic Montauk Lighthouse, stand against the coastal backdrop, and marvel at the natural wonders. Glide over charming landscapes, catch glimpses of coastal allure, and experience the enchanting aerial beauty of the eastern end of New York.',
     image: MontaukCard,
-    carouselImage: HomeBottomCarouselThird
+    carouselImage: HomeBottomCarouselThird,
   },
 ];
 
@@ -57,17 +60,28 @@ const tours = [
 // ];
 
 const Home = () => {
-  // useScrollTop();
+  useScrollTop();
 
   const imageTop = (
-    <div className='home-main-image-top-container'>
-    {/* <img src='https://placehold.co/1920x1080' /> */}
+    <div className="home-main-image-top-container">
+      {/* <img src='https://placehold.co/1920x1080' /> */}
       {/* <div className='home-main-image-top'> */}
-      <div className='caption-container'>
-        <h1 className='caption-title'>jet air blue planes</h1>
-        <p className='caption-description'>breathtaking plane tours over new york city</p>
-        <div className='caption-button-container'>
-          {coloredButton('book a plane tour', 'home-book-now-button')}
+      <div className="caption-container">
+        <h1 className="caption-title">jet air blue planes</h1>
+        <p className="caption-description">
+          <FormattedMessage
+            id="home.top-image.description"
+            defaultMessage="breathtaking plane tours over new york city"
+          />
+        </p>
+        <div className="caption-button-container">
+          {coloredButton(
+            <FormattedMessage
+              id="button.book-a-plane-tour"
+              defaultMessage="Book a Plane Tour"
+            />,
+            'home-book-now-button'
+          )}
         </div>
       </div>
       {/* </div> */}
@@ -76,17 +90,37 @@ const Home = () => {
 
   const imagesCarousel = (tours) => (
     <Carousel autoPlay interval="10000" infiniteLoop showThumbs={false}>
-      {tours.map(tour => (
+      {tours.map((tour) => (
         <div key={tour.title}>
-          <img className='home-main-image-bottom' style={{ filter: 'brightness(80%)'}} src={tour.carouselImage} />
-          <div className='bottom-carousel-caption-container'>
-            <Link to={tour.slug} className='bottom-carousel-caption-title-link'>
-              <h1 className='bottom-carousel-caption-title'>{tour.title}</h1>
+          <img
+            className="home-main-image-bottom"
+            style={{ filter: 'brightness(80%)' }}
+            src={tour.carouselImage}
+          />
+          <div className="bottom-carousel-caption-container">
+            <Link to={tour.slug} className="bottom-carousel-caption-title-link">
+              <h1 className="bottom-carousel-caption-title">
+                <FormattedMessage
+                  id={`tour.${tour.title}.title`}
+                  defaultMessage={tour.title}
+                />
+              </h1>
             </Link>
-            <p className='bottom-carousel-caption-description'>{tour.description}</p>
-            <div className='bottom-carousel-caption-button-container'>
+            <p className="bottom-carousel-caption-description">
+              <FormattedMessage
+                id={`tour.${tour.title}.description`}
+                defaultMessage={tour.description}
+              />
+            </p>
+            <div className="bottom-carousel-caption-button-container">
               <Link to={tour.slug}>
-                {coloredButton('learn more', 'home-learn-more-button')}
+                {coloredButton(
+                  <FormattedMessage
+                    id="button.learn-more"
+                    defaultMessage="Learn More"
+                  />,
+                  'home-learn-more-button'
+                )}
               </Link>
             </div>
           </div>
@@ -107,50 +141,129 @@ const Home = () => {
   // );
 
   const aboutTour = (
-    <div className='about-tour-section'>
-      <div className='about-tour-container'>
-        <h3 className='about-tour-title'>Marvel at the skies over Manhattan,</h3>
-        <p className='about-tour-description'>the unparalleled capital of the world, now seen from the air, adding a touch of magic to your experience!</p>
-        <p className='about-tour-description'>Behold the iconic skyline, featuring Central Park, Rockefeller Center, Time Square, and Grand Central Station – each narrating a unique tale of the city's rich history. Witness the majestic Empire State Building, the timeless Brooklyn Bridge, and the symbolic Wall Street. Take in the modern allure of the newly renovated World Trade Center and the historic Verrazano Bridge connecting Manhattan and Staten Island. Don't miss the Statue of Liberty, a French gift celebrating American Independence, once a gateway to dreams on Ellis Island.</p>
-        <p className='about-tour-description'>This three-dimensional sightseeing adventure offers a fresh perspective on the captivating wonders of Manhattan!</p>
+    <div className="about-tour-section">
+      <div className="about-tour-container">
+        <h3 className="about-tour-title">
+          <FormattedMessage
+            id="home.about-tour.title"
+            defaultMessage="Marvel at the skies over Manhattan,"
+          />
+        </h3>
+        <p className="about-tour-description">
+          <FormattedMessage
+            id="home.about-tour.description-0"
+            defaultMessage="the unparalleled capital of the world, now seen from the air, adding a touch of magic to your experience!"
+          />
+        </p>
+        <p className="about-tour-description">
+          <FormattedMessage
+            id="home.about-tour.description-1"
+            defaultMessage="Behold the iconic skyline, featuring Central Park, Rockefeller Center, Time Square, and Grand Central Station – each narrating a unique tale of the city's rich history. Witness the majestic Empire State Building, the timeless Brooklyn Bridge, and the symbolic Wall Street. Take in the modern allure of the newly renovated World Trade Center and the historic Verrazano Bridge connecting Manhattan and Staten Island. Don't miss the Statue of Liberty, a French gift celebrating American Independence, once a gateway to dreams on Ellis Island."
+          />
+        </p>
+        <p className="about-tour-description">
+          <FormattedMessage
+            id="home.about-tour.description-2"
+            defaultMessage="This three-dimensional sightseeing adventure offers a fresh perspective on the captivating wonders of Manhattan!"
+          />
+        </p>
       </div>
     </div>
-  )
+  );
 
   const requestInfo = (
-    <div className='home-request-info-form'>
-      <form className='home-request-info-form-container'>
-        <h2 className='home-request-info-title'>Request Information</h2>
-        <span className='home-request-info-span'>We’d love to hear from you. Please fill out the contact form and our team will be in touch to discuss your travel needs.</span>
-        <div className='home-request-input-container'>
-          <label htmlFor='fname' className='home-request-input-label'>First Name</label>
-          <input type='text' id='fname' name='fname' className='home-request-input' />
+    <div className="home-request-info-form">
+      <form className="home-request-info-form-container">
+        <h2 className="home-request-info-title">
+          <FormattedMessage
+            id="home.request-info.title"
+            defaultMessage="Request Information"
+          />
+        </h2>
+        <span className="home-request-info-span">
+          <FormattedMessage
+            id="home.request-info.description"
+            defaultMessage="We’d love to hear from you. Please fill out the contact form and our
+          team will be in touch to discuss your travel needs."
+          />
+        </span>
+        <div className="home-request-input-container">
+          <label htmlFor="fname" className="home-request-input-label">
+            <FormattedMessage
+              id="home.request-info.first-name"
+              defaultMessage="First Name"
+            />
+          </label>
+          <input
+            type="text"
+            id="fname"
+            name="fname"
+            className="home-request-input"
+          />
         </div>
-        <div className='home-request-input-container'>
-          <label htmlFor='lname' className='home-request-input-label'>Last Name</label>
-          <input type='text' id='lname' name='lname' className='home-request-input' />
+        <div className="home-request-input-container">
+          <label htmlFor="lname" className="home-request-input-label">
+            <FormattedMessage
+              id="home.request-info.last-name"
+              defaultMessage="Last Name"
+            />
+          </label>
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            className="home-request-input"
+          />
         </div>
-        <div className='home-request-input-container'>
-          <label htmlFor='email' className='home-request-input-label'>Email</label>
-          <input type='email' id='email' name='email' className='home-request-input' />
+        <div className="home-request-input-container">
+          <label htmlFor="email" className="home-request-input-label">
+            <FormattedMessage
+              id="home.request-info.email"
+              defaultMessage="Email"
+            />
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="home-request-input"
+          />
         </div>
-        <div className='home-request-input-container'>
-          <label htmlFor='phone' className='home-request-input-label'>Phone</label>
-          <input type='tel' id='phone' name='phone' className='home-request-input' />
+        <div className="home-request-input-container">
+          <label htmlFor="phone" className="home-request-input-label">
+            <FormattedMessage
+              id="home.request-info.phone"
+              defaultMessage="Phone"
+            />
+          </label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            className="home-request-input"
+          />
         </div>
-        <div className='home-request-input-container'>
-          <label htmlFor='message' className='home-request-input-label'>What Can We Assist You With?</label>
-          <input id='text' name='message' className='home-request-input' />
+        <div className="home-request-input-container">
+          <label htmlFor="message" className="home-request-input-label">
+            <FormattedMessage
+              id="home.request-info.message"
+              defaultMessage="Message"
+            />
+          </label>
+          <input id="text" name="message" className="home-request-input" />
         </div>
-        <div className='home-request-button-container'>
-          {clearButton('book now', 'home-request-button')}
+        <div className="home-request-button-container">
+          {clearButton(
+            <FormattedMessage id="button.book-now" defaultMessage="Book Now" />,
+            'home-request-button'
+          )}
         </div>
       </form>
     </div>
   );
 
   return (
-    <div className='page-container'>
+    <div className="page-container">
       {imageTop}
       {/* <section className='home-why-choose-us-container'>
         <h3 className='home-why-choose-us-text'>Why Choose Jet Air Blue Planes?</h3>
@@ -158,16 +271,22 @@ const Home = () => {
       </section> */}
       {aboutTour}
       {imagesCarousel(tours)}
-      <TourCards title={'Choose a Plane Tour'} tours={tours} />
-      <section className='home-request-info-container'>
+      <TourCards
+        title={
+          <FormattedMessage
+            id="home.cards.title"
+            defaultMessage="Choose a Plane Tour"
+          />
+        }
+        tours={tours}
+      />
+      <section className="home-request-info-container">
         {requestInfo}
         <div>
-          <img className='home-request-info-image' src={HomeRequestInfo} />
+          <img className="home-request-info-image" src={HomeRequestInfo} />
         </div>
       </section>
-
     </div>
-
   );
 };
 
