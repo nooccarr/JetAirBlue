@@ -18,7 +18,7 @@ const Header = () => {
         <div>
           <button className="header-button">
             <FormattedMessage
-              id="header.booking-button"
+              id="button.book-a-plane-tour"
               defaultMessage="Book a Plane Tour"
             />
           </button>
