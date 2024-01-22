@@ -5,7 +5,7 @@ import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
-import ClassicManhattanMap from '../assets/images/classic-manhattan-map.jpg';
+import MontaukRoute from '../assets/videos/montaukRoute.mp4';
 import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';
@@ -184,7 +184,10 @@ const MontaukPlaneTour = () => {
             />
           }
         >
-          <img src={ClassicManhattanMap} />
+          <video width="100%" height="auto" controls>
+            <source src={MontaukRoute} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </AccordionItem>
         <AccordionItem
           header={
