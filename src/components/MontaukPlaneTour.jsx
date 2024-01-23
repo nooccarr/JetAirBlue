@@ -5,7 +5,8 @@ import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
-import MontaukRoute from '../assets/videos/montaukRoute.mp4';
+import MontaukRoute from '../assets/videos/montauk-route.mp4';
+import MontaukRoutePoster from '../assets/images/posters/montauk-route.jpeg';
 import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';
@@ -184,7 +185,12 @@ const MontaukPlaneTour = () => {
             />
           }
         >
-          <video width="100%" height="auto" controls>
+          <video
+            width="100%"
+            height="auto"
+            controls
+            poster={MontaukRoutePoster}
+          >
             <source src={MontaukRoute} type="video/mp4" />
             Your browser does not support the video tag.
           </video>

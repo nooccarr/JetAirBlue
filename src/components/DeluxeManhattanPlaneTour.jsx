@@ -5,7 +5,8 @@ import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import MontaukCard from '../assets/images/related-montauk.jpg';
-import DeluxeManhattanRoute from '../assets/videos/deluxeManhattanRoute.mp4';
+import DeluxeManhattanRoute from '../assets/videos/deluxe-manhattan-route.mp4';
+import DeluxeManhattanRoutePoster from '../assets/images/posters/deluxe-manhattan-route.jpeg';
 import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';
@@ -202,7 +203,12 @@ const DeluxeManhattanPlaneTour = () => {
             />
           }
         >
-          <video width="100%" height="auto" controls>
+          <video
+            width="100%"
+            height="auto"
+            controls
+            poster={DeluxeManhattanRoutePoster}
+          >
             <source src={DeluxeManhattanRoute} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
