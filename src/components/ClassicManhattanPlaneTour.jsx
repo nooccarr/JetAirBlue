@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
 import MontaukCard from '../assets/images/related-montauk.jpg';
 import ClassicManhattanRoute from '../assets/videos/classic-manhattan-route.mp4';
-import ClassicManhattanRoutePoster from '../assets/images/posters/classic-manhattan-route.jpeg';
+import ClassicManhattanRoutePoster from '../assets/images/posters/classic-manhattan-route.jpg';
 import { coloredButton, clearButton } from '../utils/Button';
 import styles from '../styles/accordion.module.css';
 import chevronDown from '../assets/svgs/chevron-down.svg';

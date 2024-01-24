@@ -1,3 +1,5 @@
+import { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { Carousel } from 'react-responsive-carousel';
 import { coloredButton, clearButton } from '../utils/Button';
 import { Link } from 'react-router-dom';
@@ -61,6 +63,26 @@ const tours = [
 
 const Home = () => {
   useScrollTop();
+
+  const form = useRef(null);
+  console.log('FORM::object.current::', form.current);
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const serviceId = 'service_2agsawd';
+    const templateId = 'template_so92cdp';
+    const publicKey = 'KRBE_6VJ3UIScm0ro';
+
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
+  };
 
   const imageTop = (
     <div className="home-main-image-top-container">
@@ -171,9 +193,15 @@ const Home = () => {
     </div>
   );
 
+  // id is for styling and associating input element with label
+  // name attribute is used when sending information to the back-end of your website.
   const requestInfo = (
     <div className="home-request-info-form">
-      <form className="home-request-info-form-container">
+      <form
+        className="home-request-info-form-container"
+        ref={form}
+        onSubmit={sendEmail}
+      >
         <h2 className="home-request-info-title">
           <FormattedMessage
             id="home.request-info.title"
@@ -197,7 +225,7 @@ const Home = () => {
           <input
             type="text"
             id="fname"
-            name="fname"
+            name="first_name"
             className="home-request-input"
           />
         </div>
@@ -211,7 +239,7 @@ const Home = () => {
           <input
             type="text"
             id="lname"
-            name="lname"
+            name="last_name"
             className="home-request-input"
           />
         </div>
@@ -225,7 +253,7 @@ const Home = () => {
           <input
             type="email"
             id="email"
-            name="email"
+            name="reply_to"
             className="home-request-input"
           />
         </div>
@@ -239,7 +267,7 @@ const Home = () => {
           <input
             type="tel"
             id="phone"
-            name="phone"
+            name="phone_number"
             className="home-request-input"
           />
         </div>
