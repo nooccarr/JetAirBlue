@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 import { Carousel } from 'react-responsive-carousel';
 import { coloredButton, clearButton } from '../utils/Button';
@@ -63,9 +63,9 @@ const tours = [
 
 const Home = () => {
   useScrollTop();
+  const [emailSent, setEmailSent] = useState(false);
 
   const form = useRef(null);
-  console.log('FORM::object.current::', form.current);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -77,6 +77,7 @@ const Home = () => {
     emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
       (result) => {
         console.log(result.text);
+        setEmailSent(true);
       },
       (error) => {
         console.log(error.text);
@@ -210,82 +211,103 @@ const Home = () => {
         </h2>
         <span className="home-request-info-span">
           <FormattedMessage
-            id="home.request-info.description"
-            defaultMessage="We’d love to hear from you. Please fill out the contact form and our
-          team will be in touch to discuss your travel needs."
+            id={
+              emailSent
+                ? 'home.request-info.submitted'
+                : 'home.request-info.description'
+            }
+            defaultMessage={
+              emailSent
+                ? 'The form has been submitted successfully.'
+                : 'We’d love to hear from you. Please fill out the contact form and our team will be in touch to discuss your travel needs.'
+            }
           />
         </span>
-        <div className="home-request-input-container">
-          <label htmlFor="fname" className="home-request-input-label">
-            <FormattedMessage
-              id="home.request-info.first-name"
-              defaultMessage="First Name"
-            />
-          </label>
-          <input
-            type="text"
-            id="fname"
-            name="first_name"
-            className="home-request-input"
-          />
-        </div>
-        <div className="home-request-input-container">
-          <label htmlFor="lname" className="home-request-input-label">
-            <FormattedMessage
-              id="home.request-info.last-name"
-              defaultMessage="Last Name"
-            />
-          </label>
-          <input
-            type="text"
-            id="lname"
-            name="last_name"
-            className="home-request-input"
-          />
-        </div>
-        <div className="home-request-input-container">
-          <label htmlFor="email" className="home-request-input-label">
-            <FormattedMessage
-              id="home.request-info.email"
-              defaultMessage="Email"
-            />
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="reply_to"
-            className="home-request-input"
-          />
-        </div>
-        <div className="home-request-input-container">
-          <label htmlFor="phone" className="home-request-input-label">
-            <FormattedMessage
-              id="home.request-info.phone"
-              defaultMessage="Phone"
-            />
-          </label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone_number"
-            className="home-request-input"
-          />
-        </div>
-        <div className="home-request-input-container">
-          <label htmlFor="message" className="home-request-input-label">
-            <FormattedMessage
-              id="home.request-info.message"
-              defaultMessage="Message"
-            />
-          </label>
-          <input id="text" name="message" className="home-request-input" />
-        </div>
-        <div className="home-request-button-container">
-          {clearButton(
-            <FormattedMessage id="button.book-now" defaultMessage="Book Now" />,
-            'home-request-button'
-          )}
-        </div>
+        {!emailSent && (
+          <>
+            <div className="home-request-input-container">
+              <label htmlFor="fname" className="home-request-input-label">
+                <FormattedMessage
+                  id="home.request-info.first-name"
+                  defaultMessage="First Name"
+                />
+              </label>
+              <input
+                type="text"
+                id="fname"
+                name="first_name"
+                className="home-request-input"
+                required
+              />
+            </div>
+            <div className="home-request-input-container">
+              <label htmlFor="lname" className="home-request-input-label">
+                <FormattedMessage
+                  id="home.request-info.last-name"
+                  defaultMessage="Last Name"
+                />
+              </label>
+              <input
+                type="text"
+                id="lname"
+                name="last_name"
+                className="home-request-input"
+              />
+            </div>
+            <div className="home-request-input-container">
+              <label htmlFor="email" className="home-request-input-label">
+                <FormattedMessage
+                  id="home.request-info.email"
+                  defaultMessage="Email"
+                />
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="reply_to"
+                className="home-request-input"
+                required
+              />
+            </div>
+            <div className="home-request-input-container">
+              <label htmlFor="phone" className="home-request-input-label">
+                <FormattedMessage
+                  id="home.request-info.phone"
+                  defaultMessage="Phone"
+                />
+              </label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone_number"
+                className="home-request-input"
+              />
+            </div>
+            <div className="home-request-input-container">
+              <label htmlFor="message" className="home-request-input-label">
+                <FormattedMessage
+                  id="home.request-info.message"
+                  defaultMessage="Message"
+                />
+              </label>
+              <input
+                id="text"
+                name="message"
+                className="home-request-input"
+                required
+              />
+            </div>
+            <div className="home-request-button-container">
+              {clearButton(
+                <FormattedMessage
+                  id="button.book-now"
+                  defaultMessage="Book Now"
+                />,
+                'home-request-button'
+              )}
+            </div>
+          </>
+        )}
       </form>
     </div>
   );

@@ -104,6 +104,7 @@
   "home.cards.title": "Choose a Plane Tour",
   "home.request-info.title": "Request Information",
   "home.request-info.description": "We’d love to hear from you. Please fill out the contact form and our team will be in touch to discuss your travel needs.",
+  "home.request-info.submitted": "The form has been submitted successfully.",
   "home.request-info.first-name": "First Name",
   "home.request-info.last-name": "Last Name",
   "home.request-info.email": "Email",
