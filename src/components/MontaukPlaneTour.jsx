@@ -1,7 +1,11 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import useScrollTop from './hooks/useScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faClock,
+  faCalendarAlt,
+  faCoins,
+} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import DeluxeManhattanCard from '../assets/images/related-deluxe-manhattan-card.jpg';
@@ -16,6 +20,7 @@ const tour = {
   title: 'Montauk Plane Tour',
   duration: '60 Minutes',
   availability: 'Monday-Sunday 10:00am-5:00pm',
+  fare: '$200 per person',
   description: [
     'Explore the Montauk Scenic Flight, a journey of unparalleled beauty and coastal wonders. Take off from Farmingdale Airport, circling the iconic Montauk Lighthouse that stands at the eastern end of New York, overlooking the of the Atlantic Ocean.',
     "As you soar above, be captivated by the breathtaking sights along Long Island's south coastline – from the endless shores of Jones Beach to the picturesque landscapes of Fire Island. Glide over the East Hampton and the Montauk Recreation Area, catching glimpses of Montauk Airport in the coastal area.",
@@ -69,6 +74,7 @@ const MontaukPlaneTour = () => {
     title,
     duration,
     availability,
+    fare,
     description,
     sights,
   }) => (
@@ -108,6 +114,21 @@ const MontaukPlaneTour = () => {
               <FormattedMessage
                 id={`tour.${title}.availability`}
                 defaultMessage={availability}
+              />
+            </span>
+          </li>
+          <li className="tour-info-section-li">
+            <FontAwesomeIcon icon={faCoins} />
+            <span className="tour-info-section-li-prop">
+              <FormattedMessage
+                id="tour.quick-details.fare"
+                defaultMessage="fare:"
+              />
+            </span>
+            <span>
+              <FormattedMessage
+                id={`tour.${title}.fare`}
+                defaultMessage={fare}
               />
             </span>
           </li>
