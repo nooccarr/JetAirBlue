@@ -178,6 +178,142 @@ const ClassicManhattanPlaneTour = () => {
     </div>
   );
 
+  const tourFlightGuide = (
+    <ul className="tour-accordion-ul">
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-0.title"
+            defaultMessage="Check-in"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-0.description-0"
+            defaultMessage="Arrive at the departure point at least 45 minutes before your scheduled tour."
+          />
+        </p>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-0.description-1"
+            defaultMessage="All passengers must present a valid photo ID."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-1.title"
+            defaultMessage="Safety Rules"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-1.description-0"
+            defaultMessage="A mandatory safety briefing will be conducted before the flight. Follow all instructions provided by our experienced flight crew."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-2.title"
+            defaultMessage="Flight Conditions"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-2.description-0"
+            defaultMessage="Tours are subject to weather conditions. In case of cancellations, we'll work with you to reschedule or provide a refund."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-3.title"
+            defaultMessage="Cancellation Policy"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-3.description-0"
+            defaultMessage="Please cancel your reservation at least 48 hours in advance.."
+          />
+        </p>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-3.description-1"
+            defaultMessage="Cancellations must be made 24 hours in advance for a full refund."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-4.title"
+            defaultMessage="Attire"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-4.description-0"
+            defaultMessage="Considering the weather conditions on the day of the tour, please dress comfortably and refrain from bringing heavy luggage."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-5.title"
+            defaultMessage="Photography and Devices"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-5.description-0"
+            defaultMessage="You may bring your camera or smartphone to take photos and videos during the tour. Please follow crew instructions regarding device usage."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-6.title"
+            defaultMessage="Route"
+          />
+        </strong>
+
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-6.description-0"
+            defaultMessage="We recommend reaching Republic Airport by taxi or car. It takes approximately 40 minutes from Flushing and one hour from Manhattan."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-7.title"
+            defaultMessage="Enjoy the Experience"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-7.description-0"
+            defaultMessage="Relax, enjoy the breathtaking views, and make memories!"
+          />
+        </p>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-7.description-1"
+            defaultMessage="For any additional information or assistance, feel free to contact our customer service team. Thank you for choosing our scenic flight experience."
+          />
+        </p>
+      </li>
+    </ul>
+  );
+
   const AccordionItem = ({ header, ...rest }) => (
     <Item
       {...rest}
@@ -233,74 +369,7 @@ const ClassicManhattanPlaneTour = () => {
             />
           }
         >
-          <ul className="tour-accordion-ul">
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">체크인</strong>
-              <p className="tour-accordion-p">
-                예약된 스케쥴보다 최소 45분 전에는 출발지에 도착하세요.
-              </p>
-              <p className="tour-accordion-p">
-                모든 승객은 유효한 사진 신분증을 제출해야 합니다.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">안전수칙</strong>
-              <p className="tour-accordion-p">
-                비행 전 필수적인 기내 안전수칙에 대해 안내드립니다. 가이드의
-                모든 지침을 따라주세요.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">날씨 조건</strong>
-              <p className="tour-accordion-p">
-                항공 비행은 날씨 조건에 따라 달라집니다. 기상 악화로 비행할 수가
-                없을 때 예약 날짜변경, 전액 크레딧 또는 환불이 제공됩니다.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">취소 정책</strong>
-              <p className="tour-accordion-p">
-                최소한 48시간 전에는 예약을 취소해 주세요.
-              </p>
-              <p className="tour-accordion-p">
-                예약 취소는 24시간 전에 하시면 전액 환불해 드립니다.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">복장</strong>
-              <p className="tour-accordion-p">
-                비행 당일 날씨 조건을 고려하여 간편한 복장으로 탑승하시고 무거운
-                가방은 삼가해주세요.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">
-                사진 촬영 및 기기
-              </strong>
-              <p className="tour-accordion-p">
-                카메라 및 모바일 기기 사용이 허용되며 분실하지 않도록 안전하게
-                보관하세요. 기기 사용에 관한 가이드의 지시를 따라주셔야 합니다.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">오시는 길</strong>
-
-              <p className="tour-accordion-p">
-                리퍼블릭 공항까지는 택시 또는 승용차로 오시길 권장합니다.
-                플러싱에서는 40분, 맨하탄에서는 한시간 정도 소요됩니다.
-              </p>
-            </li>
-            <li className="tour-accordion-li">
-              <strong className="tour-accordion-strong">즐기기</strong>
-              <p className="tour-accordion-p">
-                편안하게 아름다운 경치를 즐기며 소중한 추억을 만드십시오!
-              </p>
-              <p className="tour-accordion-p">
-                추가 정보나 도움이 필요한 경우 언제든지 고객 서비스 팀에
-                문의하십시오. Jet Air Blue를 선택해 주셔서 감사합니다.
-              </p>
-            </li>
-          </ul>
+          {tourFlightGuide}
         </AccordionItem>
       </Accordion>
     </div>
