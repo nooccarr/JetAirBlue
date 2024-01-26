@@ -1,7 +1,11 @@
 import { Accordion, AccordionItem as Item } from '@szhsin/react-accordion';
 import useScrollTop from './hooks/useScrollTop';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import {
+  faClock,
+  faCalendarAlt,
+  faCoins,
+} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import ClassicManhattanCard from '../assets/images/related-classic-manhattan-card.jpg';
 import MontaukCard from '../assets/images/related-montauk.jpg';
@@ -16,6 +20,7 @@ const tour = {
   title: 'Deluxe Manhattan Plane Tour',
   duration: '90 Minutes',
   availability: 'Monday-Sunday 10:00am-5:00pm',
+  fare: '$400 per person',
   description: [
     'Experience the captivating Manhattan and Montauk Scenic Tour, a seamless blend of the Classic Manhattan Plane Tour and the enchanting Montauk Plane Tour.',
     'The journey unfolds from Long Island Republic Airport, taking you along the Hudson River to the mesmerizing Manhattan skyline – a bustling cityscape with iconic landmarks and skyscrapers. As the tour progresses, glide over the tranquil landscapes of Jones Beach, adding a laid-back coastal touch to the adventure.',
@@ -87,6 +92,7 @@ const DeluxeManhattanPlaneTour = () => {
     title,
     duration,
     availability,
+    fare,
     description,
     sights,
   }) => (
@@ -129,6 +135,21 @@ const DeluxeManhattanPlaneTour = () => {
               />
             </span>
           </li>
+          <li className="tour-info-section-li">
+            <FontAwesomeIcon icon={faCoins} />
+            <span className="tour-info-section-li-prop">
+              <FormattedMessage
+                id="tour.quick-details.fare"
+                defaultMessage="fare:"
+              />
+            </span>
+            <span>
+              <FormattedMessage
+                id={`tour.${title}.fare`}
+                defaultMessage={fare}
+              />
+            </span>
+          </li>
         </ul>
       </div>
       <h3 className="tour-info-section-sighting-title">
@@ -164,6 +185,142 @@ const DeluxeManhattanPlaneTour = () => {
         ))}
       </ul>
     </div>
+  );
+
+  const tourFlightGuide = (
+    <ul className="tour-accordion-ul">
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-0.title"
+            defaultMessage="Check-in"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-0.description-0"
+            defaultMessage="Arrive at the departure point at least 45 minutes before your scheduled tour."
+          />
+        </p>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-0.description-1"
+            defaultMessage="All passengers must present a valid photo ID."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-1.title"
+            defaultMessage="Safety Rules"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-1.description-0"
+            defaultMessage="A mandatory safety briefing will be conducted before the flight. Follow all instructions provided by our experienced flight crew."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-2.title"
+            defaultMessage="Flight Conditions"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-2.description-0"
+            defaultMessage="Tours are subject to weather conditions. In case of cancellations, we'll work with you to reschedule or provide a refund."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-3.title"
+            defaultMessage="Cancellation Policy"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-3.description-0"
+            defaultMessage="Please cancel your reservation at least 48 hours in advance.."
+          />
+        </p>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-3.description-1"
+            defaultMessage="Cancellations must be made 24 hours in advance for a full refund."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-4.title"
+            defaultMessage="Attire"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-4.description-0"
+            defaultMessage="Considering the weather conditions on the day of the tour, please dress comfortably and refrain from bringing heavy luggage."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-5.title"
+            defaultMessage="Photography and Devices"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-5.description-0"
+            defaultMessage="You may bring your camera or smartphone to take photos and videos during the tour. Please follow crew instructions regarding device usage."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-6.title"
+            defaultMessage="Route"
+          />
+        </strong>
+
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-6.description-0"
+            defaultMessage="We recommend reaching Republic Airport by taxi or car. It takes approximately 40 minutes from Flushing and one hour from Manhattan."
+          />
+        </p>
+      </li>
+      <li className="tour-accordion-li">
+        <strong className="tour-accordion-strong">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-7.title"
+            defaultMessage="Enjoy the Experience"
+          />
+        </strong>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-7.description-0"
+            defaultMessage="Relax, enjoy the breathtaking views, and make memories!"
+          />
+        </p>
+        <p className="tour-accordion-p">
+          <FormattedMessage
+            id="tour.accordion-item-1.answer-7.description-1"
+            defaultMessage="For any additional information or assistance, feel free to contact our customer service team. Thank you for choosing our scenic flight experience."
+          />
+        </p>
+      </li>
+    </ul>
   );
 
   const AccordionItem = ({ header, ...rest }) => (
@@ -221,35 +378,7 @@ const DeluxeManhattanPlaneTour = () => {
             />
           }
         >
-          *Pricing is per seat. There’s an additional $40 per person heliport
-          fee due at check-in. Cancellations made within 24 hours of the
-          scheduled departure time as well as no-shows will incur 100% of tour
-          charges. Please contact Manhattan Helicopters at least 24 hours in
-          advance and we will re-schedule your tour at no cost. Late arrivals
-          will be addressed on a case-by-case basis depending on seating and
-          aircraft availability. Reservations made at the heliport forfeit their
-          right to cancel after payment has been made. The maximum weight is 300
-          pounds (136 kilograms) per passenger. Passengers weighing over 250lbs,
-          or 113 kg must purchase an additional seat. The scheduled duration of
-          our tours may vary based on flight routing and weather conditions.
-          <br />
-          <br />
-          Manhattan Helicopters reserves the right to amend the flight paths
-          without notice. Flight routes will be altered during Yankee home games
-          to avoid restricted airspace. All passengers must pass a metal
-          detector and present a government-issued ID for security purposes.
-          Prices are subject to change without notice. Management reserves the
-          right to refuse boarding to a passenger or to upgrade passengers at
-          any time. Manhattan Helicopters reserves the right to alter or
-          terminate any flights due to security maintenance, aircraft
-          availability, emergencies, weather, or acts of God.
-          <br />
-          <br />
-          Narrated audio language selection is not guaranteed and is based on
-          availability. Should more than 2 languages be requested on the same
-          flight, the audio commentary may default to English. Due to the
-          unpredictable nature of technical difficulties, we cannot provide
-          assurance for the audio functionality of the headsets.
+          {tourFlightGuide}
         </AccordionItem>
       </Accordion>
     </div>
