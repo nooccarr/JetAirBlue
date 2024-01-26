@@ -23,8 +23,8 @@ const Header = () => {
             />
           </button>
           <select value={context.locale} onChange={context.selectLanguage}>
-            <option value="en-US">English</option>
             <option value="ko-KR">한국어</option>
+            <option value="en-US">English</option>
           </select>
         </div>
       </div>

@@ -5,7 +5,8 @@ import English from './lang/en-US.json';
 
 export const Context = React.createContext();
 
-const userLocale = navigator.language;
+// const userLocale = navigator.language;
+const userLocale = 'ko-KR';
 
 let lang;
 if (userLocale === 'en-US') {
