@@ -5,6 +5,7 @@ import DeluxeManhattanCard from '../assets/images/home-deluxe-manhattan-card.jpg
 import MontaukCard from '../assets/images/home-montauk-card.jpg';
 import { Link } from 'react-router-dom';
 import { coloredButton, clearButton } from '../utils/Button';
+import { FormattedMessage } from 'react-intl';
 
 const tours = [
   {
@@ -43,14 +44,32 @@ const PlaneTours = () => {
       <div className="tour-card-text-container">
         <div>
           <Link to={`../${slug}`} className="tour-card-title-link">
-            <h4 className="tour-card-title">{title}</h4>
+            <h4 className="tour-card-title">
+              <FormattedMessage
+                id={`tour.${title}.title`}
+                defaultMessage={title}
+              />
+            </h4>
           </Link>
-          <p className="tour-card-description">{description}</p>
+          <p className="tour-card-description">
+            {' '}
+            <FormattedMessage
+              id={`tour.${title}.description`}
+              defaultMessage={description}
+            />
+          </p>
         </div>
         <div className="tour-card-button-container">
-          {coloredButton('book now')}
+          {coloredButton(
+            <FormattedMessage id="button.book-now" defaultMessage="Book Now" />
+          )}
           <Link to={`../${slug}`} className="tour-card-button-link">
-            {clearButton('learn more')}
+            {clearButton(
+              <FormattedMessage
+                id="button.learn-more"
+                defaultMessage="Learn More"
+              />
+            )}
           </Link>
         </div>
       </div>
@@ -98,7 +117,14 @@ const PlaneTours = () => {
 
   return (
     <main className="page-container">
-      <TopImageSection title="Jet Air Blue Plane Tours" />
+      <TopImageSection
+        title={
+          <FormattedMessage
+            id="plane-tours.title"
+            defaultMessage="Jet Air Blue Plane Tours"
+          />
+        }
+      />
       <div className="plane-tours-container">
         {tourCardSection(tours)}
         <div className="plane-tours-divider-container">

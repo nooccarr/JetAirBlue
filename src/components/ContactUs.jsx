@@ -9,6 +9,8 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import TopImageSection from './TopImageSection';
 import { coloredButton } from '../utils/Button';
+import { FormattedMessage } from 'react-intl';
+import { Form } from 'react-router-dom';
 
 const ContactUs = () => {
   useScrollTop();
@@ -36,7 +38,12 @@ const ContactUs = () => {
 
   const contactUsForm = (
     <form className="contact-us-form" ref={form} onSubmit={sendEmail}>
-      <h3 className="contact-us-form-title">Send Us a Message</h3>
+      <h3 className="contact-us-form-title">
+        <FormattedMessage
+          id="contact-us.form.title"
+          defaultMessage="Send Us a Message"
+        />
+      </h3>
       {emailSent ? (
         <p>The form has been submitted successfully.</p>
       ) : (
@@ -44,7 +51,10 @@ const ContactUs = () => {
           {' '}
           <div className="contact-us-input-container">
             <label htmlFor="name" className="contact-us-input-label">
-              Name
+              <FormattedMessage
+                id="contact-us-form.name"
+                defaultMessage="Name"
+              />
             </label>
             <input
               type="text"
@@ -56,7 +66,10 @@ const ContactUs = () => {
           </div>
           <div className="contact-us-input-container">
             <label htmlFor="email" className="contact-us-input-label">
-              Email
+              <FormattedMessage
+                id="contact-us-form.email"
+                defaultMessage="Email"
+              />
             </label>
             <input
               type="email"
@@ -68,7 +81,10 @@ const ContactUs = () => {
           </div>
           <div className="contact-us-input-container">
             <label htmlFor="phone" className="contact-us-input-label">
-              Phone
+              <FormattedMessage
+                id="contact-us-form.phone"
+                defaultMessage="Phone"
+              />
             </label>
             <input
               type="tel"
@@ -79,7 +95,10 @@ const ContactUs = () => {
           </div>
           <div className="contact-us-input-container">
             <label htmlFor="message" className="contact-us-input-label">
-              Message
+              <FormattedMessage
+                id="contact-us-form.message"
+                defaultMessage="Message"
+              />
             </label>
             <textarea
               id="textarea"
@@ -90,7 +109,13 @@ const ContactUs = () => {
             />
           </div>
           <div className="contact-us-button-container">
-            {coloredButton('submit', 'contact-us-button')}
+            {coloredButton(
+              <FormattedMessage
+                id="contact-us-form.button"
+                defaultMessage="Submit"
+              />,
+              'contact-us-button'
+            )}
           </div>
         </>
       )}
@@ -144,11 +169,36 @@ const ContactUs = () => {
         </ul>
       </div>
 
-      <h4 className="contact-us-info-hours">Hours of Operation</h4>
-      <p className="contact-us-info-desc">Monday-Friday, 10 am to 5 pm</p>
-      <p className="contact-us-info-desc">Saturday-Sunday, 10 am to 5 pm</p>
-      <h5 className="contact-us-info-holiday">Holiday Hours</h5>
-      <p className="contact-us-info-desc">10 am to 5 pm</p>
+      <h4 className="contact-us-info-hours">
+        <FormattedMessage
+          id="contact-us.info.hours-of-operation"
+          defaultMessage="Hours of Operation"
+        />
+      </h4>
+      <p className="contact-us-info-desc">
+        <FormattedMessage
+          id="contact-us.info.weekdays"
+          defaultMessage="Monday-Friday, 10 am to 5 pm"
+        />
+      </p>
+      <p className="contact-us-info-desc">
+        <FormattedMessage
+          id="contact-us.info.weekends"
+          defaultMessage="Saturday-Sunday, 10 am to 5 pm"
+        />
+      </p>
+      <h5 className="contact-us-info-holiday">
+        <FormattedMessage
+          id="contact-us.info.holiday-hours"
+          defaultMessage="Holiday Hours"
+        />
+      </h5>
+      <p className="contact-us-info-desc">
+        <FormattedMessage
+          id="contact-us.info.holidays"
+          defaultMessage="10 am to 5 pm"
+        />
+      </p>
       <div className="about-us-intro-image-container">
         <img src="https://placehold.co/100x100" />
       </div>
@@ -158,8 +208,15 @@ const ContactUs = () => {
   return (
     <main className="page-container">
       <TopImageSection
-        title="Contact Us"
-        description="Customer Service Lines are Open from 10am-5pm"
+        title={
+          <FormattedMessage id="contact-us.title" defaultMessage="Contact Us" />
+        }
+        description={
+          <FormattedMessage
+            id="contact-us.sub-title"
+            defaultMessage="Customer Service Lines are Open from 10am-5pm"
+          />
+        }
       />
       <div className="contact-us-container">
         <div className="contact-us-form-info-container">
