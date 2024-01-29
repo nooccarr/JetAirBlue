@@ -27,12 +27,12 @@ const MenuItems = ({ items }) => {
   }, [dropdown]);
 
   const onMouseEnter = () => {
-    window.innerWidth > 960 && setDropdown(true);
+    window.innerWidth > 768 && setDropdown(true);
     setDepthLevel(1);
   };
 
   const onMouseLeave = () => {
-    window.innerWidth > 960 && setDropdown(false);
+    window.innerWidth > 768 && setDropdown(false);
     setDepthLevel(0);
   };
 
@@ -56,7 +56,7 @@ const MenuItems = ({ items }) => {
             aria-expanded={dropdown ? 'true' : 'false'}
             onClick={() => setDropdown((prev) => !prev)}
           >
-            {window.innerWidth < 960 ? (
+            {window.innerWidth < 768 ? (
               <FormattedMessage
                 id={`header.navbar.menu.${items.title}`}
                 defaultMessage={items.title}
@@ -69,8 +69,8 @@ const MenuItems = ({ items }) => {
                     defaultMessage={items.title}
                   />
                 </Link>
-                {window.innerWidth < 960 ? null : depthLevel > 0 &&
-                  window.innerWidth > 960 ? (
+                {window.innerWidth < 768 ? null : depthLevel > 0 &&
+                  window.innerWidth > 768 ? (
                   <span className="caret-icon">
                     <FontAwesomeIcon icon={faCaretUp} />
                   </span>
@@ -96,8 +96,8 @@ const MenuItems = ({ items }) => {
               id={`header.navbar.menu.${items.title}`}
               defaultMessage={items.title}
             />
-            {window.innerWidth < 960 ? null : depthLevel > 0 &&
-              window.innerWidth > 960 ? (
+            {window.innerWidth < 768 ? null : depthLevel > 0 &&
+              window.innerWidth > 768 ? (
               <span className="caret-icon">
                 <FontAwesomeIcon icon={faCaretUp} />
               </span>
