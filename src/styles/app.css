@@ -57,6 +57,10 @@ header {
   text-decoration: underline;
 }
 
+.header-menu-button {
+  vertical-align: middle;
+  padding-bottom: 2px;
+}
 
 /* NAVIGATION BAR */
 .navbar-menu-container {
@@ -123,7 +127,7 @@ header {
   margin: 0px;
   padding: 0px;
   border-radius: 5px;
-  z-index: 100
+  z-index: 100;
 }
 
 .dropdown-menu-item {
@@ -135,7 +139,6 @@ header {
   font-size: 13px;
   letter-spacing: 1px;
   padding: 10px 20px;
-
 }
 
 .show {
@@ -171,7 +174,6 @@ header {
   /* height: 95vh; */
   /* height: 550px; */
 }
-
 
 .caption-container {
   position: absolute;
@@ -333,13 +335,12 @@ header {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
 }
 
 .tour-card-text-container {
   display: flex;
   flex-direction: column;
-  justify-content:flex-end;
+  justify-content: flex-end;
   /* height: 100%; */
   padding: 20px;
 }
@@ -389,13 +390,34 @@ header {
   height: 68px;
 }
 
+/* ACCORDION */
+.tour-accordion-ul {
+  margin: 0;
+  padding-left: 0;
+}
+
+.tour-accordion-li {
+  list-style-type: none;
+}
+
+.tour-accordion-strong {
+  font-size: 17px;
+}
+
+.tour-accordion-p {
+  margin: 0;
+}
+
+.tour-accordion-p:last-child {
+  margin-bottom: 12px;
+}
 /* BUTTON */
 .colored-button {
   padding: 12px;
   margin-top: auto;
   width: 48%;
   text-transform: uppercase;
-  border: 1px solid #505152;;
+  border: 1px solid #505152;
   border-radius: 5px;
   background-color: #505152;
   color: #fff;
@@ -427,7 +449,6 @@ header {
   opacity: 1;
   transition: 0.3s;
   /* text-decoration: none; */
-
 }
 
 .home-book-now-button:hover,
@@ -438,7 +459,6 @@ header {
   background-color: #505152;
   border: 1px solid #505152;
 }
-
 
 .clear-button {
   padding: 12px;
@@ -496,12 +516,12 @@ header {
 
 .about-tour-description {
   text-align: center;
-    margin: 0;
-    font-size: 1.2rem;
-    letter-spacing: -0.75px;
-    line-height: 1.5;
-    color: #fff;
-    padding-bottom: 1.2rem;
+  margin: 0;
+  font-size: 1.2rem;
+  letter-spacing: -0.75px;
+  line-height: 1.5;
+  color: #fff;
+  padding-bottom: 1.2rem;
 }
 
 /* WHY CHOOSE US */
@@ -565,7 +585,6 @@ header {
   /* grid-template-columns: 1fr 2fr; */
   /* gap: 10px; */
   /* grid-auto-rows: minmax(100px, auto); */
-
 }
 
 .home-request-info-form {
@@ -584,7 +603,7 @@ header {
   font-family: 'Spectral', serif;
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
-  color: #191B1C;
+  color: #191b1c;
   letter-spacing: 2px;
   line-height: 1.2;
   margin-top: 0;
@@ -721,8 +740,6 @@ header {
   line-height: 1.5;
   letter-spacing: -1px;
   color: #fff;
-
-
 }
 
 /* PLANE TOUR INFO SECTION */
@@ -730,7 +747,6 @@ header {
   margin: 0 auto;
   max-width: 1280px;
   padding: 80px 20px 0 20px;
-
 }
 
 .tour-info-section-quick-details-container,
@@ -745,7 +761,7 @@ header {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
   line-height: 16px;
   margin: 0 0 16px 0;
 }
@@ -776,7 +792,7 @@ header {
   font-weight: 600;
   letter-spacing: -1px;
   line-height: 1.25;
-  color: #08090E;
+  color: #08090e;
 }
 
 .tour-info-section-sighting-description {
@@ -795,7 +811,7 @@ header {
   letter-spacing: -1px;
   text-transform: capitalize;
   line-height: 1.25;
-  color: #08090E;
+  color: #08090e;
 }
 
 .tour-info-section-sighting-list-ul {
@@ -820,10 +836,8 @@ header {
   grid-template-columns: 2fr 1fr;
 }
 
-
 .about-us-intro-text-container {
   padding-right: 20px;
-
 }
 .about-us-title {
   text-transform: capitalize;
@@ -847,14 +861,12 @@ header {
   display: flex;
   justify-content: center;
   margin-top: 24px;
-
 }
 .about-us-bold {
   display: block;
   margin-top: 24px;
   font-size: 18px;
   font-weight: 700;
-
 }
 
 .about-us-ul {
@@ -908,7 +920,7 @@ header {
 }
 
 .contact-us-input {
-  background-color: #FAFBFC;
+  background-color: #fafbfc;
   border: 1px solid #9badb8;
   border-radius: 4px;
   padding: 5px 4px;
@@ -919,7 +931,7 @@ header {
 }
 
 .contact-us-textarea {
-  background-color: #FAFBFC;
+  background-color: #fafbfc;
   border: 1px solid #9badb8;
   border-radius: 4px;
   padding: 6px 8px;
@@ -953,7 +965,7 @@ header {
 .contact-us-info-title,
 .contact-us-form-title {
   font-size: 32px;
-  color: #08090E;
+  color: #08090e;
   margin: 0;
   letter-spacing: -1px;
 }
@@ -972,7 +984,7 @@ header {
 
 .faq-info-title {
   font-size: 32px;
-  color: #08090E;
+  color: #08090e;
   margin: 0;
   letter-spacing: -1px;
   text-transform: uppercase;
@@ -982,7 +994,6 @@ header {
   background-color: #cce0ee;
   padding: 40px 40px 40px 40px;
 }
-
 
 /* FOOTER */
 footer {
@@ -1044,7 +1055,7 @@ footer {
 }
 
 .contact-info > a {
-  color: #08090E;
+  color: #08090e;
   text-decoration: none;
 }
 
