@@ -16,7 +16,8 @@ const Header = () => {
   const context = useContext(Context);
 
   const [isMobile, setIsMobile] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     window.innerWidth <= 767 ? setIsMobile(true) : setIsMobile(false);
@@ -27,21 +28,28 @@ const Header = () => {
     return () => window.removeEventListener('resize', onWindowResize);
   }, []);
 
+  useEffect(() => {
+    if (!isMobile) setIsMenuOpen(false);
+  }, [isMobile]);
+
   const FlagDropdown = () => {
     return (
       <div className="inline-block relative hover:cursor-pointer text-start">
-        <div className="hover:underline" onClick={() => setOpen(!open)}>
+        <div
+          className="hover:underline"
+          onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
+        >
           {context.locale === 'ko-KR' ? '한국어' : 'ENGLISH'}
         </div>
-        {open && (
+        {isLanguageOpen && (
           <div className="absolute z-10 text-start">
             {options.map((option, index) => (
               <div
                 key={index}
-                className="bg-[#060d17] last:rounded-b-md w-[128px] mx-[-48px] px-[20px] py-[10px] hover:underline"
+                className="bg-[#060d17] last:rounded-b-md w-32 -mx-12 px-5 py-2.5 hover:underline"
                 onClick={() => {
                   context.selectLanguage(option);
-                  setOpen(false);
+                  setIsLanguageOpen(false);
                 }}
               >
                 <img
@@ -59,15 +67,16 @@ const Header = () => {
       </div>
     );
   };
+
   return (
     <header>
       <div className="header-container">
-        <Link to="/" className="header-logo">
+        <Link to="/" className="header-logo my-4">
           {/* <img src='/images/logo.png' alt='logo' /> */}
           jet air blue
         </Link>
         {!isMobile && <NavBar />}
-        <div>
+        <div className="my-4">
           {!isMobile && (
             <>
               <div className="inline text-[13px] font-bold me-20">
@@ -82,7 +91,28 @@ const Header = () => {
             </>
           )}
           {isMobile && (
-            <img className="header-menu-button" src={Menu} alt="Menu" />
+            <>
+              <div className="inline text-[13px] font-bold me-10 lg-me-15">
+                <FlagDropdown />
+              </div>
+              <div
+                onClick={() => !isLanguageOpen && setIsMenuOpen(!isMenuOpen)}
+                className={`inline-block border border-black hover:border-white ${
+                  isMenuOpen && 'border-white'
+                } px-1 rounded-md hover:cursor-pointer`}
+              >
+                <img
+                  className="header-menu-button inline-block"
+                  src={Menu}
+                  alt="Menu"
+                />
+                {isMenuOpen && (
+                  <div className="absolute z-10 mt-5">
+                    <NavBar dropdown="true" />
+                  </div>
+                )}
+              </div>
+            </>
           )}
         </div>
       </div>

@@ -32,6 +32,7 @@ header {
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
+  line-height: 1;
   font-size: 13px;
   letter-spacing: 1px;
   opacity: 1;
