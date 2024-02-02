@@ -86,7 +86,7 @@ const Home = () => {
   };
 
   const imageTop = (
-    <div className="home-main-image-top-container">
+    <div className="home-main-image-top-container aspect-video min-h-[600px] w-full">
       {/* <img src='https://placehold.co/1920x1080' /> */}
       {/* <div className='home-main-image-top'> */}
       <div className="caption-container">
@@ -330,9 +330,9 @@ const Home = () => {
         }
         tours={tours}
       />
-      <section className="home-request-info-container">
+      <section className="grid grid-cols-1 lg:grid-cols-2">
         {requestInfo}
-        <div>
+        <div className="order-first min-h-[650px] lg:order-last">
           <img className="home-request-info-image" src={HomeRequestInfo} />
         </div>
       </section>
