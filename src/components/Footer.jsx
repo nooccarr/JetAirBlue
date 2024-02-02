@@ -104,7 +104,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <section className="footer-container">
+      <section className="footer-container justify-center gap-x-[195px] sm:justify-between">
         {contactInfo()}
         {quickLinks()}
       </section>

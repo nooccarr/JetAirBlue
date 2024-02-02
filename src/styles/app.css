@@ -9,6 +9,7 @@ body {
   line-height: 1.5;
   color: #333;
   background-color: #fff;
+  min-width: 336px;
 }
 
 /* HEADER */
@@ -172,9 +173,6 @@ header {
   background-position: center center;
   background-color: rgba(34, 34, 34, 0.3);
   background-blend-mode: multiply;
-  height: 1080px;
-  /* height: 95vh; */
-  /* height: 550px; */
 }
 
 .caption-container {
@@ -219,9 +217,9 @@ header {
 
 .bottom-carousel-caption-container {
   position: absolute;
-  width: 40%;
+  width: 80%;
   top: 50%;
-  left: 25%;
+  left: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -265,9 +263,10 @@ header {
 .home-choose-tour-container {
   margin: 0 auto;
   max-width: 1280px;
-  padding-top: 80px;
+  /* padding-top: 80px;
   padding-bottom: 98px;
-  /* padding: 80px 20px 98px 20px; */
+  padding-left: 20px; */
+  padding: 80px 20px 98px 20px;
 }
 
 .home-choose-tour-text {
@@ -298,11 +297,12 @@ header {
   flex-wrap: wrap; */
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 40px;
+  /* gap: 40px; */
 }
 
 .tour-card-container {
   max-width: 360px;
+  min-width: 288px;
   margin: 24px 24px 24px;
   border-radius: 10px;
   /* height: 100%; */
@@ -316,16 +316,17 @@ header {
 }
 
 .plane-tour-card-container {
-  /* max-width: 360px;
-  margin: 24px 24px 24px; */
+  min-width: 288px;
+  max-width: 386px;
+  /* margin: 24px 24px 24px; */
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
 }
 
 .related-tour-card-container {
-  min-width: 360px;
-  max-width: 590px;
+  min-width: 288px;
+  max-width: 572px;
 }
 
 .tour-card-image-container {
@@ -566,7 +567,7 @@ header {
 }
 
 .home-value-container {
-  min-width: 244px;
+  /* min-width: 244px; */
   max-width: 460px;
   margin: 0 30px;
 }
@@ -592,14 +593,6 @@ header {
 }
 
 /* HOME REQUEST INFO */
-.home-request-info-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-template-columns: 1fr 2fr; */
-  /* gap: 10px; */
-  /* grid-auto-rows: minmax(100px, auto); */
-}
-
 .home-request-info-form {
   /* grid-row: 1;
   grid-column: 1; */
@@ -631,7 +624,6 @@ header {
 .home-request-input-container {
   display: flex;
   flex-direction: column;
-  min-width: 360px;
 }
 
 .home-request-button-container {
@@ -1031,7 +1023,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   align-items: top;
-  justify-content: space-between;
   padding: 80px 20px;
 }
 

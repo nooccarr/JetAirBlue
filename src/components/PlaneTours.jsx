@@ -82,7 +82,7 @@ const PlaneTours = () => {
   );
 
   const tourCardList = (tours) => (
-    <div className="plane-tour-card-list">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10">
       {tours.map((tour) => tourCard(tour))}
     </div>
   );
