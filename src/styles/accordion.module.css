@@ -29,6 +29,7 @@ body {
   margin-bottom: 4px;
   border: 1px solid #ddd;
   border-bottom: none;
+  background-color: #fff;
 }
 
 .itemExpanded {

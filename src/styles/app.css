@@ -346,6 +346,7 @@ header {
   flex-direction: column;
   justify-content: flex-end;
   /* height: 100%; */
+  margin-top: 7px;
   padding: 20px;
 }
 
@@ -393,6 +394,7 @@ header {
   display: flex;
   justify-content: space-between;
   height: 68px;
+  padding: 0 20px 20px 20px;
 }
 
 /* ACCORDION */
@@ -728,6 +730,7 @@ header {
 .tour-main-image-caption-title {
   margin: 0;
   font-size: 4rem;
+  font-weight: 600;
   line-height: 1.125;
   letter-spacing: -1px;
   color: #fff;
@@ -738,6 +741,7 @@ header {
   text-align: center;
   margin: 0;
   font-size: 4rem;
+  font-weight: 700;
   line-height: 1.125;
   letter-spacing: -1px;
   color: #fff;
@@ -747,6 +751,7 @@ header {
 .tour-other-image-caption-description {
   margin: 0;
   font-size: 32px;
+  font-weight: 700;
   line-height: 1.5;
   letter-spacing: -1px;
   color: #fff;
@@ -826,6 +831,7 @@ header {
 
 .tour-info-section-sighting-list-ul {
   padding-left: 20px;
+  margin-top: 16px;
   margin-bottom: 0;
 }
 
@@ -854,6 +860,7 @@ header {
   margin: 0;
   margin-bottom: 24px;
   font-size: 32px;
+  font-weight: 700;
   letter-spacing: -1px;
   line-height: 1.25;
   color: #08090e;
@@ -899,6 +906,7 @@ header {
 .crew-li {
   margin: 24px 0 0 0;
   font-size: 18px;
+  font-weight: 700;
 }
 
 .staff-ul {
@@ -953,6 +961,7 @@ header {
 
 .contact-us-info-hours {
   font-size: 24px;
+  font-weight: 700;
   letter-spacing: -1px;
   margin: 0;
 }
@@ -963,6 +972,7 @@ header {
 
 .contact-us-info-holiday {
   font-size: 18px;
+  font-weight: 700;
   letter-spacing: -1px;
   margin: 16px 0 0 0;
 }
@@ -977,6 +987,7 @@ header {
   font-size: 32px;
   color: #08090e;
   margin: 0;
+  font-weight: 700;
   letter-spacing: -1px;
 }
 
@@ -994,6 +1005,7 @@ header {
 
 .faq-info-title {
   font-size: 32px;
+  font-weight: 700;
   color: #08090e;
   margin: 0;
   letter-spacing: -1px;

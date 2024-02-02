@@ -29,15 +29,16 @@ const Header = () => {
 
   const FlagDropdown = () => {
     return (
-      <div className="inline-block relative w-24 hover:cursor-pointer text-start">
+      <div className="inline-block relative hover:cursor-pointer text-start">
         <div className="hover:underline" onClick={() => setOpen(!open)}>
           {context.locale === 'ko-KR' ? '한국어' : 'ENGLISH'}
         </div>
         {open && (
-          <div className="absolute z-10 text-start bg-black">
+          <div className="absolute z-10 text-start">
             {options.map((option, index) => (
               <div
                 key={index}
+                className="bg-[#060d17] last:rounded-b-md w-[128px] mx-[-48px] px-[20px] py-[10px] hover:underline"
                 onClick={() => {
                   context.selectLanguage(option);
                   setOpen(false);
@@ -69,16 +70,8 @@ const Header = () => {
         <div>
           {!isMobile && (
             <>
-              <div className="inline text-[13px] font-bold">
+              <div className="inline text-[13px] font-bold me-20">
                 <FlagDropdown />
-                {/* <select
-              className="text-white bg-black focus-visible:outline-none hover:underline hover:cursor-pointer"
-              value={context.locale}
-              onChange={context.selectLanguage}
-            >
-              <option value="ko-KR" className="">한국어</option>
-              <option value="en-US" className="">ENGLISH</option>
-            </select> */}
               </div>
               <button className="header-button">
                 <FormattedMessage
