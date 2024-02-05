@@ -6,6 +6,7 @@ import { FormattedMessage } from 'react-intl';
 import Menu from '../assets/svgs/menu.svg';
 import UsFlag from '../assets/svgs/us-flag.svg';
 import KrFlag from '../assets/svgs/kr-flag.svg';
+import Language from '../assets/svgs/language.svg';
 
 const options = [
   { value: 'ko-KR', label: '한국어', flag: KrFlag },
@@ -39,7 +40,14 @@ const Header = () => {
           className="hover:underline"
           onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
         >
-          {context.locale === 'ko-KR' ? '한국어' : 'ENGLISH'}
+          {/* {context.locale === 'ko-KR' ? '한국어' : 'ENGLISH'} */}
+          <img
+            className="inline-block me-2"
+            src={Language}
+            alt=""
+            width="20"
+            height="20"
+          />
         </div>
         {isLanguageOpen && (
           <div className="absolute z-10 text-start">
@@ -79,15 +87,15 @@ const Header = () => {
         <div className="my-4">
           {!isMobile && (
             <>
-              <div className="inline text-[13px] font-bold me-20">
-                <FlagDropdown />
-              </div>
-              <button className="header-button">
+              <button className="header-button me-10">
                 <FormattedMessage
                   id="button.book-a-plane-tour"
                   defaultMessage="Book a Plane Tour"
                 />
               </button>
+              <div className="inline text-[13px] font-bold">
+                <FlagDropdown />
+              </div>
             </>
           )}
           {isMobile && (
