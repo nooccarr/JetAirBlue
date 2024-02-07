@@ -37,12 +37,11 @@ const Header = () => {
     return (
       <div className="inline-block relative hover:cursor-pointer text-start">
         <div
-          className="hover:underline"
+          className=""
           onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
         >
-          {/* {context.locale === 'ko-KR' ? '한국어' : 'ENGLISH'} */}
           <img
-            className="inline-block me-2"
+            className="inline-block me-4"
             src={Language}
             alt=""
             width="20"
@@ -83,29 +82,29 @@ const Header = () => {
           {/* <img src='/images/logo.png' alt='logo' /> */}
           jet air blue
         </Link>
-        {!isMobile && <NavBar />}
-        <div className="my-4">
+        <div className="my-4 flex gap-10">
           {!isMobile && (
             <>
-              <button className="header-button me-10">
+              <NavBar />
+              <button className="header-button">
                 <FormattedMessage
                   id="button.book-a-plane-tour"
                   defaultMessage="Book a Plane Tour"
                 />
               </button>
-              <div className="inline text-[13px] font-bold">
+              <div className="text-[13px] font-bold flex items-center">
                 <FlagDropdown />
               </div>
             </>
           )}
           {isMobile && (
-            <>
-              <div className="inline text-[13px] font-bold me-10 lg-me-15">
+            <div className="flex items-center">
+              <div className="inline text-[13px] font-bold ">
                 <FlagDropdown />
               </div>
               <div
                 onClick={() => !isLanguageOpen && setIsMenuOpen(!isMenuOpen)}
-                className={`inline-block border border-black hover:border-white ${
+                className={`inline-block border border-black ${
                   isMenuOpen && 'border-white'
                 } px-1 rounded-md hover:cursor-pointer`}
               >
@@ -120,7 +119,7 @@ const Header = () => {
                   </div>
                 )}
               </div>
-            </>
+            </div>
           )}
         </div>
       </div>
