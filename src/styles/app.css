@@ -68,8 +68,6 @@ header {
 .navbar-menu-container {
   display: flex;
   padding-left: 0px;
-  min-width: 300px;
-  justify-content: space-around;
   list-style-type: none;
   margin: 16px 0;
 }
