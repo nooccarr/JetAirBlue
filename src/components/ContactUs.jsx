@@ -10,7 +10,7 @@ import {
 import TopImageSection from './TopImageSection';
 import { coloredButton } from '../utils/Button';
 import { FormattedMessage } from 'react-intl';
-import { Form } from 'react-router-dom';
+import NycApple from '../assets/images/nyc-apple.avif';
 
 const ContactUs = () => {
   useScrollTop();
@@ -200,7 +200,8 @@ const ContactUs = () => {
         />
       </p>
       <div className="about-us-intro-image-container">
-        <img src="https://placehold.co/100x100" />
+        {/* <img src="https://placehold.co/100x100" /> */}
+        <img src={NycApple} />
       </div>
     </div>
   );

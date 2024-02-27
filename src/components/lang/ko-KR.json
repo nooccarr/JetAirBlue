@@ -152,9 +152,13 @@
   "contact-us-form.phone": "전화번호",
   "contact-us-form.message": "메세지",
   "contact-us-form.button": "보내기",
+  "footer.external-link.air-transport": "한국항공협회",
+  "footer.external-link.kulaa": "대한스포츠항공협회",
+  "footer.external-link.zoomzoomtour": "LA 비행 투어",
   "footer.link.home": "홈",
   "footer.link.classic-manhattan-plane-tour": "클래식 맨하탄 비행 투어",
   "footer.link.montauk-plane-tour": "몬탁 비행 투어",
   "footer.link.faq": "자주 묻는 질문",
+  "footer.link.gallery": "갤러리",
   "footer.link.contact-us": "문의하기"
 }

@@ -1,6 +1,7 @@
 import TopImageSection from './TopImageSection';
 import useScrollTop from './hooks/useScrollTop';
 import { FormattedMessage } from 'react-intl';
+import PilotHat from '../assets/images/pilot-hat.avif';
 const reasons = [
   '10+ Years of Tour Experience',
   'Affordable Prices',
@@ -73,7 +74,7 @@ const AboutUs = () => {
         </p>
       </div>
       <div className="about-us-intro-image-container">
-        <img src="https://placehold.co/200x200" />
+        <img src={PilotHat} />
       </div>
     </div>
   );

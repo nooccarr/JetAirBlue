@@ -90,7 +90,7 @@ const Header = () => {
       </li>
       {subMenus[1].map((subMenu) => {
         return (
-          <Link to={subMenu.url}>
+          <Link to={subMenu.url} key={subMenu.title}>
             <li
               className="bg-[#060d17] -mx-52 px-5 py-2.5 -mt-1 hover:underline"
               key={subMenu.title}
@@ -111,7 +111,7 @@ const Header = () => {
       </li>
       {subMenus[2].map((subMenu) => {
         return (
-          <Link to={subMenu.url}>
+          <Link to={subMenu.url} key={subMenu.title}>
             <li
               className="bg-[#060d17] -mx-52 px-5 py-2.5 -mt-1 hover:underline last:rounded-b-md"
               key={subMenu.title}

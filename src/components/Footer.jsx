@@ -9,7 +9,8 @@ import { FormattedMessage } from 'react-intl';
 
 const Footer = () => {
   const contactInfo = () => (
-    <div>
+    // <div className="w-[219px]">
+    <div className="w-[229px]">
       <h3 className="footer-section-title">jet air blue</h3>
       <div className="footer-section-contact-us-container">
         <ul className="footer-section-icon-container">
@@ -37,7 +38,7 @@ const Footer = () => {
           <li className="footer-contact-info">
             <a href="mailto: test@test.com">jouncpark@gmail.com</a>
           </li>
-          <li className="footer-contact-info">
+          <li className="footer-contact-info pb-0">
             <a
               href="https://maps.app.goo.gl/fc9EKkDM2yR1QnMQ7"
               target="_blank"
@@ -57,8 +58,42 @@ const Footer = () => {
     </div>
   );
 
+  const externalLinks = () => (
+    // <div className="w-[144px]">
+    <div className="w-[231px]">
+      <h3 className="footer-section-title">external links</h3>
+      <ul className="footer-section-quick-links-container">
+        <li className="footer-quick-links">
+          <Link to="http://www.airtransport.or.kr">
+            <FormattedMessage
+              id="footer.external-link.air-transport"
+              defaultMessage="Korea Civil Aviation Association"
+            />
+          </Link>
+        </li>
+        <li className="footer-quick-links">
+          <Link to="http://www.kulaa.or.kr/">
+            <FormattedMessage
+              id="footer.external-link.kulaa"
+              defaultMessage="Korea Sport Aviation Association"
+            />
+          </Link>
+        </li>
+        <li className="footer-quick-links">
+          <Link to="https://www.zoomzoomtour.com/seller/257746">
+            <FormattedMessage
+              id="footer.external-link.zoomzoomtour"
+              defaultMessage="LA Flight Tour"
+            />
+          </Link>
+        </li>
+      </ul>
+    </div>
+  );
+
   const quickLinks = () => (
-    <div>
+    // <div className="w-[174px]">
+    <div className="w-[213x]">
       <h3 className="footer-section-title">quick links</h3>
       <ul className="footer-section-quick-links-container">
         <li className="footer-quick-links">
@@ -82,19 +117,27 @@ const Footer = () => {
             />
           </Link>
         </li>
-        <li className="footer-quick-links">
+        {/* <li className="footer-quick-links">
           <Link to="/faq">
             <FormattedMessage
               id="footer.link.faq"
               defaultMessage="frequently asked questions"
             />
           </Link>
-        </li>
+        </li> */}
         <li className="footer-quick-links">
           <Link to="/contact-us">
             <FormattedMessage
               id="footer.link.contact-us"
               defaultMessage="contact us"
+            />
+          </Link>
+        </li>
+        <li className="footer-quick-links">
+          <Link to="/gallery">
+            <FormattedMessage
+              id="footer.link.gallery"
+              defaultMessage="gallery"
             />
           </Link>
         </li>
@@ -104,8 +147,9 @@ const Footer = () => {
 
   return (
     <footer>
-      <section className="footer-container justify-center gap-x-[195px] sm:justify-between">
+      <section className="footer-container flex-col w-[235px] sm:w-full mx-auto sm:flex-row sm:justify-between gap-8">
         {contactInfo()}
+        {externalLinks()}
         {quickLinks()}
       </section>
     </footer>
