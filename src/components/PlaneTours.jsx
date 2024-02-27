@@ -6,6 +6,7 @@ import MontaukCard from '../assets/images/home-montauk-card.jpg';
 import { Link } from 'react-router-dom';
 import { coloredButton, clearButton } from '../utils/Button';
 import { FormattedMessage } from 'react-intl';
+import PilotHat from '../assets/images/pilot-hat.avif';
 
 const tours = [
   {
@@ -56,7 +57,6 @@ const PlaneTours = () => {
               </h4>
             </Link>
             <p className="tour-card-description">
-              {' '}
               <FormattedMessage
                 id={`tour.${title}.description`}
                 defaultMessage={description}
@@ -115,7 +115,7 @@ const PlaneTours = () => {
         </p>
       </div>
       <div className="about-us-intro-image-container">
-        <img src="https://placehold.co/200x200" />
+        <img src={PilotHat} />
       </div>
     </div>
   );

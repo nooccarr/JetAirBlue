@@ -90,7 +90,7 @@ const Home = () => {
       {/* <img src='https://placehold.co/1920x1080' /> */}
       {/* <div className='home-main-image-top'> */}
       <div className="caption-container">
-        <h1 className="caption-title">jet air blue planes</h1>
+        <h1 className="caption-title text-center">jet air blue planes</h1>
         <p className="caption-description">
           <FormattedMessage
             id="home.top-image.description"

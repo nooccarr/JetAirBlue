@@ -22,16 +22,16 @@ export const menuItems = [
       {
         title: 'Montauk Plane Tour',
         url: '/montauk-plane-tour',
-      }
-    ]
+      },
+    ],
   },
   {
     title: 'More',
     submenu: [
-      {
-        title: 'About Us',
-        url: '/about-us',
-      },
+      // {
+      //   title: 'About Us',
+      //   url: '/about-us',
+      // },
       {
         title: 'Contact Us',
         url: '/contact-us',
@@ -40,10 +40,10 @@ export const menuItems = [
         title: 'Gallery',
         url: '/gallery',
       },
-      {
-        title: 'FAQ',
-        url: '/faq',
-      },
-    ]
+      // {
+      //   title: 'FAQ',
+      //   url: '/faq',
+      // },
+    ],
   },
 ];

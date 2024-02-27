@@ -152,9 +152,13 @@
   "contact-us-form.phone": "Phone",
   "contact-us-form.message": "Message",
   "contact-us-form.button": "Submit",
+  "footer.external-link.air-transport": "Korea Civil Aviation Association",
+  "footer.external-link.kulaa": "Korea Sport Aviation Association",
+  "footer.external-link.zoomzoomtour": "LA Flight Tour",
   "footer.link.home": "Home",
   "footer.link.classic-manhattan-plane-tour": "Classic Manhattan Plane Tour",
   "footer.link.montauk-plane-tour": "Montauk Plane Tour",
   "footer.link.faq": "Frequently Asked Questions",
+  "footer.link.gallery": "Gallery",
   "footer.link.contact-us": "Contact Us"
 }
