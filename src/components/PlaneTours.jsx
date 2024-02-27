@@ -91,8 +91,8 @@ const PlaneTours = () => {
     <section>
       <p className="plane-tours-paragraph">
         Take to the skies and see Manhattan from breathtaking new heights! Our
-        unique helicopter tours show you the best of the many world-famous
-        landmarks New York City has to offer.
+        unique plane tours show you the best of the many world-famous landmarks
+        New York City has to offer.
       </p>
       {tourCardList(tours)}
     </section>
@@ -103,15 +103,14 @@ const PlaneTours = () => {
       <div className="about-us-intro-text-container">
         <h3 className="about-us-title">who are we?</h3>
         <p className="about-us-description">
-          Our team of professionals at Manhattan Helicopters cares about the
-          experience our clients have. We are committed to having you walk away
-          happy, satisfied and in awe of your one-of-a-kind helicopter tour of
-          New York City. While there are a handful of different Manhattan
-          helicopter tours from which you can choose from, not all of the
-          companies should be entrusted with your experience and safety. Take
-          the guesswork out of choosing a tour company, by allowing Manhattan
-          Helicopters to provide you with an affordable, safe, unforgettable New
-          York City experience.
+          Our team of professionals at Jet Air Blue cares about the experience
+          our clients have. We are committed to having you walk away happy,
+          satisfied and in awe of your one-of-a-kind plane tour of New York
+          City. While there are a handful of different Manhattan plane tours
+          from which you can choose from, not all of the companies should be
+          entrusted with your experience and safety. Take the guesswork out of
+          choosing a tour company, by allowing Jet Air Blue to provide you with
+          an affordable, safe, unforgettable New York City experience.
         </p>
       </div>
       <div className="about-us-intro-image-container">
