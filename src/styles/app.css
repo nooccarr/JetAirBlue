@@ -720,7 +720,7 @@ header {
 
 .tour-main-image-caption-title {
   margin: 0;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: 600;
   line-height: 1.125;
   letter-spacing: -1px;
@@ -731,7 +731,7 @@ header {
 .tour-other-image-caption-title {
   text-align: center;
   margin: 0;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   font-weight: 700;
   line-height: 1.125;
   letter-spacing: -1px;
@@ -741,7 +741,7 @@ header {
 
 .tour-other-image-caption-description {
   margin: 0;
-  font-size: 32px;
+  /* font-size: 32px; */
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: -1px;
@@ -907,8 +907,8 @@ header {
 /* CONTACT US */
 .contact-us-form {
   background-color: #fff;
-  padding: 40px 60px 40px 40px;
-  margin-left: -20px;
+  padding: 40px;
+  /* margin-left: -20px; */
 }
 
 .contact-us-form-info-container {
@@ -918,7 +918,7 @@ header {
 
 .contact-us-input-container {
   margin-top: 16px;
-  padding-right: 16px;
+  /* padding-right: 16px; */
 }
 
 .contact-us-input-label {

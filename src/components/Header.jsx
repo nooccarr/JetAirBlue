@@ -22,7 +22,7 @@ const Header = () => {
 
   const FlagDropdown = () => {
     return (
-      <div className="inline-block relative hover:cursor-pointer text-start">
+      <div className="inline-block hover:cursor-pointer text-start">
         <div
           className=""
           onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
@@ -35,29 +35,6 @@ const Header = () => {
             height="20"
           />
         </div>
-        {isLanguageOpen && (
-          <div className="absolute top-[48px] md:top-[53px] -left-[147px] md:-left-[193px] w-[240px] z-10 text-start flex">
-            {options.map((option, index) => (
-              <div
-                key={index}
-                className="bg-[#060d17] px-5 py-2.5 hover:underline"
-                onClick={() => {
-                  context.selectLanguage(option);
-                  setIsLanguageOpen(false);
-                }}
-              >
-                <img
-                  className="inline-block me-2"
-                  src={option.flag}
-                  alt=""
-                  width="20"
-                  height="20"
-                />
-                {option.label}
-              </div>
-            ))}
-          </div>
-        )}
       </div>
     );
   };
@@ -136,7 +113,7 @@ const Header = () => {
       <div className="header-container">
         <Link to="/" className="header-logo my-4">
           {/* <img src='/images/logo.png' alt='logo' /> */}
-          jet air blue
+          <h1>jet air blue</h1>
         </Link>
         <div className="flex gap-10">
           <div className="hidden md:block">{NavBarDesktop}</div>
@@ -163,6 +140,36 @@ const Header = () => {
               )}
             </div>
           </div>
+
+          {isLanguageOpen && (
+            <div className="bg-[#060d17] absolute z-10 left-0 top-[75px] w-full">
+              <div className="max-w-[1280px] mx-auto">
+                {options.map((option, index) => (
+                  <div
+                    key={index}
+                    className="px-5 py-2.5 last:pb-8 flex justify-start"
+                    onClick={() => {
+                      context.selectLanguage(option);
+                      setIsLanguageOpen(false);
+                    }}
+                  >
+                    <div className="flex gap-2 hover:cursor-pointer hover:underline">
+                      <img
+                        className="inline-block"
+                        src={option.flag}
+                        alt=""
+                        width="20"
+                        height="20"
+                      />
+                      <span className="text-sm font-semibold">
+                        {option.label}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </header>
