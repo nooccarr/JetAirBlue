@@ -64,7 +64,7 @@ const MontaukPlaneTour = () => {
     <div className="tour-main-image-container">
       <section className="tour-main-image">
         <div className="tour-main-image-caption-container">
-          <h1 className="tour-main-image-caption-title">{title}</h1>
+          <h1 className="tour-main-image-caption-title text-center">{title}</h1>
         </div>
       </section>
     </div>
