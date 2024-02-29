@@ -17,22 +17,8 @@ const options = [
 const Header = () => {
   const context = useContext(Context);
 
-  const [isMobile, setIsMobile] = useState(false);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    window.innerWidth <= 767 ? setIsMobile(true) : setIsMobile(false);
-    const onWindowResize = () => {
-      window.innerWidth <= 767 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener('resize', onWindowResize);
-    return () => window.removeEventListener('resize', onWindowResize);
-  }, []);
-
-  useEffect(() => {
-    if (!isMobile) setIsMenuOpen(false);
-  }, [isMobile]);
 
   const FlagDropdown = () => {
     return (
@@ -50,11 +36,11 @@ const Header = () => {
           />
         </div>
         {isLanguageOpen && (
-          <div className="absolute z-10 text-start">
+          <div className="absolute top-[48px] md:top-[53px] -left-[147px] md:-left-[193px] w-[240px] z-10 text-start flex">
             {options.map((option, index) => (
               <div
                 key={index}
-                className="bg-[#060d17] last:rounded-b-md w-32 -mx-12 px-5 py-2.5 hover:underline"
+                className="bg-[#060d17] px-5 py-2.5 hover:underline"
                 onClick={() => {
                   context.selectLanguage(option);
                   setIsLanguageOpen(false);
@@ -81,8 +67,8 @@ const Header = () => {
   });
 
   const NavBarMobile = (
-    <ul>
-      <li className="bg-[#060d17] text-[#b5b7ba] font-semibold -mx-52 px-5 py-2.5 -mt-1 cursor-text">
+    <ul className="pb-96 px-5 bg-[#060d17]">
+      <li className="text-[#b5b7ba] font-semibold pt-2.5 pb-0 mb-2.5  cursor-text border-b-1 border-[#b5b7ba]">
         <FormattedMessage
           id={`header.navbar.menu.${menuItems[1].title}`}
           defaultMessage="Plane Tours"
@@ -92,7 +78,7 @@ const Header = () => {
         return (
           <Link to={subMenu.url} key={subMenu.title}>
             <li
-              className="bg-[#060d17] -mx-52 px-5 py-2.5 -mt-1 hover:underline"
+              className="bg-[#060d17] py-2.5  hover:underline"
               key={subMenu.title}
             >
               <FormattedMessage
@@ -103,17 +89,18 @@ const Header = () => {
           </Link>
         );
       })}
-      <li className="bg-[#060d17] text-[#b5b7ba] font-semibold -mx-52 px-5 py-2.5 -mt-1 cursor-text">
+      <li className="text-[#b5b7ba] font-semibold pt-6 pb-0 mb-2.5  cursor-text border-b-1 border-[#b5b7ba]">
         <FormattedMessage
           id={`header.navbar.menu.${menuItems[2].title}`}
           defaultMessage="More"
         />
       </li>
+
       {subMenus[2].map((subMenu) => {
         return (
           <Link to={subMenu.url} key={subMenu.title}>
             <li
-              className="bg-[#060d17] -mx-52 px-5 py-2.5 -mt-1 hover:underline last:rounded-b-md"
+              className="bg-[#060d17] py-2.5  hover:underline"
               key={subMenu.title}
             >
               <FormattedMessage
@@ -152,30 +139,30 @@ const Header = () => {
           jet air blue
         </Link>
         <div className="flex gap-10">
-          {!isMobile && <div>{NavBarDesktop}</div>}
+          <div className="hidden md:block">{NavBarDesktop}</div>
 
-          {isMobile && (
-            <div className="flex items-center gap-4">
-              <div className="inline text-[13px] font-bold ">
-                <FlagDropdown />
-              </div>
-              <div
-                onClick={() => !isLanguageOpen && setIsMenuOpen(!isMenuOpen)}
-                className={`inline-block border border-black ${
-                  isMenuOpen && 'border-white'
-                } px-1 rounded-md hover:cursor-pointer`}
-              >
-                <img
-                  className="header-menu-button inline-block"
-                  src={Menu}
-                  alt="Menu"
-                />
-                {isMenuOpen && (
-                  <div className="absolute z-10 mt-5">{NavBarMobile}</div>
-                )}
-              </div>
+          <div className="md:hidden flex items-center gap-4">
+            <div className="inline text-[13px] font-bold ">
+              <FlagDropdown />
             </div>
-          )}
+            <div
+              onClick={() => !isLanguageOpen && setIsMenuOpen(!isMenuOpen)}
+              className={`inline-block border border-black ${
+                isMenuOpen && 'border-white'
+              } px-1 rounded-md hover:cursor-pointer`}
+            >
+              <img
+                className="header-menu-button inline-block"
+                src={Menu}
+                alt="Menu"
+              />
+              {isMenuOpen && (
+                <div className="absolute z-10 left-0 top-[75px] w-full">
+                  {NavBarMobile}
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
     </header>
