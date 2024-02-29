@@ -37,7 +37,7 @@ const ContactUs = () => {
   };
 
   const contactUsForm = (
-    <form className="contact-us-form" ref={form} onSubmit={sendEmail}>
+    <form className="p-5 md:p-10 bg-white" ref={form} onSubmit={sendEmail}>
       <h3 className="contact-us-form-title">
         <FormattedMessage
           id="contact-us.form.title"
@@ -48,7 +48,6 @@ const ContactUs = () => {
         <p>The form has been submitted successfully.</p>
       ) : (
         <>
-          {' '}
           <div className="contact-us-input-container">
             <label htmlFor="name" className="contact-us-input-label">
               <FormattedMessage
@@ -123,7 +122,7 @@ const ContactUs = () => {
   );
 
   const contactUsInfo = (
-    <div className="contact-us-info-container">
+    <div className="p-5 md:p-10 bg-[#cce0ee] order-first md:order-last">
       <h3 className="contact-us-info-title">Jet Air Blue Planes</h3>
       <div className="contact-us-icon-info-container">
         <ul className="contact-us-icon-container">
@@ -220,7 +219,7 @@ const ContactUs = () => {
         }
       />
       <div className="contact-us-container">
-        <div className="contact-us-form-info-container">
+        <div className="grid md:grid-cols-2">
           {contactUsForm}
           {contactUsInfo}
         </div>

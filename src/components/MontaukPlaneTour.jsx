@@ -61,10 +61,12 @@ const MontaukPlaneTour = () => {
   useScrollTop();
 
   const topImageSection = (title) => (
-    <div className="tour-main-image-container">
+    <div className="h-[232px] md:h-[357px]">
       <section className="tour-main-image">
         <div className="tour-main-image-caption-container">
-          <h1 className="tour-main-image-caption-title text-center">{title}</h1>
+          <h1 className="tour-main-image-caption-title text-center text-3xl md:text-6xl">
+            {title}
+          </h1>
         </div>
       </section>
     </div>
