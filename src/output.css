@@ -994,6 +994,10 @@ video {
   height: 100dvh;
 }
 
+.h-\[232px\] {
+  height: 232px;
+}
+
 .h-\[2px\] {
   height: 2px;
 }
@@ -1045,26 +1049,6 @@ video {
 
 .h-unit-8 {
   height: var(--nextui-spacing-unit-8);
-}
-
-.h-\[357px\] {
-  height: 357px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[250px\] {
-  height: 250px;
-}
-
-.h-\[225px\] {
-  height: 225px;
-}
-
-.h-\[232px\] {
-  height: 232px;
 }
 
 .max-h-64 {

@@ -83,7 +83,7 @@ const Footer = () => {
           <Link to="https://www.aircraftspruce.com">
             <FormattedMessage
               id="footer.external-link.aircraft-spruce"
-              defaultMessage="Aircraft Spruce"
+              defaultMessage="Aircraft Spruce & Specialty Co."
             />
           </Link>
         </li>
