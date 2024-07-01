@@ -29,7 +29,7 @@ body {
   margin-bottom: 4px;
   border: 1px solid #ddd;
   border-bottom: none;
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 .itemExpanded {
@@ -49,7 +49,7 @@ body {
   text-align: left;
   color: #000;
   /* color: #007bff; */
-  background-color: #fff;
+  background-color: #f6f6f6;
   /* border: 1px solid #ddd; */
   border: none;
   border-bottom: 1px solid #ddd;
@@ -60,7 +60,7 @@ body {
 }
 
 /* .itemBtnExpanded {
-  background-color: #fff;
+  background-color: #f6f6f6;
 } */
 
 .itemContent {

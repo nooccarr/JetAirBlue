@@ -7,15 +7,15 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #333;
-  background-color: #fff;
+  color: #242325;
+  background-color: #f6f6f6;
   min-width: 320px;
 }
 
 /* HEADER */
 header {
   background-color: #060d17;
-  color: #fff;
+  color: #242325;
 }
 
 .header-container {
@@ -29,7 +29,7 @@ header {
 }
 
 .header-logo {
-  color: #fff;
+  color: #f6f6f6;
   font-weight: 900;
   text-transform: uppercase;
   text-decoration: none;
@@ -47,7 +47,7 @@ header {
 .header-button {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: #f6f6f6;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 13px;
@@ -73,13 +73,13 @@ header {
 }
 
 .navbar-menu-item {
-  color: #fff;
+  color: #f6f6f6;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .navbar-menu-item > a {
-  color: #fff;
+  color: #f6f6f6;
   text-transform: uppercase;
   text-decoration: none;
   font-size: 13px;
@@ -91,14 +91,14 @@ header {
 }
 
 .navbar-menu-item > button > a {
-  color: #fff;
+  color: #f6f6f6;
   text-decoration: none;
 }
 
 .navbar-menu-item > button {
   background-color: transparent;
   border: none;
-  color: #fff;
+  color: #f6f6f6;
   font-weight: bold;
   text-transform: uppercase;
   font-size: 13px;
@@ -107,7 +107,7 @@ header {
 }
 
 .navbar-menu-item > ul > li > a {
-  color: #fff;
+  color: #f6f6f6;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -133,7 +133,7 @@ header {
 
 .dropdown-menu-item {
   background-color: #060d17;
-  color: #fff;
+  color: #f6f6f6;
   font-weight: bold;
   text-transform: uppercase;
   text-decoration: none;
@@ -185,7 +185,7 @@ header {
   font-size: 48px;
   font-weight: 700;
   line-height: 1.25;
-  color: #fff;
+  color: #f6f6f6;
   text-transform: uppercase;
   padding-bottom: 20px;
 }
@@ -194,7 +194,7 @@ header {
   margin: 0px;
   font-size: 24px;
   line-height: 1.25;
-  color: #fff;
+  color: #f6f6f6;
   text-transform: capitalize;
   text-align: center;
   padding-bottom: 40px;
@@ -227,7 +227,7 @@ header {
   font-size: 40px;
   font-weight: 700;
   line-height: 1.25;
-  color: #fff;
+  color: #f6f6f6;
   text-transform: capitalize;
   padding-bottom: 20px;
   opacity: 1;
@@ -249,7 +249,7 @@ header {
   font-size: 1.2rem;
   letter-spacing: -0.75px;
   line-height: 1.5;
-  color: #fff;
+  color: #f6f6f6;
   padding-bottom: 40px;
 }
 
@@ -304,7 +304,7 @@ header {
   margin: 24px 24px 24px;
   border-radius: 10px;
   /* height: 100%; */
-  background-color: #fff;
+  background-color: #f6f6f6;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -318,7 +318,7 @@ header {
   max-width: 386px;
   /* margin: 24px 24px 24px; */
   border-radius: 10px;
-  background-color: #fff;
+  background-color: #f6f6f6;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -355,7 +355,7 @@ header {
 }
 
 .tour-card-title {
-  color: #333;
+  color: #242325;
   line-height: 1;
   margin-top: 6px;
   margin-bottom: 20px;
@@ -430,7 +430,7 @@ header {
   border: 1px solid #505152;
   border-radius: 5px;
   background-color: #505152;
-  color: #fff;
+  color: #f6f6f6;
   opacity: 0.7;
   transition: 0.3s;
 }
@@ -513,7 +513,7 @@ header {
 .about-tour-container {
   margin: 0 auto;
   max-width: 1280px;
-  color: #fff;
+  color: #f6f6f6;
 }
 
 .about-tour-title {
@@ -532,7 +532,7 @@ header {
   font-size: 1.2rem;
   letter-spacing: -0.75px;
   line-height: 1.5;
-  color: #fff;
+  color: #f6f6f6;
   padding-bottom: 1.2rem;
 }
 
@@ -552,7 +552,7 @@ header {
   font-size: 32px;
   letter-spacing: -1px;
   line-height: 1.25;
-  color: #fff;
+  color: #f6f6f6;
 }
 
 .home-value-list {
@@ -576,7 +576,7 @@ header {
   font-size: 24px;
   letter-spacing: -1px;
   line-height: 1.25;
-  color: #fff;
+  color: #f6f6f6;
   text-transform: uppercase;
   border-bottom: 3px solid rgb(92 128 160);
   padding-bottom: 5px;
@@ -586,7 +586,7 @@ header {
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
-  color: #fff;
+  color: #f6f6f6;
   padding-bottom: 55px;
 }
 
@@ -596,7 +596,7 @@ header {
   grid-column: 1; */
   padding: 0 30px;
   padding: 32px 24px;
-  background-color: #fff;
+  background-color: #f6f6f6;
 }
 
 .home-request-info-form-container {
@@ -607,7 +607,7 @@ header {
   font-family: 'Spectral', serif;
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
-  color: #191b1c;
+  color: #242325;
   letter-spacing: 2px;
   line-height: 1.2;
   margin-top: 0;
@@ -724,7 +724,7 @@ header {
   font-weight: 600;
   line-height: 1.125;
   letter-spacing: -1px;
-  color: #fff;
+  color: #f6f6f6;
   text-transform: capitalize;
 }
 
@@ -735,7 +735,7 @@ header {
   font-weight: 700;
   line-height: 1.125;
   letter-spacing: -1px;
-  color: #fff;
+  color: #f6f6f6;
   text-transform: capitalize;
 }
 
@@ -745,7 +745,7 @@ header {
   font-weight: 700;
   line-height: 1.5;
   letter-spacing: -1px;
-  color: #fff;
+  color: #f6f6f6;
 }
 
 /* PLANE TOUR INFO SECTION */
@@ -882,7 +882,7 @@ header {
 }
 
 .about-us-info-section-container {
-  background-color: #fff;
+  background-color: #f6f6f6;
   padding: 40px;
   margin-left: -20px;
   margin-top: 40px;
@@ -906,7 +906,7 @@ header {
 
 /* CONTACT US */
 .contact-us-form {
-  background-color: #fff;
+  background-color: #f6f6f6;
   padding: 40px;
   /* margin-left: -20px; */
 }
@@ -1011,7 +1011,7 @@ header {
 /* FOOTER */
 footer {
   background-color: rgb(150 151 153);
-  color: #fff;
+  color: #f6f6f6;
   border-top: 3px solid rgb(92 128 160);
 }
 
@@ -1064,7 +1064,7 @@ footer {
 }
 
 .footer-contact-info > a {
-  color: #fff;
+  color: #f6f6f6;
   text-decoration: none;
 }
 
@@ -1105,6 +1105,6 @@ footer {
 }
 
 .footer-quick-links > a {
-  color: #fff;
+  color: #f6f6f6;
   text-decoration: none;
 }
