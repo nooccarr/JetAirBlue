@@ -72,7 +72,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="http://www.kulaa.or.kr/">
+          <Link to="http://www.kulaa.or.kr">
             <FormattedMessage
               id="footer.external-link.kulaa"
               defaultMessage="Korea Sport Aviation Association"
@@ -80,10 +80,10 @@ const Footer = () => {
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="https://www.zoomzoomtour.com/seller/257746">
+          <Link to="https://www.aircraftspruce.com">
             <FormattedMessage
-              id="footer.external-link.zoomzoomtour"
-              defaultMessage="LA Flight Tour"
+              id="footer.external-link.aircraft-spruce"
+              defaultMessage="Aircraft Spruce"
             />
           </Link>
         </li>
