@@ -8,6 +8,7 @@ import Menu from '../assets/svgs/menu.svg';
 import UsFlag from '../assets/svgs/us-flag.svg';
 import KrFlag from '../assets/svgs/kr-flag.svg';
 import Language from '../assets/svgs/language.svg';
+import Logo from '../assets/images/logo.jpg';
 
 const options = [
   { value: 'ko-KR', label: '한국어', flag: KrFlag },
@@ -22,7 +23,7 @@ const Header = () => {
 
   const FlagDropdown = () => {
     return (
-      <div className="inline-block hover:cursor-pointer text-start">
+      <div className="inline-block hover:cursor-pointer text-start  ">
         <div
           className=""
           onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
@@ -43,6 +44,7 @@ const Header = () => {
     return menu.submenu;
   });
 
+  // MOBILE MENU (home, tours, reservation)
   const NavBarMobile = (
     <ul className="pb-96 px-5 bg-[#060d17]">
       <li className="text-[#b5b7ba] font-semibold pt-2.5 pb-0 mb-2.5  cursor-text border-b-1 border-[#b5b7ba]">
@@ -54,10 +56,7 @@ const Header = () => {
       {subMenus[1].map((subMenu) => {
         return (
           <Link to={subMenu.url} key={subMenu.title}>
-            <li
-              className="bg-[#060d17] py-2.5  hover:underline"
-              key={subMenu.title}
-            >
+            <li className="bg-[#060d17] py-2.5" key={subMenu.title}>
               <FormattedMessage
                 id={`header.navbar.menu.${subMenu.title}`}
                 defaultMessage={subMenu.title}
@@ -76,10 +75,7 @@ const Header = () => {
       {subMenus[2].map((subMenu) => {
         return (
           <Link to={subMenu.url} key={subMenu.title}>
-            <li
-              className="bg-[#060d17] py-2.5  hover:underline"
-              key={subMenu.title}
-            >
+            <li className="bg-[#060d17] py-2.5" key={subMenu.title}>
               <FormattedMessage
                 id={`header.navbar.menu.${subMenu.title}`}
                 defaultMessage={subMenu.title}
@@ -91,18 +87,20 @@ const Header = () => {
     </ul>
   );
 
+  // DESKTOP MENU (home, tours, reservation)
   const NavBarDesktop = (
     <ul className="navbar-menu-container gap-10">
       {menuItems.map((menu, index) => {
         return <MenuItems items={menu} key={index} />;
       })}
-      <button className="header-button">
+      <button className="header-button animate-fadeIn animated-underline">
         <FormattedMessage
           id="button.book-a-plane-tour"
           defaultMessage="Book a Plane Tour"
         />
       </button>
-      <div className="text-[13px] font-bold flex items-center">
+      {/* DESKTOP LANGUAGE BUTTON */}
+      <div className="text-[13px] font-bold flex items-center animate-fadeIn">
         <FlagDropdown />
       </div>
     </ul>
@@ -111,22 +109,23 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <Link to="/" className="header-logo my-4">
-          {/* <img src='/images/logo.png' alt='logo' /> */}
-          <h1>jet air blue</h1>
+        <Link to="/" className="header-logo animate-appearance-in">
+          <img src={Logo} alt="logo" />
+          <h1 className="px-4">jet air blue</h1>
         </Link>
         <div className="flex gap-10">
           <div className="hidden md:block">{NavBarDesktop}</div>
 
           <div className="md:hidden flex items-center gap-4">
-            <div className="inline text-[13px] font-bold ">
+            {/* MOBILE LANGUAGE BUTTON */}
+            <div className="inline text-[13px] font-bold animate-fadeIn">
               <FlagDropdown />
             </div>
             <div
               onClick={() => !isLanguageOpen && setIsMenuOpen(!isMenuOpen)}
               className={`inline-block border border-black ${
                 isMenuOpen && 'border-white'
-              } px-1 rounded-md hover:cursor-pointer`}
+              } px-1 rounded-md hover:cursor-pointer animate-fadeIn`}
             >
               <img
                 className="header-menu-button inline-block"
@@ -134,15 +133,16 @@ const Header = () => {
                 alt="Menu"
               />
               {isMenuOpen && (
-                <div className="absolute z-10 left-0 top-[75px] w-full">
+                <div className="absolute z-10 left-0 top-[75px] w-full animate-fadeInTop">
                   {NavBarMobile}
                 </div>
               )}
             </div>
           </div>
 
+          {/* MOBILE/DESKTOP LANGUAGE DROPDOWN */}
           {isLanguageOpen && (
-            <div className="bg-[#060d17] absolute z-10 left-0 top-[75px] w-full">
+            <div className="bg-[#060d17] absolute z-10 left-0 top-[75px] w-full animate-fadeInTop">
               <div className="max-w-[1280px] mx-auto">
                 {options.map((option, index) => (
                   <div
@@ -153,7 +153,7 @@ const Header = () => {
                       setIsLanguageOpen(false);
                     }}
                   >
-                    <div className="flex gap-2 hover:cursor-pointer hover:underline">
+                    <div className="flex gap-2 hover:cursor-pointer animated-underline">
                       <img
                         className="inline-block"
                         src={option.flag}

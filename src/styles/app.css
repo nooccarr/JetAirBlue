@@ -56,7 +56,6 @@ header {
 
 .header-button:hover {
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .header-menu-button {
@@ -87,7 +86,7 @@ header {
 }
 
 .navbar-menu-item > a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 .navbar-menu-item > button > a {
@@ -115,9 +114,7 @@ header {
   letter-spacing: 1px;
 }
 
-.navbar-menu-item > ul > li > a:hover {
-  text-decoration: underline;
-}
+/* .navbar-menu-item > ul > li > a:hover {} */
 
 /* NAVIGATION BAR: DROP DOWN MENU */
 .dropdown {
@@ -1108,4 +1105,28 @@ footer {
 .footer-quick-links > a {
   color: #f6f6f6;
   text-decoration: none;
+}
+
+/* animated underline */
+
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #f6f6f6;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.animated-underline:hover::after {
+  visibility: visible;
+  width: 100%;
 }
