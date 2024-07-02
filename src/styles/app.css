@@ -7,15 +7,15 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #242325;
-  background-color: #f6f6f6;
+  color: #353437;
+  background-color: #fdfdfd;
   min-width: 320px;
 }
 
 /* HEADER */
 header {
   background-color: #060d17;
-  color: #242325;
+  color: #f6f6f6;
 }
 
 .header-container {
@@ -159,7 +159,7 @@ header {
 }
 
 .page-container {
-  background-color: #f2f2f2;
+  background-color: #fdfdfd;
 }
 
 /* HOME */
@@ -304,7 +304,7 @@ header {
   margin: 24px 24px 24px;
   border-radius: 10px;
   /* height: 100%; */
-  background-color: #f6f6f6;
+  background-color: #fdfdfd;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -318,7 +318,7 @@ header {
   max-width: 386px;
   /* margin: 24px 24px 24px; */
   border-radius: 10px;
-  background-color: #f6f6f6;
+  background-color: #fdfdfd;
   box-shadow: 0 0 rgba(0, 0, 0, 0.2), 0 3px 3px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -355,7 +355,7 @@ header {
 }
 
 .tour-card-title {
-  color: #242325;
+  color: #353437;
   line-height: 1;
   margin-top: 6px;
   margin-bottom: 20px;
@@ -386,7 +386,7 @@ header {
 }
 
 .related-tour-card-description {
-  background-color: #f2f2f3;
+  background-color: #fdfdfd;
   padding: 20px;
 }
 
@@ -401,6 +401,7 @@ header {
 .tour-accordion-ul {
   margin: 0;
   padding-left: 0;
+  color: #353437;
 }
 
 .tour-accordion-li {
@@ -607,7 +608,7 @@ header {
   font-family: 'Spectral', serif;
   font-size: calc(1.425rem + 2.1vw);
   font-weight: 300;
-  color: #242325;
+  color: #353437;
   letter-spacing: 2px;
   line-height: 1.2;
   margin-top: 0;
@@ -834,7 +835,7 @@ header {
   margin: 0 auto;
   padding: 80px 20px;
   max-width: 1280px;
-  background-color: #f2f2f2;
+  background-color: #fdfdfd;
 }
 
 .about-us-intro-section,
@@ -882,7 +883,7 @@ header {
 }
 
 .about-us-info-section-container {
-  background-color: #f6f6f6;
+  background-color: #fdfdfd;
   padding: 40px;
   margin-left: -20px;
   margin-top: 40px;
@@ -906,7 +907,7 @@ header {
 
 /* CONTACT US */
 .contact-us-form {
-  background-color: #f6f6f6;
+  background-color: #fdfdfd;
   padding: 40px;
   /* margin-left: -20px; */
 }
