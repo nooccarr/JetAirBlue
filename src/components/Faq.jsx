@@ -212,7 +212,7 @@ const Faq = () => {
             {item}
             {index !== textArray.length - 1 && bolded && <b>{bolded}</b>}
             {index !== textArray.length - 1 && anchored && (
-              <a href={anchored} style={{ color: '#003100' }}>
+              <a href={anchored} style={{ color: '#353437' }}>
                 {anchored}
               </a>
             )}

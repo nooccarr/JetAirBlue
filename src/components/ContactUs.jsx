@@ -37,7 +37,7 @@ const ContactUs = () => {
   };
 
   const contactUsForm = (
-    <form className="p-5 md:p-10 bg-white" ref={form} onSubmit={sendEmail}>
+    <form className="p-5 md:p-10 bg-[#fdfdfd]" ref={form} onSubmit={sendEmail}>
       <h3 className="contact-us-form-title">
         <FormattedMessage
           id="contact-us.form.title"
