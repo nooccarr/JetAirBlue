@@ -1073,7 +1073,7 @@ footer {
 
 .footer-contact-info > a:hover,
 .footer-contact-info > a:focus {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
 }
 
@@ -1085,7 +1085,7 @@ footer {
 
 .footer-contact-info > a > address:hover,
 .footer-contact-info > a > address:focus {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
 }
 
@@ -1098,7 +1098,7 @@ footer {
 
 .footer-quick-links:hover,
 .footer-quick-links:focus {
-  text-decoration: underline;
+  /* text-decoration: underline; */
   cursor: pointer;
 }
 

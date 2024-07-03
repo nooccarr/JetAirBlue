@@ -33,14 +33,22 @@ const Footer = () => {
 
         <ul className="footer-section-info-container">
           <li className="footer-contact-info">
-            <a href="tel:+1-718-359-1070">718-359-1070</a>
+            <a href="tel:+1-718-359-1070" className="animated-underline">
+              718-359-1070
+            </a>
           </li>
           <li className="footer-contact-info">
-            <a href="mailto: test@test.com">jouncpark@gmail.com</a>
+            <a
+              href="mailto: jouncpark@gmail.com"
+              className="animated-underline"
+            >
+              jouncpark@gmail.com
+            </a>
           </li>
           <li className="footer-contact-info pb-0">
             <a
               href="https://maps.app.goo.gl/fc9EKkDM2yR1QnMQ7"
+              className="animated-underline"
               target="_blank"
               rel=""
             >
@@ -62,9 +70,12 @@ const Footer = () => {
     // <div className="w-[144px]">
     <div className="w-[231px]">
       <h3 className="footer-section-title">external links</h3>
-      <ul className="footer-section-quick-links-container">
+      <ul className="footer-section-quick-links-container flex flex-col gap-1">
         <li className="footer-quick-links">
-          <Link to="http://www.airtransport.or.kr">
+          <Link
+            to="http://www.airtransport.or.kr"
+            className="animated-underline"
+          >
             <FormattedMessage
               id="footer.external-link.air-transport"
               defaultMessage="Korea Civil Aviation Association"
@@ -72,7 +83,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="http://www.kulaa.or.kr">
+          <Link to="http://www.kulaa.or.kr" className="animated-underline">
             <FormattedMessage
               id="footer.external-link.kulaa"
               defaultMessage="Korea Sport Aviation Association"
@@ -80,7 +91,10 @@ const Footer = () => {
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="https://www.aircraftspruce.com">
+          <Link
+            to="https://www.aircraftspruce.com"
+            className="animated-underline"
+          >
             <FormattedMessage
               id="footer.external-link.aircraft-spruce"
               defaultMessage="Aircraft Spruce & Specialty Co."
@@ -95,14 +109,17 @@ const Footer = () => {
     // <div className="w-[174px]">
     <div className="w-[213x]">
       <h3 className="footer-section-title">quick links</h3>
-      <ul className="footer-section-quick-links-container">
+      <ul className="footer-section-quick-links-container flex flex-col gap-1">
         <li className="footer-quick-links">
-          <Link to="/">
+          <Link to="/" className="animated-underline">
             <FormattedMessage id="footer.link.home" defaultMessage="Home" />
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="/classic-manhattan-plane-tour">
+          <Link
+            to="/classic-manhattan-plane-tour"
+            className="animated-underline"
+          >
             <FormattedMessage
               id="footer.link.classic-manhattan-plane-tour"
               defaultMessage="Classic Manhattan Plane Tour"
@@ -110,7 +127,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="/montauk-plane-tour">
+          <Link to="/montauk-plane-tour" className="animated-underline">
             <FormattedMessage
               id="footer.link.montauk-plane-tour"
               defaultMessage="Montauk Plane Tour"
@@ -126,7 +143,7 @@ const Footer = () => {
           </Link>
         </li> */}
         <li className="footer-quick-links">
-          <Link to="/contact-us">
+          <Link to="/contact-us" className="animated-underline">
             <FormattedMessage
               id="footer.link.contact-us"
               defaultMessage="contact us"
@@ -134,7 +151,7 @@ const Footer = () => {
           </Link>
         </li>
         <li className="footer-quick-links">
-          <Link to="/gallery">
+          <Link to="/gallery" className="animated-underline">
             <FormattedMessage
               id="footer.link.gallery"
               defaultMessage="gallery"

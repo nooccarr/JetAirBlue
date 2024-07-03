@@ -23,7 +23,7 @@ const Header = () => {
 
   const FlagDropdown = () => {
     return (
-      <div className="inline-block hover:cursor-pointer text-start  ">
+      <div className="inline-block hover:cursor-pointer text-start">
         <div
           className=""
           onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
@@ -153,7 +153,7 @@ const Header = () => {
                       setIsLanguageOpen(false);
                     }}
                   >
-                    <div className="flex gap-2 hover:cursor-pointer animated-underline">
+                    <div className="flex gap-2 hover:cursor-pointer">
                       <img
                         className="inline-block"
                         src={option.flag}
@@ -161,7 +161,7 @@ const Header = () => {
                         width="20"
                         height="20"
                       />
-                      <span className="text-sm font-semibold">
+                      <span className="text-sm font-semibold animated-underline">
                         {option.label}
                       </span>
                     </div>
