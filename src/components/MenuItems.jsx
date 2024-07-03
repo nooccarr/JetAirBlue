@@ -42,7 +42,7 @@ const MenuItems = ({ items }) => {
 
   return (
     <li
-      className="navbar-menu-item"
+      className="navbar-menu-item animate-fadeIn"
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
@@ -110,7 +110,7 @@ const MenuItems = ({ items }) => {
           <Dropdown submenus={items.submenu} dropdown={dropdown} />
         </>
       ) : (
-        <Link to={items.url}>
+        <Link to={items.url} className="animated-underline">
           <FormattedMessage
             id={`header.navbar.menu.${items.title}`}
             defaultMessage={items.title}
