@@ -85,10 +85,6 @@ header {
   letter-spacing: 1px;
 }
 
-.navbar-menu-item > a:hover {
-  /* text-decoration: underline; */
-}
-
 .navbar-menu-item > button > a {
   color: #f6f6f6;
   text-decoration: none;
