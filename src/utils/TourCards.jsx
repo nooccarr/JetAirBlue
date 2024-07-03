@@ -56,7 +56,7 @@ export const tourCardList = (tours, classname) => (
 
 const tourCardSection = ({ title, tours, classname }) => (
   <section className="home-choose-tour-container">
-    <h3 className="home-choose-tour-text">{title}</h3>
+    <h3 className="home-choose-tour-text animate-fadeInRight">{title}</h3>
     {tourCardList(tours, classname)}
   </section>
 );
