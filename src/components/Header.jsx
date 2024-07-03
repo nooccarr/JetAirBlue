@@ -23,7 +23,7 @@ const Header = () => {
 
   const FlagDropdown = () => {
     return (
-      <div className="inline-block hover:cursor-pointer text-start  ">
+      <div className="inline-block hover:cursor-pointer text-start">
         <div
           className=""
           onClick={() => !isMenuOpen && setIsLanguageOpen(!isLanguageOpen)}
@@ -46,7 +46,7 @@ const Header = () => {
 
   // MOBILE MENU (home, tours, reservation)
   const NavBarMobile = (
-    <ul className="pb-96 px-5 bg-[#060d17]">
+    <ul className="pt-4 pb-[100vh] px-5 bg-[#060d17]">
       <li className="text-[#b5b7ba] font-semibold pt-2.5 pb-0 mb-2.5  cursor-text border-b-1 border-[#b5b7ba]">
         <FormattedMessage
           id={`header.navbar.menu.${menuItems[1].title}`}
@@ -142,7 +142,7 @@ const Header = () => {
 
           {/* MOBILE/DESKTOP LANGUAGE DROPDOWN */}
           {isLanguageOpen && (
-            <div className="bg-[#060d17] absolute z-10 left-0 top-[75px] w-full animate-fadeInTop">
+            <div className="bg-[#060d17] pt-2 absolute z-10 left-0 top-[75px] w-full animate-fadeInTop">
               <div className="max-w-[1280px] mx-auto">
                 {options.map((option, index) => (
                   <div
@@ -153,7 +153,7 @@ const Header = () => {
                       setIsLanguageOpen(false);
                     }}
                   >
-                    <div className="flex gap-2 hover:cursor-pointer animated-underline">
+                    <div className="flex gap-2 hover:cursor-pointer">
                       <img
                         className="inline-block"
                         src={option.flag}
@@ -161,7 +161,7 @@ const Header = () => {
                         width="20"
                         height="20"
                       />
-                      <span className="text-sm font-semibold">
+                      <span className="text-sm font-semibold animated-underline">
                         {option.label}
                       </span>
                     </div>

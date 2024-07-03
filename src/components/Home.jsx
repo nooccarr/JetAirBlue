@@ -99,7 +99,7 @@ const Home = () => {
             defaultMessage="breathtaking plane tours over new york city"
           />
         </p>
-        <div className="caption-button-container animate-appearance-in">
+        <div className="caption-button-container animate-fadeIn">
           {coloredButton(
             <FormattedMessage
               id="button.book-a-plane-tour"
@@ -205,7 +205,7 @@ const Home = () => {
         ref={form}
         onSubmit={sendEmail}
       >
-        <h2 className="home-request-info-title">
+        <h2 className="home-request-info-title animate-fadeInRight">
           <FormattedMessage
             id="home.request-info.title"
             defaultMessage="Request Information"
