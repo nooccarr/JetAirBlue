@@ -110,8 +110,8 @@ const Header = () => {
     <header>
       <div className="header-container">
         <Link to="/" className="header-logo animate-appearance-in">
-          <img src={Logo} alt="logo" />
-          <h1 className="px-4">jet air blue</h1>
+          <img width={100} src={Logo} alt="logo" />
+          <h1 className="text-xs">jet air blue</h1>
         </Link>
         <div className="flex gap-10">
           <div className="hidden md:block">{NavBarDesktop}</div>

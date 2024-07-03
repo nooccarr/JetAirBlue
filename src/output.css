@@ -783,11 +783,6 @@ video {
   margin-bottom: 4rem;
 }
 
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-\[calc\(\(theme\(spacing\.5\)-theme\(spacing\.1\)\)\/2\)\] {
   margin-top: calc((1.25rem - 0.25rem) / 2);
   margin-bottom: calc((1.25rem - 0.25rem) / 2);
@@ -865,10 +860,6 @@ video {
 
 .mt-6 {
   margin-top: 1.5rem;
-}
-
-.ms-5 {
-  margin-inline-start: 1.25rem;
 }
 
 .box-border {
@@ -1597,7 +1588,7 @@ video {
 @keyframes fadeInTop {
   0% {
     opacity: 0;
-    transform: translateY(-10%);
+    transform: translateY(-1%);
   }
 
   100% {
@@ -1755,6 +1746,10 @@ video {
 
 .items-center {
   align-items: center;
+}
+
+.items-baseline {
+  align-items: baseline;
 }
 
 .justify-start {
@@ -2661,6 +2656,14 @@ video {
   padding-top: 1.5rem;
 }
 
+.pb-2 {
+  padding-bottom: 0.5rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
+}
+
 .text-left {
   text-align: left;
 }
@@ -2744,6 +2747,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -7088,6 +7096,10 @@ video {
     margin-bottom: 4rem;
   }
 
+  .sm\:block {
+    display: block;
+  }
+
   .sm\:w-full {
     width: 100%;
   }
@@ -7186,6 +7198,14 @@ video {
 @media (min-width: 1024px) {
   .lg\:order-last {
     order: 9999;
+  }
+
+  .lg\:block {
+    display: block;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:grid-cols-2 {
