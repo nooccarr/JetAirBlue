@@ -167,8 +167,8 @@ const Home = () => {
 
   const aboutTour = (
     <div className="about-tour-section">
-      <div className="about-tour-container">
-        <h3 className="about-tour-title animate-fadeInRight">
+      <div className="about-tour-container animate-fadeInBottom">
+        <h3 className="about-tour-title">
           <FormattedMessage
             id="home.about-tour.title"
             defaultMessage="Marvel at the skies over Manhattan,"
@@ -205,7 +205,7 @@ const Home = () => {
         ref={form}
         onSubmit={sendEmail}
       >
-        <h2 className="home-request-info-title animate-fadeInRight">
+        <h2 className="home-request-info-title">
           <FormattedMessage
             id="home.request-info.title"
             defaultMessage="Request Information"

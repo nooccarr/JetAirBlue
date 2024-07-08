@@ -15,13 +15,18 @@ module.exports = {
           '100%': { opacity: '1' },
         },
         fadeInTop: {
-          '0%': { opacity: '0', transform: 'translateY(-1%)' },
+          '0%': { opacity: '0', transform: 'translateY(-8%)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeInBottom: {
+          '0%': { opacity: '0', transform: 'translateY(6%)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
         fadeInRight: {
-          '0%': { opacity: '0', transform: 'translateX(1%)' },
+          '0%': { opacity: '0', transform: 'translateX(6%)' },
           '100%': { opacity: '1', transform: 'translateX(0)' },
         },
+
         fadeOut: {
           '0%': { opacity: '1' },
           '100%': { opacity: '0' },
@@ -32,11 +37,12 @@ module.exports = {
         },
       },
       animation: {
-        fadeIn: 'fadeIn 0.5s ease-in-out',
-        fadeInTop: 'fadeInTop 0.5s ease-in-out',
+        fadeIn: 'fadeIn 1s ease-in-out',
+        fadeInTop: 'fadeInTop 0.6s ease-in-out',
+        fadeInBottom: 'fadeInBottom 0.5s ease-in-out',
         fadeInRight: 'fadeInRight 0.5s ease-in-out',
-        fadeOut: 'fadeOut 0.5s ease-in-out',
-        fadeOutTop: 'fadeOutTop 0.5s ease-in-out',
+        fadeOut: 'fadeOut 1s ease-in-out',
+        fadeOutTop: 'fadeOutTop 1s ease-in-out',
       },
     },
   },
