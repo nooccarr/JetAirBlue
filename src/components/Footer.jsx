@@ -11,7 +11,7 @@ const Footer = () => {
   const contactInfo = () => (
     // <div className="w-[219px]">
     <div className="w-[229px]">
-      <h3 className="footer-section-title animate-fadeInRight">jet air blue</h3>
+      <h3 className="footer-section-title">jet air blue</h3>
       <div className="footer-section-contact-us-container">
         <ul className="footer-section-icon-container">
           <li className="footer-contact-info">
@@ -69,9 +69,7 @@ const Footer = () => {
   const externalLinks = () => (
     // <div className="w-[144px]">
     <div className="w-[231px]">
-      <h3 className="footer-section-title animate-fadeInRight">
-        external links
-      </h3>
+      <h3 className="footer-section-title">external links</h3>
       <ul className="footer-section-quick-links-container flex flex-col gap-1">
         <li className="footer-quick-links">
           <Link
@@ -116,7 +114,7 @@ const Footer = () => {
   const quickLinks = () => (
     // <div className="w-[174px]">
     <div className="w-[213x]">
-      <h3 className="footer-section-title animate-fadeInRight">quick links</h3>
+      <h3 className="footer-section-title">quick links</h3>
       <ul className="footer-section-quick-links-container flex flex-col gap-1">
         <li className="footer-quick-links">
           <Link to="/" className="animated-underline">

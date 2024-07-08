@@ -109,7 +109,7 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <Link to="/" className="header-logo animate-appearance-in">
+        <Link to="/" className="header-logo animate-fadeIn">
           <img width={100} src={Logo} alt="logo" />
           <h1 className="text-xs">jet air blue</h1>
         </Link>

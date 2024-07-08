@@ -49,14 +49,14 @@ const tourCard = ({ slug, title, description, image }, classname) => (
 );
 
 export const tourCardList = (tours, classname) => (
-  <div className="tour-card-list">
+  <div className="tour-card-list  animate-fadeInRight">
     {tours.map((tour) => tourCard(tour, classname))}
   </div>
 );
 
 const tourCardSection = ({ title, tours, classname }) => (
   <section className="home-choose-tour-container">
-    <h3 className="home-choose-tour-text animate-fadeInRight">{title}</h3>
+    <h3 className="home-choose-tour-text">{title}</h3>
     {tourCardList(tours, classname)}
   </section>
 );
