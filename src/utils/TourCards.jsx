@@ -49,7 +49,7 @@ const tourCard = ({ slug, title, description, image }, classname) => (
 );
 
 export const tourCardList = (tours, classname) => (
-  <div className="tour-card-list  animate-fadeInRight">
+  <div className="tour-card-list">
     {tours.map((tour) => tourCard(tour, classname))}
   </div>
 );
