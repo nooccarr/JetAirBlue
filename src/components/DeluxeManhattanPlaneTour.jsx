@@ -80,9 +80,9 @@ const DeluxeManhattanPlaneTour = () => {
 
   const topImageSection = (title) => (
     <div className="h-[232px] md:h-[357px]">
-      <section className="tour-main-image">
+      <section className="tour-main-image animate-fadeIn">
         <div className="tour-main-image-caption-container">
-          <h1 className="tour-main-image-caption-title text-center text-3xl md:text-6xl animate-fadeIn">
+          <h1 className="tour-main-image-caption-title text-center text-3xl md:text-6xl">
             {title}
           </h1>
         </div>

@@ -86,20 +86,18 @@ const Home = () => {
   };
 
   const imageTop = (
-    <div className="home-main-image-top-container aspect-video min-h-[600px] w-full">
+    <div className="home-main-image-top-container aspect-video min-h-[600px] w-full animate-fadeIn">
       {/* <img src='https://placehold.co/1920x1080' /> */}
       {/* <div className='home-main-image-top'> */}
       <div className="caption-container">
-        <h1 className="caption-title text-center animate-fadeIn">
-          jet air blue planes
-        </h1>
-        <p className="caption-description animate-fadeIn">
+        <h1 className="caption-title text-center">jet air blue planes</h1>
+        <p className="caption-description">
           <FormattedMessage
             id="home.top-image.description"
             defaultMessage="breathtaking plane tours over new york city"
           />
         </p>
-        <div className="caption-button-container animate-fadeIn">
+        <div className="caption-button-container">
           {coloredButton(
             <FormattedMessage
               id="button.book-a-plane-tour"
@@ -167,7 +165,7 @@ const Home = () => {
 
   const aboutTour = (
     <div className="about-tour-section">
-      <div className="about-tour-container animate-fadeInBottom">
+      <div className="about-tour-container">
         <h3 className="about-tour-title">
           <FormattedMessage
             id="home.about-tour.title"
