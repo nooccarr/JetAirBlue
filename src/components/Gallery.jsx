@@ -16,7 +16,7 @@ const Gallery = () => {
   const handleClose = () => setIndex(-1);
 
   return (
-    <main className="page-container">
+    <main className="page-container animate-fadeIn">
       <TopImageSection
         title={<FormattedMessage id="gallery.title" defaultMessage="Gallery" />}
       />

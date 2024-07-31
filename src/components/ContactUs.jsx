@@ -206,7 +206,7 @@ const ContactUs = () => {
   );
 
   return (
-    <main className="page-container">
+    <main className="page-container animate-fadeIn">
       <TopImageSection
         title={
           <FormattedMessage id="contact-us.title" defaultMessage="Contact Us" />

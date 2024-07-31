@@ -71,7 +71,7 @@ const ClassicManhattanPlaneTour = () => {
 
   const topImageSection = (title) => (
     <div className="h-[232px] md:h-[357px]">
-      <section className="tour-main-image animate-fadeIn">
+      <section className="tour-main-image">
         <div className="tour-main-image-caption-container">
           <h1 className="tour-main-image-caption-title text-center text-3xl md:text-6xl">
             {title}
@@ -435,7 +435,7 @@ const ClassicManhattanPlaneTour = () => {
   );
 
   return (
-    <main className="page-container">
+    <main className="page-container animate-fadeIn">
       {topImageSection(
         <FormattedMessage
           id={`tour.${tour.title}.title`}
