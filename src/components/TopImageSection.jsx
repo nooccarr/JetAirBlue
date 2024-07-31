@@ -1,6 +1,6 @@
 const TopImageSection = ({ title, description }) => (
   <div className="tour-other-image-container">
-    <section className="tour-other-image animate-fadeIn">
+    <section className="tour-other-image">
       <div className="tour-other-image-caption-container item-start">
         <div>
           <h1 className="tour-other-image-caption-title text-3xl md:text-6xl ">

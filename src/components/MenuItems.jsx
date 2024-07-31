@@ -42,7 +42,7 @@ const MenuItems = ({ items }) => {
 
   return (
     <li
-      className="navbar-menu-item animate-fadeIn"
+      className="navbar-menu-item"
       ref={ref}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}

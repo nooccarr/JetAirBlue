@@ -93,14 +93,14 @@ const Header = () => {
       {menuItems.map((menu, index) => {
         return <MenuItems items={menu} key={index} />;
       })}
-      <button className="header-button animate-fadeIn animated-underline">
+      <button className="header-button animated-underline">
         <FormattedMessage
           id="button.book-a-plane-tour"
           defaultMessage="Book a Plane Tour"
         />
       </button>
       {/* DESKTOP LANGUAGE BUTTON */}
-      <div className="text-[13px] font-bold flex items-center animate-fadeIn">
+      <div className="text-[13px] font-bold flex items-center">
         <FlagDropdown />
       </div>
     </ul>
@@ -109,8 +109,8 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <Link to="/" className="header-logo animate-fadeIn">
-          <img width={100} src={Logo} alt="logo" />
+        <Link to="/" className="header-logo">
+          <img width={100} height={38} src={Logo} alt="logo" />
           <h1 className="text-xs">jet air blue</h1>
         </Link>
         <div className="flex gap-10">
@@ -118,14 +118,14 @@ const Header = () => {
 
           <div className="md:hidden flex items-center gap-4">
             {/* MOBILE LANGUAGE BUTTON */}
-            <div className="inline text-[13px] font-bold animate-fadeIn">
+            <div className="inline text-[13px] font-bold">
               <FlagDropdown />
             </div>
             <div
               onClick={() => !isLanguageOpen && setIsMenuOpen(!isMenuOpen)}
               className={`inline-block border border-black ${
                 isMenuOpen && 'border-white'
-              } px-1 rounded-md hover:cursor-pointer animate-fadeIn`}
+              } px-1 rounded-md hover:cursor-pointer`}
             >
               <img
                 className="header-menu-button inline-block"
