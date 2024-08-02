@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Wrapper from './contextWrapper';
 import Layout from './Layout';
@@ -13,9 +14,19 @@ import ContactUs from './ContactUs';
 import Gallery from './Gallery';
 import Faq from './Faq';
 import NoMatch from './NoMatch';
+import Modal from 'react-modal';
+import BookingModal from './BookingModal';
 import '../styles/app.css';
 
+Modal.setAppElement('#root');
+
 const App = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleBookingModalClose = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <Wrapper>
       <Routes>
@@ -40,6 +51,10 @@ const App = () => {
         </Route>
       </Routes>
       <Footer />
+      <BookingModal
+        isModalOpen={isModalOpen}
+        handleBookingModalClose={handleBookingModalClose}
+      />
     </Wrapper>
   );
 };
